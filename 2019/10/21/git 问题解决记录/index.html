@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>git 问题解决记录 | 赵大汉的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="git 问题解决记录unable to access ‘XXX’:Empty reply from server12$ git pull origin masterfatal: unable to access &amp;apos;https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note.git&#x2F;&amp;apos;: Empty reply from server  解决：重置git配置的h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 问题解决记录">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;21&#x2F;git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95&#x2F;index.html">
+<meta property="og:site_name" content="赵大汉的个人博客">
+<meta property="og:description" content="git 问题解决记录unable to access ‘XXX’:Empty reply from server12$ git pull origin masterfatal: unable to access &amp;apos;https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note.git&#x2F;&amp;apos;: Empty reply from server  解决：重置git配置的h">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-30T12:04:47.094Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="赵大汉的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">赵大汉的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">dahan&#39;s Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-git 问题解决记录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/21/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2019-10-21T13:37:52.191Z" itemprop="datePublished">2019-10-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git 问题解决记录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git-问题解决记录"><a href="#git-问题解决记录" class="headerlink" title="git 问题解决记录"></a>git 问题解决记录</h1><h1 id="unable-to-access-‘XXX’-Empty-reply-from-server"><a href="#unable-to-access-‘XXX’-Empty-reply-from-server" class="headerlink" title="unable to access ‘XXX’:Empty reply from server"></a>unable to access ‘XXX’:Empty reply from server</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin master</span><br><span class="line">fatal: unable to access &apos;https://github.com/zhaodahan/zhao_Note.git/&apos;: Empty reply from server</span><br></pre></td></tr></table></figure>
+
+<p>解决：<strong>重置git配置的http或https代理的：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br></pre></td></tr></table></figure>
+
+<p>然后就成功pull</p>
+<h1 id="本地库已经删除了，但是依旧提交到了远程库"><a href="#本地库已经删除了，但是依旧提交到了远程库" class="headerlink" title="本地库已经删除了，但是依旧提交到了远程库"></a>本地库已经删除了，但是依旧提交到了远程库</h1><p>远程库与本地库不一致，使用git pull 无法将多余的文件拉取下来。</p>
+<p>解决思路： 用远程库覆盖本地版本库。 然后修改后重新提交。</p>
+<h1 id="git-clone-和pull-速度太慢解决方案"><a href="#git-clone-和pull-速度太慢解决方案" class="headerlink" title="git clone 和pull  速度太慢解决方案"></a>git clone 和pull  速度太慢解决方案</h1><p>windows上进入c:\windows\system32\drivers\etc，找到hosts</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">151.101.72.249 http://global-ssl.fastly.Net</span><br><span class="line">192.30.253.112 http://github.com</span><br></pre></td></tr></table></figure>
+
+<p>cmd : 刷新DNS来生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+
+<p>修改使用ssr 来连接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy https://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<p>使用完之后取消代理以便不会影响提交</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="使用git提交代码到github-每次都要输入用户名和密码的解决方法"><a href="#使用git提交代码到github-每次都要输入用户名和密码的解决方法" class="headerlink" title="使用git提交代码到github,每次都要输入用户名和密码的解决方法"></a>使用git提交代码到github,每次都要输入用户名和密码的解决方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">找到项目的.git目录下的config文件： </span><br><span class="line">修改url路径</span><br><span class="line">将其改为如下格式： </span><br><span class="line">https://username:password@github.com/username/project.git </span><br><span class="line">在这里，username就是你的用户名，比如我的用户名是CmderQ，那么改成之后的结果是： </span><br><span class="line">url= https://CmderQ:#####@github.com/CmderQ/hello.git </span><br><span class="line">这里的”#####”代表的就是我这个账户的密码。改完之后，保存</span><br><span class="line"></span><br><span class="line">例如: 我的修改</span><br><span class="line">#	url = https://github.com/zhaodahan/zhao_Note.git</span><br><span class="line">    url = https://zhaodahan:zhao7494@github.com/zhaodahan/zhao_Note.git</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/21/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" data-id="ck20gsz0t00006kilajiye1um" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/21/git%20%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          git 笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/21/%E6%B5%8B%E8%AF%95%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">测试生成博客文章</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/test/" style="font-size: 10px;">test</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/21/git%20%E7%AC%94%E8%AE%B0/">git 笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/21/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/">git 问题解决记录</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/21/%E6%B5%8B%E8%AF%95%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">测试生成博客文章</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/21/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 zhaodahan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
