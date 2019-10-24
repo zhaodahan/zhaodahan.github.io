@@ -6,19 +6,53 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 赵大汉的个人博客</title>
+  <title>java数据结构与算法__数据结构(三) | 赵大汉的个人博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="们常常犯的三种错误：第一，听到了，就以为已经明白了；第二，知道了，就以为自己做到了；第三，心动了，就以为自己在行动">
-<meta name="keywords" content="开发者,程序猿,编程,代码,开源,IT网站,Developer,Programmer,Coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="赵大汉的个人博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="java数据结构与算法树平衡二叉树（AVL）平衡二叉树的存在是因为二叉排序树可能存在的一些问题，他是对二叉排序树的一种优化。  什么是平衡二叉树">
+<meta name="keywords" content="note,java,数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java数据结构与算法__数据结构(三)">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;07&#x2F;11&#x2F;java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%B8%89&#x2F;index.html">
 <meta property="og:site_name" content="赵大汉的个人博客">
-<meta property="og:description" content="们常常犯的三种错误：第一，听到了，就以为已经明白了；第二，知道了，就以为自己做到了；第三，心动了，就以为自己在行动">
+<meta property="og:description" content="java数据结构与算法树平衡二叉树（AVL）平衡二叉树的存在是因为二叉排序树可能存在的一些问题，他是对二叉排序树的一种优化。  什么是平衡二叉树">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS104.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS105.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS106.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS107.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS108.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS109.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS110.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS111.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS112.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS113.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS115.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS114.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS116.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS117.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS118.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS119.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS120.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS121.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS122.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS123.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS124.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS125.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS126.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS127.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS128.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS129.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS130.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS131.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS132.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS133.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS134.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS135.png?raw=true">
+<meta property="og:updated_time" content="2019-10-24T14:09:14.031Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;DATA_STRUCTURES_ALGORITHMS104.png?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="赵大汉的个人博客" type="application/atom+xml">
   
@@ -198,1588 +232,224 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-java数据结构与算法回顾与加强-数据结构 - 三" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" class="archive-article-date">
-        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" target="_blank">sql 问题解决记录</a>
   
+    <h1 class="article-title" itemprop="name">
+      java数据结构与算法__数据结构(三)
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" target="_blank">git 问题解决记录</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-09-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" target="_blank">Redis基础回顾笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nosql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" class="archive-article-date">
-        <time datetime="2019-09-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" target="_blank">Shiro学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shiro</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/" class="archive-article-date">
-        <time datetime="2019-09-12T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/" target="_blank">SpringBoot高级(整合篇)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" class="archive-article-date">
-        <time datetime="2019-09-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" target="_blank">Spring Boot核心技术</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">spring 基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" target="_blank">Spring Cloud学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">springCloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">SpringMVC基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">springmvc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" target="_blank">Spring注解驱动开发</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">注解</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Git&GitHub%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Git&GitHub%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" target="_blank">Git&amp;GitHub学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/MyBatis%20%E9%80%9A%E7%94%A8mapper%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-23T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/23/MyBatis%20%E9%80%9A%E7%94%A8mapper%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">通用mapper</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/21/MyBatisPlus%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-21T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/21/MyBatisPlus%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">MyBatisPlus 学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/20/Mybatis%E5%BA%94%E7%94%A8%E2%80%94SSM%E6%95%B4%E5%90%88/" class="archive-article-date">
-        <time datetime="2019-08-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/20/Mybatis%E5%BA%94%E7%94%A8%E2%80%94SSM%E6%95%B4%E5%90%88/" target="_blank">SSM整合</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/20/MyBatis%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-08-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/20/MyBatis%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">MyBatis基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/13/SSSP%20%E6%95%B4%E5%90%88%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/13/SSSP%20%E6%95%B4%E5%90%88%E7%AC%94%E8%AE%B0/" target="_blank">SSSP整合</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/12/SpringData%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-12T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/12/SpringData%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">SpringData 学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/11/JPA%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-08-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/11/JPA%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JPA 基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/10/Hibernate%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/10/Hibernate%E7%AC%94%E8%AE%B0/" target="_blank">Hibernate笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/23/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-23T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/23/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E4%BA%8C/" target="_blank">java设计模式 (二)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/22/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-        <time datetime="2019-07-22T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-22</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/22/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank">java设计模式 (一)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/20/mysql%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/20/mysql%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">mysql 基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/20/MySQL%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-07-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/20/MySQL%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">MySQL高级</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/13/JUC%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/13/JUC%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JUC 多线程</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/13/NIO%E5%9B%9E%E9%A1%BE%E5%8A%A0%E5%BC%BA/" class="archive-article-date">
-        <time datetime="2019-07-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/13/NIO%E5%9B%9E%E9%A1%BE%E5%8A%A0%E5%BC%BA/" target="_blank">NIO</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NIO</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95/" target="_blank">java数据结构与算法 (一)</a>
   
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">java数据结构与算法__数据结构(一)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95%20-%20%E4%BA%8C/" target="_blank">java数据结构与算法 (二)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%BA%8C/" target="_blank">java数据结构与算法__数据结构(二)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 <a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%B8%89/" class="archive-article-date">
         <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">4.6k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">19分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="java数据结构与算法"><a href="#java数据结构与算法" class="headerlink" title="java数据结构与算法"></a>java数据结构与算法</h1><h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><h4 id="平衡二叉树（AVL）"><a href="#平衡二叉树（AVL）" class="headerlink" title="平衡二叉树（AVL）"></a>平衡二叉树（AVL）</h4><p>平衡二叉树的存在是因为二叉排序树可能存在的一些问题，他是对二叉排序树的一种优化。</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS104.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS104.png"></p>
+<p><strong>什么是平衡二叉树</strong></p>
+<a id="more"></a>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS105.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS105.png"></p>
+<p>平衡二叉树的前提是一颗二叉排序树，他是在二叉排序树的基础上发展而来的。</p>
+<h5 id="构建平衡二叉树"><a href="#构建平衡二叉树" class="headerlink" title="构建平衡二叉树"></a>构建平衡二叉树</h5><p>构建一颗平衡二叉树根据不同的情况需要进行左旋转，右旋转，双旋转。</p>
+<h6 id="左旋转"><a href="#左旋转" class="headerlink" title="左旋转"></a>左旋转</h6><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS106.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS106.png"></p>
+<p>代码实现：</p>
+<p>通过上面的分析，我们发现在构建平衡二叉树的过程中，是否需要进行旋转的判定重要条件是节点的左右子树高度相差大于1. 那么这时候统计节点左子树高度和右子树高度就很重要了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建Node结点</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> value;</span><br><span class="line">	Node left;</span><br><span class="line">	Node right;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.value = value;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 返回左子树的高度</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">leftHeight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (left == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> left.height();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 返回右子树的高度</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rightHeight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (right == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> right.height();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 返回 以该结点为根结点的树的高度</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">height</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> Math.max(left == <span class="keyword">null</span> ? <span class="number">0</span> : left.height(), right == <span class="keyword">null</span> ? <span class="number">0</span> : right.height()) + <span class="number">1</span>;</span><br><span class="line">  <span class="comment">// 这里为什么要+1，Math.max(left == null ? 0 : left.height(), right == null ? 0 : right.height())只是统计出了这个节点左右子树的节点的最大值，除了左右子树还要包括自身，所以要+1</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>创建AVL:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建AVLTree</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AVLTree</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Node root;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> Node <span class="title">getRoot</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> root;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 查找要删除的结点</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Node <span class="title">search</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> root.search(value);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 查找父结点</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Node <span class="title">searchParent</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> root.searchParent(value);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 编写方法:</span></span><br><span class="line">	<span class="comment">// 1. 返回的 以node 为根结点的二叉排序树的最小结点的值</span></span><br><span class="line">	<span class="comment">// 2. 删除node 为根结点的二叉排序树的最小结点</span></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> node</span></span><br><span class="line"><span class="comment">	 *            传入的结点(当做二叉排序树的根结点)</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> 返回的 以node 为根结点的二叉排序树的最小结点的值</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">delRightTreeMin</span><span class="params">(Node node)</span> </span>&#123;</span><br><span class="line">		Node target = node;</span><br><span class="line">		<span class="comment">// 循环的查找左子节点，就会找到最小值</span></span><br><span class="line">		<span class="keyword">while</span> (target.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">			target = target.left;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 这时 target就指向了最小结点</span></span><br><span class="line">		<span class="comment">// 删除最小结点</span></span><br><span class="line">		delNode(target.value);</span><br><span class="line">		<span class="keyword">return</span> target.value;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 删除结点</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delNode</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="comment">// 1.需求先去找到要删除的结点 targetNode</span></span><br><span class="line">			Node targetNode = search(value);</span><br><span class="line">			<span class="comment">// 如果没有找到要删除的结点</span></span><br><span class="line">			<span class="keyword">if</span> (targetNode == <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 如果我们发现当前这颗二叉排序树只有一个结点</span></span><br><span class="line">			<span class="keyword">if</span> (root.left == <span class="keyword">null</span> &amp;&amp; root.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">				root = <span class="keyword">null</span>;</span><br><span class="line">				<span class="keyword">return</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="comment">// 去找到targetNode的父结点</span></span><br><span class="line">			Node parent = searchParent(value);</span><br><span class="line">			<span class="comment">// 如果要删除的结点是叶子结点</span></span><br><span class="line">			<span class="keyword">if</span> (targetNode.left == <span class="keyword">null</span> &amp;&amp; targetNode.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="comment">// 判断targetNode 是父结点的左子结点，还是右子结点</span></span><br><span class="line">				<span class="keyword">if</span> (parent.left != <span class="keyword">null</span> &amp;&amp; parent.left.value == value) &#123; <span class="comment">// 是左子结点</span></span><br><span class="line">					parent.left = <span class="keyword">null</span>;</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (parent.right != <span class="keyword">null</span> &amp;&amp; parent.right.value == value) &#123;<span class="comment">// 是由子结点</span></span><br><span class="line">					parent.right = <span class="keyword">null</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (targetNode.left != <span class="keyword">null</span> &amp;&amp; targetNode.right != <span class="keyword">null</span>) &#123; <span class="comment">// 删除有两颗子树的节点</span></span><br><span class="line">				<span class="keyword">int</span> minVal = delRightTreeMin(targetNode.right);</span><br><span class="line">				targetNode.value = minVal;</span><br><span class="line"></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123; <span class="comment">// 删除只有一颗子树的结点</span></span><br><span class="line">				<span class="comment">// 如果要删除的结点有左子结点</span></span><br><span class="line">				<span class="keyword">if</span> (targetNode.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">					<span class="keyword">if</span> (parent != <span class="keyword">null</span>) &#123;</span><br><span class="line">						<span class="comment">// 如果 targetNode 是 parent 的左子结点</span></span><br><span class="line">						<span class="keyword">if</span> (parent.left.value == value) &#123;</span><br><span class="line">							parent.left = targetNode.left;</span><br><span class="line">						&#125; <span class="keyword">else</span> &#123; <span class="comment">// targetNode 是 parent 的右子结点</span></span><br><span class="line">							parent.right = targetNode.left;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						root = targetNode.left;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123; <span class="comment">// 如果要删除的结点有右子结点</span></span><br><span class="line">					<span class="keyword">if</span> (parent != <span class="keyword">null</span>) &#123;</span><br><span class="line">						<span class="comment">// 如果 targetNode 是 parent 的左子结点</span></span><br><span class="line">						<span class="keyword">if</span> (parent.left.value == value) &#123;</span><br><span class="line">							parent.left = targetNode.right;</span><br><span class="line">						&#125; <span class="keyword">else</span> &#123; <span class="comment">// 如果 targetNode 是 parent 的右子结点</span></span><br><span class="line">							parent.right = targetNode.right;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						root = targetNode.right;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 添加结点的方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(Node node)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">			root = node;<span class="comment">// 如果root为空则直接让root指向node</span></span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			root.add(node);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 中序遍历</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">infixOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root != <span class="keyword">null</span>) &#123;</span><br><span class="line">			root.infixOrder();</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(<span class="string">"二叉排序树为空，不能遍历"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>左旋转的方法我们写在Node中，这样我们tree在添加删除的之后只需要按照之前的方法add，delete即可</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//左旋转方法</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">leftRotate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//创建新的结点，以当前根结点的值</span></span><br><span class="line">		Node newNode = <span class="keyword">new</span> Node(value);</span><br><span class="line">		<span class="comment">//把新的结点的左子树设置成当前结点的左子树</span></span><br><span class="line">		newNode.left = left;</span><br><span class="line">		<span class="comment">//把新的结点的右子树设置成带你过去结点的右子树的左子树</span></span><br><span class="line">		newNode.right = right.left;</span><br><span class="line">		<span class="comment">//把当前结点的值替换成右子结点的值</span></span><br><span class="line">		value = right.value;</span><br><span class="line">		<span class="comment">//把当前结点的右子树设置成当前结点右子树的右子树</span></span><br><span class="line">		right = right.right;</span><br><span class="line">		<span class="comment">//把当前结点的左子树(左子结点)设置成新的结点</span></span><br><span class="line">		left = newNode;	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 那么原来的add()方法就需要做一些修改</span></span><br><span class="line"><span class="comment">// 添加结点的方法</span></span><br><span class="line">	<span class="comment">// 递归的形式添加结点，注意需要满足二叉排序树的要求</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(Node node)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 判断传入的结点的值，和当前子树的根结点的值关系</span></span><br><span class="line">		<span class="keyword">if</span> (node.value &lt; <span class="keyword">this</span>.value) &#123;</span><br><span class="line">			<span class="comment">// 如果当前结点左子结点为null</span></span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">this</span>.left == <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">this</span>.left = node;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// 递归的向左子树添加</span></span><br><span class="line">				<span class="keyword">this</span>.left.add(node);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123; <span class="comment">// 添加的结点的值大于 当前结点的值</span></span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">this</span>.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">this</span>.right = node;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// 递归的向右子树添加</span></span><br><span class="line">				<span class="keyword">this</span>.right.add(node);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//当添加完一个结点后，如果: (右子树的高度-左子树的高度) &gt; 1 , 左旋转</span></span><br><span class="line">		<span class="keyword">if</span>(rightHeight() - leftHeight() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">		     leftRotate(); <span class="comment">// 先暂时直接对该节点进行左旋转</span></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="右旋转"><a href="#右旋转" class="headerlink" title="右旋转"></a>右旋转</h6><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS107.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS107.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS108.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS108.png"></p>
+<p>右旋转代码实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//右旋转</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">rightRotate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		Node newNode = <span class="keyword">new</span> Node(value);</span><br><span class="line">		newNode.right = right;</span><br><span class="line">		newNode.left = left.right;</span><br><span class="line">		value = left.value;</span><br><span class="line">		left = left.left;</span><br><span class="line">		right = newNode;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Node中的add()做进一步的完善</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当添加完一个结点后，如果 (左子树的高度 - 右子树的高度) &gt; 1, 右旋转</span></span><br><span class="line">		<span class="keyword">if</span>(leftHeight() - rightHeight() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">				<span class="comment">//直接进行右旋转即可</span></span><br><span class="line">				rightRotate();</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="双旋转"><a href="#双旋转" class="headerlink" title="双旋转"></a>双旋转</h6><p>某些情况下，单旋转不能完成平衡二叉树的转换</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS109.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS109.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS110.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS110.png"></p>
+<p>add()代码补充</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加结点的方法</span></span><br><span class="line">	<span class="comment">// 递归的形式添加结点，注意需要满足二叉排序树的要求</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(Node node)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 判断传入的结点的值，和当前子树的根结点的值关系</span></span><br><span class="line">		<span class="keyword">if</span> (node.value &lt; <span class="keyword">this</span>.value) &#123;</span><br><span class="line">			<span class="comment">// 如果当前结点左子结点为null</span></span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">this</span>.left == <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">this</span>.left = node;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// 递归的向左子树添加</span></span><br><span class="line">				<span class="keyword">this</span>.left.add(node);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123; <span class="comment">// 添加的结点的值大于 当前结点的值</span></span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">this</span>.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">this</span>.right = node;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// 递归的向右子树添加</span></span><br><span class="line">				<span class="keyword">this</span>.right.add(node);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//当添加完一个结点后，如果: (右子树的高度-左子树的高度) &gt; 1 , 左旋转</span></span><br><span class="line">		<span class="keyword">if</span>(rightHeight() - leftHeight() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="comment">//如果它的右子树的左子树的高度大于它的右子树的右子树的高度</span></span><br><span class="line">			<span class="keyword">if</span>(right != <span class="keyword">null</span> &amp;&amp; right.leftHeight() &gt; right.rightHeight()) &#123;</span><br><span class="line">				<span class="comment">//先对右子结点进行右旋转</span></span><br><span class="line">				right.rightRotate();</span><br><span class="line">				<span class="comment">//然后在对当前结点进行左旋转</span></span><br><span class="line">				leftRotate(); <span class="comment">//左旋转..</span></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">//直接进行左旋转即可</span></span><br><span class="line">				leftRotate();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> ; <span class="comment">//必须要!!!</span></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//当添加完一个结点后，如果 (左子树的高度 - 右子树的高度) &gt; 1, 右旋转</span></span><br><span class="line">		<span class="keyword">if</span>(leftHeight() - rightHeight() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="comment">//如果它的左子树的右子树高度大于它的左子树的高度</span></span><br><span class="line">			<span class="keyword">if</span>(left != <span class="keyword">null</span> &amp;&amp; left.rightHeight() &gt; left.leftHeight()) &#123;</span><br><span class="line">				<span class="comment">//先对当前结点的左结点(左子树)-&gt;左旋转</span></span><br><span class="line">				left.leftRotate();</span><br><span class="line">				<span class="comment">//再对当前结点进行右旋转</span></span><br><span class="line">				rightRotate();</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">//直接进行右旋转即可</span></span><br><span class="line">				rightRotate();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结： 左旋降低右子树高度，右旋降低左子树高度；</p>
+<h4 id="多路查找树"><a href="#多路查找树" class="headerlink" title="多路查找树"></a>多路查找树</h4><h5 id="二叉树与B树"><a href="#二叉树与B树" class="headerlink" title="二叉树与B树"></a>二叉树与B树</h5><p>(B树就是多叉树)</p>
+<p>二叉树虽然操作效率高，但是仍然存在一些问题</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS111.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS111.png"></p>
+<p>为了解决这个问题，我们就提出了多叉树：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS112.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS112.png"></p>
+<p>多叉树的优化就是降低树的高度。 数据库中做索引就是使用的B+树。</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS113.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS113.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS115.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS115.png"></p>
+<h6 id="2-3树"><a href="#2-3树" class="headerlink" title="2-3树"></a>2-3树</h6><p>2-3树是最简单的B树</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS114.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS114.png"></p>
+<p>注意： 他仍然满足二叉排序树的，他也是对二叉排序树的一种优化。</p>
+<p> 构建2,3树的过程：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS116.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS116.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS117.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS117.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS118.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS118.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS119.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS119.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS120.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS120.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS121.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS121.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS122.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS122.png"></p>
+<h6 id="B-，B-树"><a href="#B-，B-树" class="headerlink" title="B+，B-树"></a>B+，B-树</h6><p>B-tree 树即 B 树.B 即 Balanced，平衡的意思</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS123.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS123.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS124.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS124.png"></p>
+<p>B+树的分段效率比二分更大，一下子就去掉了2/3; 提高检索效率。 并降低了树的高度。</p>
+<h6 id="B-树"><a href="#B-树" class="headerlink" title="B* 树"></a>B* 树</h6><p>B* 树是在B+树的基础上做的一个变化。</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS125.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS125.png"></p>
+<p>B* 树在B+树的非叶子节点上增加兄弟指针有什么用？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">B+树的分裂：当一个结点满时，分配一个新的结点，并将原结点中1/2的数据复制到新结点，最后在父结点中增加新结点的指针；B+树的分裂只影响原结点和父结点，而不会影响兄弟结点，所以它不需要指向兄弟的指针；</span><br><span class="line"></span><br><span class="line">B*树的分裂：当一个结点满时，如果它的下一个兄弟结点未满，那么将一部分数据移到兄弟结点中，再在原结点插入关键字，最后修改父结点中兄弟结点的关键字（因为兄弟结点的关键字范围改变了）；如果兄弟也满了，则在原结点与兄弟结点之间增加新结点，并各复制1/3的数据到新结点，最后在父结点增加新结点的指针；所以，B*树分配新结点的概率比B+树要低，空间使用率更高；</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="图"><a href="#图" class="headerlink" title="图"></a>图</h2><p><strong>为什么要有图</strong>？</p>
+<p>前面学习的线性的数据结构只能表示一对一，一对多的关系。 当我们想表述多对多的关系的时候。。。就引出了图。</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS126.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS126.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS127.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS127.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS128.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS128.png"></p>
+<p>图的表示方式：</p>
+<p>有两种：二维数组表示（邻接矩阵）；链表表示（邻接表）</p>
+<p>可以看出图在内存底层的存储方式也是数组和链表，只不过是在他们的基础上做了一层逻辑封装。</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS129.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS129.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS130.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS130.png"></p>
+<h3 id="图的创建"><a href="#图的创建" class="headerlink" title="图的创建"></a>图的创建</h3><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS131.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS131.png"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Graph</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> ArrayList&lt;String&gt; vertexList; <span class="comment">//存储顶点集合</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span>[][] edges; <span class="comment">//存储图对应的邻结矩阵</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> numOfEdges; <span class="comment">//表示边的数目</span></span><br><span class="line">	<span class="comment">//定义给数组boolean[], 记录某个结点是否被访问</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span>[] isVisited;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//构造器</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Graph</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//初始化矩阵和vertexList</span></span><br><span class="line">		edges = <span class="keyword">new</span> <span class="keyword">int</span>[n][n];</span><br><span class="line">		vertexList = <span class="keyword">new</span> ArrayList&lt;String&gt;(n);</span><br><span class="line">		numOfEdges = <span class="number">0</span>;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">//插入结点</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertVertex</span><span class="params">(String vertex)</span> </span>&#123;</span><br><span class="line">		vertexList.add(vertex);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//添加边</span></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> v1 表示点的下标即使第几个顶点  "A"-"B" "A"-&gt;0 "B"-&gt;1</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> v2 第二个顶点对应的下标</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> weight 表示 </span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertEdge</span><span class="params">(<span class="keyword">int</span> v1, <span class="keyword">int</span> v2, <span class="keyword">int</span> weight)</span> </span>&#123;</span><br><span class="line">		edges[v1][v2] = weight;</span><br><span class="line">		edges[v2][v1] = weight;</span><br><span class="line">		numOfEdges++;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    	<span class="comment">//图中常用的方法</span></span><br><span class="line">	<span class="comment">//返回结点的个数</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNumOfVertex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> vertexList.size();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//得到边的数目</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNumOfEdges</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> numOfEdges;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//返回结点i(下标)对应的节点的数据 0-&gt;"A" 1-&gt;"B" 2-&gt;"C"</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getValueByIndex</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> vertexList.get(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//返回v1和v2的权值</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getWeight</span><span class="params">(<span class="keyword">int</span> v1, <span class="keyword">int</span> v2)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> edges[v1][v2];</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//显示图对应的矩阵</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showGraph</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span>[] link : edges) &#123;</span><br><span class="line">			System.err.println(Arrays.toString(link));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//测试一把图是否创建ok</span></span><br><span class="line">		<span class="keyword">int</span> n = <span class="number">8</span>;  <span class="comment">//结点的个数</span></span><br><span class="line">		<span class="comment">//String Vertexs[] = &#123;"A", "B", "C", "D", "E"&#125;;</span></span><br><span class="line">        		<span class="comment">//添加边</span></span><br><span class="line">		<span class="comment">//A-B A-C B-C B-D B-E </span></span><br><span class="line">		graph.insertEdge(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>); <span class="comment">// A-B</span></span><br><span class="line">		graph.insertEdge(<span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>); <span class="comment">// </span></span><br><span class="line">		graph.insertEdge(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>); <span class="comment">// </span></span><br><span class="line">		graph.insertEdge(<span class="number">1</span>, <span class="number">3</span>, <span class="number">1</span>); <span class="comment">// </span></span><br><span class="line">		graph.insertEdge(<span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>); <span class="comment">// </span></span><br><span class="line">		String Vertexs[] = &#123;<span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span>, <span class="string">"6"</span>, <span class="string">"7"</span>, <span class="string">"8"</span>&#125;;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//创建图对象</span></span><br><span class="line">		Graph graph = <span class="keyword">new</span> Graph(n);</span><br><span class="line">		<span class="comment">//循环的添加顶点</span></span><br><span class="line">		<span class="keyword">for</span>(String vertex: Vertexs) &#123;</span><br><span class="line">			graph.insertVertex(vertex);</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">		<span class="comment">//更新边的关系</span></span><br><span class="line">		graph.insertEdge(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">		graph.insertEdge(<span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>);</span><br><span class="line">		graph.insertEdge(<span class="number">1</span>, <span class="number">3</span>, <span class="number">1</span>);</span><br><span class="line">		graph.insertEdge(<span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>);</span><br><span class="line">		graph.insertEdge(<span class="number">3</span>, <span class="number">7</span>, <span class="number">1</span>);</span><br><span class="line">		graph.insertEdge(<span class="number">4</span>, <span class="number">7</span>, <span class="number">1</span>);</span><br><span class="line">		graph.insertEdge(<span class="number">2</span>, <span class="number">5</span>, <span class="number">1</span>);</span><br><span class="line">		graph.insertEdge(<span class="number">2</span>, <span class="number">6</span>, <span class="number">1</span>);</span><br><span class="line">		graph.insertEdge(<span class="number">5</span>, <span class="number">6</span>, <span class="number">1</span>);		</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//显示一把邻结矩阵</span></span><br><span class="line">		graph.showGraph();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//测试一把，我们的dfs遍历是否ok</span></span><br><span class="line">		System.out.println(<span class="string">"深度遍历"</span>);</span><br><span class="line">		graph.dfs(); <span class="comment">// A-&gt;B-&gt;C-&gt;D-&gt;E [1-&gt;2-&gt;4-&gt;8-&gt;5-&gt;3-&gt;6-&gt;7]</span></span><br><span class="line"><span class="comment">//		System.out.println();</span></span><br><span class="line">		System.out.println(<span class="string">"广度优先!"</span>);</span><br><span class="line">		graph.bfs(); <span class="comment">// A-&gt;B-&gt;C-&gt;D-E [1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6-&gt;7-&gt;8]</span></span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="图的遍历"><a href="#图的遍历" class="headerlink" title="图的遍历"></a>图的遍历</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">图遍历介绍</span><br><span class="line">所谓图的遍历，即是对结点的访问。一个图有那么多个结点，如何遍历这些结点，</span><br><span class="line">需要特定策略，一般有两种访问策略: (1)深度优先遍历 (2)广度优先遍历</span><br><span class="line">他们都是在图中寻找节点的算法</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="深度优先遍历"><a href="#深度优先遍历" class="headerlink" title="深度优先遍历"></a>深度优先遍历</h4><p>dfs:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">图的深度优先搜索(Depth First Search) 。</span><br><span class="line">1) 深度优先遍历，从初始访问结点出发，初始访问结点可能有多个邻接结点，深度优先遍历的策略就是首先访问</span><br><span class="line">第一个邻接结点，然后再以这个被访问的邻接结点作为初始结点，访问它的第一个邻接结点， 可以这样理解：</span><br><span class="line">每次都在访问完当前结点后首先访问当前结点的第一个邻接结点。</span><br><span class="line">2) 这样的访问策略是优先往纵向挖掘深入，而不是对一个结点的所有邻接结点进行横向访问。</span><br><span class="line">3) 显然，深度优先搜索是一个递归的过程</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS132.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS132.png"></p>
+<p>(下面代码的理解需要画图参照两个数组节点list , 表示图的邻接矩阵)</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS133.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS133.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">深度优先遍历算法步骤</span><br><span class="line">1) 访问初始结点 v，并标记结点 v 为已访问。</span><br><span class="line">2) 查找结点 v 的第一个邻接结点 w。</span><br><span class="line">3) 若 w 存在，则继续执行 4，如果 w 不存在，则回到第 1 步，将从 v 的下一个结点继续。</span><br><span class="line">4) 若 w 未被访问，对 w 进行深度优先遍历递归（即把 w 当做另一个 v，然后进行步骤 123）。</span><br><span class="line">5) 查找结点 v 的 w 邻接结点的下一个邻接结点，转到步骤 3</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//得到第一个邻接结点的下标 w </span></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 这里对应着的是dfs的第二步，获取当前节点的下一个邻接节点的下标 (对应着存储节点的list中的下标)。 </span></span><br><span class="line"><span class="comment">	 * 什么是邻接节点： 就是与当前节点连接着的边点。</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> index </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> 如果存在就返回对应的下标，否则返回-1</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"><span class="comment">//等价于在二维矩阵中根据x轴下标一定的时候， 找到对应y列中</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getFirstNeighbor</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; vertexList.size(); j++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(edges[index][j] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//根据前一个邻接结点的下标来获取下一个邻接结点</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* v1 是当前节点，v2是当前节点的节点，求的是当前节点在v2之后的下一个邻接节点 </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNextNeighbor</span><span class="params">(<span class="keyword">int</span> v1, <span class="keyword">int</span> v2)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = v2 + <span class="number">1</span>; j &lt; vertexList.size(); j++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(edges[v1][j] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//深度优先遍历算法</span></span><br><span class="line">	<span class="comment">//i 第一次就是 0</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">boolean</span>[] isVisited, <span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//首先我们访问该结点,输出</span></span><br><span class="line">		System.out.print(getValueByIndex(i) + <span class="string">"-&gt;"</span>);</span><br><span class="line">		<span class="comment">//将结点设置为已经访问</span></span><br><span class="line">		isVisited[i] = <span class="keyword">true</span>;</span><br><span class="line">		<span class="comment">//查找结点i的第一个邻接结点w</span></span><br><span class="line">		<span class="keyword">int</span> w = getFirstNeighbor(i);</span><br><span class="line">		<span class="keyword">while</span>(w != -<span class="number">1</span>) &#123;<span class="comment">//说明有</span></span><br><span class="line">			<span class="keyword">if</span>(!isVisited[w]) &#123;</span><br><span class="line">				dfs(isVisited, w);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//如果w结点已经被访问过</span></span><br><span class="line">			w = getNextNeighbor(i, w);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//对dfs 进行一个重载, 遍历我们所有的结点，并进行 dfs</span></span><br><span class="line"><span class="comment">//==&gt;实现：则回到第 1 步，将从 v 的下一个结点继续 </span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		isVisited = <span class="keyword">new</span> <span class="keyword">boolean</span>[vertexList.size()];</span><br><span class="line">		<span class="comment">//遍历所有的结点，进行dfs[回溯]</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; getNumOfVertex(); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(!isVisited[i]) &#123;</span><br><span class="line">				dfs(isVisited, i);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>深度是不断深入，如果一个节点无法深入了，就换另一个节点作为起点接着深入，始终是在一列。直到完全访问结束。</p>
+<p>深度优先算法在找邻接节点的时候：举例 A 找到临接B ,然后是在B这一个X 层，从头开始找对一个临街C</p>
+<h4 id="广度优先遍历"><a href="#广度优先遍历" class="headerlink" title="广度优先遍历"></a>广度优先遍历</h4><p>bfs:</p>
+<p>广度优先算法在找邻接节点的时候：举例 A 找到临接B ,然后又是从A这个X层，从B之后找到临街C。如果以A找不到，再以B为初始节点去找。。 所以相当于分层去找。。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">类似于一个分层搜索的过程，广度优先遍历需要使用一个队列以保持访问过的结点的顺序，以便按这个顺序来</span><br><span class="line">访问这些结点的邻接结点</span><br><span class="line">13.5.2 广度优先遍历算法步骤</span><br><span class="line">1) 访问初始结点 v 并标记结点 v 为已访问。</span><br><span class="line">2) 结点 v 入队列</span><br><span class="line">3) 当队列非空时，继续执行，否则算法结束。</span><br><span class="line">4) 出队列，取得队头结点 u。</span><br><span class="line">5) 查找结点 u 的第一个邻接结点 w。</span><br><span class="line">6) 若结点 u 的邻接结点 w 不存在，则转到步骤 3；否则循环执行以下三个步骤：</span><br><span class="line">6.1 若结点 w 尚未被访问，则访问结点 w 并标记为已访问。</span><br><span class="line">6.2 结点 w 入队列</span><br><span class="line">6.3 查找结点 u 的继 w 邻接结点后的下一个邻接结点 w，转到步骤 6。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS134.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS134.png"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对一个结点进行广度优先遍历的方法</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">boolean</span>[] isVisited, <span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> u ; <span class="comment">// 表示队列的头结点对应下标</span></span><br><span class="line">	<span class="keyword">int</span> w ; <span class="comment">// 邻接结点的下标w</span></span><br><span class="line">	<span class="comment">//队列，记录结点访问的顺序 (这里使用list简单代替队列)</span></span><br><span class="line">	LinkedList queue = <span class="keyword">new</span> LinkedList();</span><br><span class="line">	<span class="comment">//访问结点，输出结点信息</span></span><br><span class="line">	System.out.print(getValueByIndex(i) + <span class="string">"=&gt;"</span>);</span><br><span class="line">	<span class="comment">//标记为已访问</span></span><br><span class="line">	isVisited[i] = <span class="keyword">true</span>;</span><br><span class="line">	<span class="comment">//将结点加入队列</span></span><br><span class="line">	queue.addLast(i);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span>( !queue.isEmpty()) &#123;</span><br><span class="line">		<span class="comment">//取出队列的头结点下标</span></span><br><span class="line">		u = (Integer)queue.removeFirst();</span><br><span class="line">		<span class="comment">//得到第一个邻接结点的下标 w </span></span><br><span class="line">		w = getFirstNeighbor(u);</span><br><span class="line">		<span class="keyword">while</span>(w != -<span class="number">1</span>) &#123;<span class="comment">//找到</span></span><br><span class="line">			<span class="comment">//是否访问过</span></span><br><span class="line">			<span class="keyword">if</span>(!isVisited[w]) &#123;</span><br><span class="line">				System.out.print(getValueByIndex(w) + <span class="string">"=&gt;"</span>);</span><br><span class="line">				<span class="comment">//标记已经访问</span></span><br><span class="line">				isVisited[w] = <span class="keyword">true</span>;</span><br><span class="line">				<span class="comment">//入队</span></span><br><span class="line">				queue.addLast(w);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//以u为前驱点，找w后面的下一个邻结点</span></span><br><span class="line">			w = getNextNeighbor(u, w); <span class="comment">//体现出我们的广度优先</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">//遍历所有的结点，都进行广度优先搜索</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	isVisited = <span class="keyword">new</span> <span class="keyword">boolean</span>[vertexList.size()];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; getNumOfVertex(); i++) &#123;</span><br><span class="line">		<span class="keyword">if</span>(!isVisited[i]) &#123;</span><br><span class="line">			bfs(isVisited, i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/DATA_STRUCTURES_ALGORITHMS135.png?raw=true" alt="DATA_STRUCTURES_ALGORITHMS135.png"></p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%B8%89/" target="_blank">java数据结构与算法__数据结构(三)</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          zhaodahan
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2019/07/11/java数据结构与算法回顾与加强-数据结构 - 三/" title="java数据结构与算法__数据结构(三)" target="_blank">http://yoursite.com/2019/07/11/java数据结构与算法回顾与加强-数据结构 - 三/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
 
-        <div class="article-info info-on-right">
-          
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -1799,168 +469,129 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%B8%89/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/JAVAWeb%20%E4%B8%ADservlet%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%BA%8C/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          java数据结构与算法__数据结构(二)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/10/JAVAWeb%20%E4%B8%ADservlet%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JAVAWeb回顾</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/JAVAWeb%20%E4%B8%ADservlet%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JAVAWeb回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#java数据结构与算法"><span class="toc-number">1.</span> <span class="toc-text">java数据结构与算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#树"><span class="toc-number">1.1.</span> <span class="toc-text">树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#平衡二叉树（AVL）"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">平衡二叉树（AVL）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#构建平衡二叉树"><span class="toc-number">1.1.0.1.1.</span> <span class="toc-text">构建平衡二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#左旋转"><span class="toc-number">1.1.0.1.1.1.</span> <span class="toc-text">左旋转</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#右旋转"><span class="toc-number">1.1.0.1.1.2.</span> <span class="toc-text">右旋转</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#双旋转"><span class="toc-number">1.1.0.1.1.3.</span> <span class="toc-text">双旋转</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多路查找树"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">多路查找树</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#二叉树与B树"><span class="toc-number">1.1.0.2.1.</span> <span class="toc-text">二叉树与B树</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#2-3树"><span class="toc-number">1.1.0.2.1.1.</span> <span class="toc-text">2-3树</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#B-，B-树"><span class="toc-number">1.1.0.2.1.2.</span> <span class="toc-text">B+，B-树</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#B-树"><span class="toc-number">1.1.0.2.1.3.</span> <span class="toc-text">B* 树</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图"><span class="toc-number">1.2.</span> <span class="toc-text">图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#图的创建"><span class="toc-number">1.2.1.</span> <span class="toc-text">图的创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图的遍历"><span class="toc-number">1.2.2.</span> <span class="toc-text">图的遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#深度优先遍历"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">深度优先遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#广度优先遍历"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">广度优先遍历</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/java%20JDBC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/java%20JDBC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JDBC</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">jdbc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE(%E7%AC%AC%E4%B8%80%E7%89%88)/" class="archive-article-date">
-        <time datetime="2019-07-10T11:30:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE(%E7%AC%AC%E4%B8%80%E7%89%88)/" target="_blank">java 基础回顾 (第一版)</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
 
 
           </div>
@@ -2001,8 +632,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

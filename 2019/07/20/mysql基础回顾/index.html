@@ -6,19 +6,161 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 赵大汉的个人博客</title>
+  <title>mysql 基础回顾 | 赵大汉的个人博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="们常常犯的三种错误：第一，听到了，就以为已经明白了；第二，知道了，就以为自己做到了；第三，心动了，就以为自己在行动">
-<meta name="keywords" content="开发者,程序猿,编程,代码,开源,IT网站,Developer,Programmer,Coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="赵大汉的个人博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="mysql 基础回顾一： 基础1:MySQL服务的启动和停止​    方式一：计算机——右击管理——服务​    方式二：通过管理员身份运行​    net start 服务名（启动服务）​    net stop 服务名（停止服务） MySQL服务的登录和退出​    方式一：通过mysql自带的客户端​    只限于root用户 123456方式二：通过windows自带的客户端登录：mysq">
+<meta name="keywords" content="note,java,mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql 基础回顾">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;07&#x2F;20&#x2F;mysql%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE&#x2F;index.html">
 <meta property="og:site_name" content="赵大汉的个人博客">
-<meta property="og:description" content="们常常犯的三种错误：第一，听到了，就以为已经明白了；第二，知道了，就以为自己做到了；第三，心动了，就以为自己在行动">
+<meta property="og:description" content="mysql 基础回顾一： 基础1:MySQL服务的启动和停止​    方式一：计算机——右击管理——服务​    方式二：通过管理员身份运行​    net start 服务名（启动服务）​    net stop 服务名（停止服务） MySQL服务的登录和退出​    方式一：通过mysql自带的客户端​    只限于root用户 123456方式二：通过windows自带的客户端登录：mysq">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD59.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD1.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD2.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD3.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD4.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD5.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD6.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD7.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD8.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD9.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD10.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD11.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD20.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD12.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD13.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD14.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD15.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD16.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD17.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD18.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD19.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD21.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD22.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD23.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD24.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD25.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD26.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD27.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD28.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD29.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD30.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD31.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD32.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD33.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD34.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD35.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD36.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD37.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD38.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD39.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD40.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD42.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD41.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD43.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD44.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD45.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD46.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD47.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD48.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD49.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD50.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD51.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD52.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD53.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD54.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD55.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD56.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD57.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD58.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD60.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD61.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD62.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD63.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD64.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD65.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD66.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD67.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD68.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD69.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD70.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD71.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD72.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD73.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD74.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD75.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD76.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD77.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD78.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD79.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD80.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD81.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD85.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD82.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD83.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD84.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD86.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD87.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD88.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD89.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD90.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD91.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD92.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD93.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD94.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD95.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD96.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD97.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD98.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD99.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD100.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD101.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD102.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD103.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD104.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD105.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD106.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD110.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD107.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD108.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD109.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD111.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD112.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD113.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD114.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD115.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD116.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD117.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD118.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD119.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD120.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD121.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD122.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD123.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD124.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD126.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD125.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD127.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD128.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD129.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD130.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD131.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD132.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD133.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD134.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD135.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD136.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD137.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD138.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD139.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD140.png?raw=true">
+<meta property="og:updated_time" content="2019-10-24T14:23:21.041Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;MYSQL_REVIEWAD59.png?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="赵大汉的个人博客" type="application/atom+xml">
   
@@ -198,1172 +340,556 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-mysql基础回顾" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" class="archive-article-date">
-        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" target="_blank">sql 问题解决记录</a>
   
+    <h1 class="article-title" itemprop="name">
+      mysql 基础回顾
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" target="_blank">git 问题解决记录</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-09-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" target="_blank">Redis基础回顾笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nosql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" class="archive-article-date">
-        <time datetime="2019-09-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" target="_blank">Shiro学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shiro</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/" class="archive-article-date">
-        <time datetime="2019-09-12T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/" target="_blank">SpringBoot高级(整合篇)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" class="archive-article-date">
-        <time datetime="2019-09-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" target="_blank">Spring Boot核心技术</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">spring 基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" target="_blank">Spring Cloud学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">springCloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">SpringMVC基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">springmvc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" target="_blank">Spring注解驱动开发</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">注解</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Git&GitHub%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Git&GitHub%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" target="_blank">Git&amp;GitHub学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/MyBatis%20%E9%80%9A%E7%94%A8mapper%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-23T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/23/MyBatis%20%E9%80%9A%E7%94%A8mapper%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">通用mapper</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/21/MyBatisPlus%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-21T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/21/MyBatisPlus%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">MyBatisPlus 学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/20/Mybatis%E5%BA%94%E7%94%A8%E2%80%94SSM%E6%95%B4%E5%90%88/" class="archive-article-date">
-        <time datetime="2019-08-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/20/Mybatis%E5%BA%94%E7%94%A8%E2%80%94SSM%E6%95%B4%E5%90%88/" target="_blank">SSM整合</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/20/MyBatis%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-08-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/20/MyBatis%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">MyBatis基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/13/SSSP%20%E6%95%B4%E5%90%88%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/13/SSSP%20%E6%95%B4%E5%90%88%E7%AC%94%E8%AE%B0/" target="_blank">SSSP整合</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/12/SpringData%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-12T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/12/SpringData%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">SpringData 学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/11/JPA%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-08-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/11/JPA%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JPA 基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/10/Hibernate%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-10</time>
-</a>
-
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/10/Hibernate%E7%AC%94%E8%AE%B0/" target="_blank">Hibernate笔记</a>
   
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/23/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-23T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/23/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E4%BA%8C/" target="_blank">java设计模式 (二)</a>
-  
-    </h1>
-  
-
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/22/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-        <time datetime="2019-07-22T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-22</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/22/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank">java设计模式 (一)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 <a href="/2019/07/20/mysql%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
         <time datetime="2019-07-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">5.8k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">22分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="mysql-基础回顾"><a href="#mysql-基础回顾" class="headerlink" title="mysql 基础回顾"></a>mysql 基础回顾</h1><h1 id="一：-基础"><a href="#一：-基础" class="headerlink" title="一： 基础"></a>一： 基础</h1><p>1:MySQL服务的启动和停止<br>​    方式一：计算机——右击管理——服务<br>​    方式二：通过管理员身份运行<br>​    net start 服务名（启动服务）<br>​    net stop 服务名（停止服务）</p>
+<p>MySQL服务的登录和退出<br>​    方式一：通过mysql自带的客户端<br>​    只限于root用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">方式二：通过windows自带的客户端</span><br><span class="line">登录：</span><br><span class="line">mysql 【-h主机名 -P端口号 】-u用户名 -p密码</span><br><span class="line"></span><br><span class="line">退出：</span><br><span class="line">exit或ctrl+C</span><br></pre></td></tr></table></figure>
+
+   <a id="more"></a>
+
+<p>###MySQL的常见命令 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1.查看当前所有的数据库</span><br><span class="line">show databases;</span><br><span class="line">2.打开指定的库</span><br><span class="line">use 库名</span><br><span class="line">3.查看当前库的所有表</span><br><span class="line">show tables;</span><br><span class="line">4.查看其它库的所有表</span><br><span class="line">show tables from 库名;</span><br><span class="line">5.创建表</span><br><span class="line">create table 表名(</span><br><span class="line"></span><br><span class="line">	列名 列类型,</span><br><span class="line">	列名 列类型，</span><br><span class="line">	。。。</span><br><span class="line">);</span><br><span class="line">6.查看表结构</span><br><span class="line">desc 表名;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">7.查看服务器的版本</span><br><span class="line">方式一：登录到mysql服务端</span><br><span class="line">select version();</span><br><span class="line">方式二：没有登录到mysql服务端</span><br><span class="line">mysql --version</span><br><span class="line">或</span><br><span class="line">mysql --V</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-查询语句"><a href="#2-查询语句" class="headerlink" title="2 查询语句"></a>2 查询语句</h2><p>查询执行顺序</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD59.png?raw=true" alt="MYSQL_REVIEWAD59.png"></p>
+<p>①通过select查询完的结果 ，是一个虚拟的表格，不是真实存在<br>② 要查询的东西 可以是常量值、可以是表达式、可以是字段、可以是函数</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD1.png?raw=true" alt="MYSQL_REVIEWAD1.png"></p>
+<p>去重：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD2.png?raw=true" alt="MYSQL_REVIEWAD2.png"></p>
+<p>+的作用： </p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD3.png?raw=true" alt="MYSQL_REVIEWAD3.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD4.png?raw=true" alt="MYSQL_REVIEWAD4.png"></p>
+<p>null 和任何字段拼接，他的结构都是null.</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD5.png?raw=true" alt="MYSQL_REVIEWAD5.png"></p>
+<h3 id="进阶2：条件查询"><a href="#进阶2：条件查询" class="headerlink" title="进阶2：条件查询"></a>进阶2：条件查询</h3><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD6.png?raw=true" alt="MYSQL_REVIEWAD6.png"></p>
+<p>​    条件查询：根据条件过滤原始表的数据，查询到想要的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">	语法：</span><br><span class="line">	select </span><br><span class="line">		要查询的字段|表达式|常量值|函数  （3）</span><br><span class="line"> 	from </span><br><span class="line">		表 （1）</span><br><span class="line">	where </span><br><span class="line">		条件 ;  （2）</span><br><span class="line"># 查询语句的执行顺序是 先 （1） (2) (3)</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">分类：</span><br><span class="line">一、条件表达式</span><br><span class="line">	示例：salary&gt;10000</span><br><span class="line">	条件运算符：</span><br><span class="line">	&gt; &lt; &gt;= &lt;= = != &lt;&gt;</span><br><span class="line"></span><br><span class="line">二、逻辑表达式</span><br><span class="line">示例：salary&gt;10000 &amp;&amp; salary&lt;20000</span><br><span class="line"></span><br><span class="line">逻辑运算符：</span><br><span class="line"></span><br><span class="line">	and（&amp;&amp;）:两个条件如果同时成立，结果为true，否则为false</span><br><span class="line">	or(||)：两个条件只要有一个成立，结果为true，否则为false</span><br><span class="line">	not(!)：如果条件成立，则not后为false，否则为true</span><br><span class="line"></span><br><span class="line">三、模糊查询</span><br><span class="line">示例：last_name like &apos;a%&apos;</span><br><span class="line"></span><br><span class="line">where 关键字：</span><br><span class="line">where关键字表示多from 的原始表中的字段进行筛选。 所以where后面的字段必须是存在于原始表中的。</span><br><span class="line">sql语句的执行顺序也是按照先from表，后where 条件。 后面无论是多复杂都是遵照的这个原则</span><br></pre></td></tr></table></figure>
+
+<p>案例：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD7.png?raw=true" alt="MYSQL_REVIEWAD7.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD8.png?raw=true" alt="MYSQL_REVIEWAD8.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD9.png?raw=true" alt="MYSQL_REVIEWAD9.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD10.png?raw=true" alt="MYSQL_REVIEWAD10.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD11.png?raw=true" alt="MYSQL_REVIEWAD11.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD20.png?raw=true" alt="MYSQL_REVIEWAD20.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD12.png?raw=true" alt="MYSQL_REVIEWAD12.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD13.png?raw=true" alt="MYSQL_REVIEWAD13.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD14.png?raw=true" alt="MYSQL_REVIEWAD14.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD15.png?raw=true" alt="MYSQL_REVIEWAD15.png"></p>
+<h3 id="进阶3：排序查询"><a href="#进阶3：排序查询" class="headerlink" title="进阶3：排序查询"></a>进阶3：<strong>排序查询</strong></h3><p>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">select</span><br><span class="line">	要查询的东西</span><br><span class="line">from</span><br><span class="line">	表</span><br><span class="line">where </span><br><span class="line">	条件</span><br><span class="line"></span><br><span class="line">order by 排序的字段|表达式|函数|别名 【asc|desc】</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD16.png?raw=true" alt="MYSQL_REVIEWAD16.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD17.png?raw=true" alt="MYSQL_REVIEWAD17.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD18.png?raw=true" alt="MYSQL_REVIEWAD18.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD19.png?raw=true" alt="MYSQL_REVIEWAD19.png"></p>
+<h2 id="3-函数"><a href="#3-函数" class="headerlink" title="3 函数"></a>3 函数</h2><h3 id="进阶4：常见函数"><a href="#进阶4：常见函数" class="headerlink" title="进阶4：常见函数"></a>进阶4：常见函数</h3><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD21.png?raw=true" alt="MYSQL_REVIEWAD21.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">一、单行函数</span><br><span class="line">	1、字符函数</span><br><span class="line">		concat拼接</span><br><span class="line">		substr截取子串</span><br><span class="line">		upper转换成大写</span><br><span class="line">		lower转换成小写</span><br><span class="line">		trim去前后指定的空格和字符</span><br><span class="line">		ltrim去左边空格</span><br><span class="line">		rtrim去右边空格</span><br><span class="line">		replace替换</span><br><span class="line">		lpad左填充</span><br><span class="line">		rpad右填充</span><br><span class="line">		ins </span><br><span class="line">		length 获取字节个数</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD22.png?raw=true" alt="MYSQL_REVIEWAD22.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">2、数学函数</span><br><span class="line">	round 四舍五入</span><br><span class="line">	rand 随机数</span><br><span class="line">	floor向下取整</span><br><span class="line">	ceil向上取整</span><br><span class="line">	mod取余</span><br><span class="line">	truncate截断</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD23.png?raw=true" alt="MYSQL_REVIEWAD23.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">3、日期函数</span><br><span class="line">now当前系统日期+时间</span><br><span class="line">curdate当前系统日期</span><br><span class="line">curtime当前系统时间</span><br><span class="line">str_to_date 将字符转换成日期</span><br><span class="line">date_format将日期转换成字符</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD24.png?raw=true" alt="MYSQL_REVIEWAD24.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD25.png?raw=true" alt="MYSQL_REVIEWAD25.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4、流程控制函数</span><br><span class="line">	if 处理双分支</span><br><span class="line">	case语句 处理多分支</span><br><span class="line">		情况1：处理等值判断</span><br><span class="line">		情况2：处理条件判断</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD26.png?raw=true" alt="MYSQL_REVIEWAD26.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD27.png?raw=true" alt="MYSQL_REVIEWAD27.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD28.png?raw=true" alt="MYSQL_REVIEWAD28.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD29.png?raw=true" alt="MYSQL_REVIEWAD29.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5、其他函数</span><br><span class="line">	version版本</span><br><span class="line">	database当前库</span><br><span class="line">	user当前连接用户</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="二、分组函数"><a href="#二、分组函数" class="headerlink" title="二、分组函数"></a>二、分组函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">sum 求和</span><br><span class="line">max 最大值</span><br><span class="line">min 最小值</span><br><span class="line">avg 平均值</span><br><span class="line">count 计数</span><br><span class="line"></span><br><span class="line">特点：</span><br><span class="line">1、以上五个分组函数都忽略null值，除了count(*)</span><br><span class="line">2、sum和avg一般用于处理数值型</span><br><span class="line">	max、min、count可以处理任何数据类型</span><br><span class="line">   3、都可以搭配distinct使用，用于统计去重后的结果</span><br><span class="line">4、count的参数可以支持：</span><br><span class="line">	字段、*、常量值，一般放1</span><br><span class="line"></span><br><span class="line">   建议使用 count(*) 来统计行数</span><br><span class="line">5  分组函数中的字段一般要求是group by 的字段</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-高级查询"><a href="#4-高级查询" class="headerlink" title="4 高级查询"></a>4 高级查询</h2><h3 id="进阶5：分组查询"><a href="#进阶5：分组查询" class="headerlink" title="进阶5：分组查询"></a>进阶5：分组查询</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">select 查询的字段，分组函数</span><br><span class="line">from 表</span><br><span class="line">group by 分组的字段</span><br><span class="line">having  分组后过滤条件</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">特点：</span><br><span class="line">1、可以按单个字段分组</span><br><span class="line">2、和分组函数一同查询的字段最好是分组后的字段</span><br><span class="line">3、分组筛选</span><br><span class="line">		    数据源    	  位置			关键字</span><br><span class="line">分组前筛选：	原始表		group by的前面		where</span><br><span class="line">分组后筛选：	分组后的结果集	group by的后面		having</span><br><span class="line">分组函数做条件肯定放在having字句中</span><br><span class="line">能用分组前筛选，优先考虑使用分组前</span><br><span class="line"></span><br><span class="line">4、可以按多个字段分组，字段之间用逗号隔开</span><br><span class="line">5、可以支持排序</span><br><span class="line">6、having后可以支持别名</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD30.png?raw=true" alt="MYSQL_REVIEWAD30.png">    </p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD31.png?raw=true" alt="MYSQL_REVIEWAD31.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD32.png?raw=true" alt="MYSQL_REVIEWAD32.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD33.png?raw=true" alt="MYSQL_REVIEWAD33.png"></p>
+<p>对于复杂的查询：我们先分解查询条件。</p>
+<p>1： 去掉筛选条件查得子集</p>
+<p>2： 加上筛选条件</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD34.png?raw=true" alt="MYSQL_REVIEWAD34.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD35.png?raw=true" alt="MYSQL_REVIEWAD35.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD36.png?raw=true" alt="MYSQL_REVIEWAD36.png"></p>
+<p>按照多个字段分组</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD37.png?raw=true" alt="MYSQL_REVIEWAD37.png"></p>
+<h3 id="进阶6：多表连接查询"><a href="#进阶6：多表连接查询" class="headerlink" title="进阶6：多表连接查询"></a>进阶6：多表连接查询</h3><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD38.png?raw=true" alt="MYSQL_REVIEWAD38.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">笛卡尔乘积：如果连接条件省略或无效则会出现</span><br><span class="line">解决办法：添加上连接条件</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD39.png?raw=true" alt="MYSQL_REVIEWAD39.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD40.png?raw=true" alt="MYSQL_REVIEWAD40.png"> </p>
+<p>一、传统模式下的连接 ：等值连接——非等值连接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.等值连接的结果 = 多个表的交集</span><br><span class="line">2.n表连接，至少需要n-1个连接条件</span><br><span class="line">3.多个表不分主次，没有顺序要求</span><br><span class="line">4.一般为表起别名，提高阅读性和性能</span><br></pre></td></tr></table></figure>
+
+
+
+<p>二、通过join关键字实现连接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">含义：1999年推出的sql语法</span><br><span class="line">支持：</span><br><span class="line">等值连接、非等值连接 （内连接--求集合交集） </span><br><span class="line">外连接 ： 一般来说是用来查询一个表中有(主表)，另外一个表中没有的数据(从表)</span><br><span class="line">         主表中的每一条记录都会显示出来。 主要想查询谁，谁就是主表</span><br><span class="line">全外连接 ： mysql 不支持全连接</span><br><span class="line">交叉连接 ： 笛卡尔乘积，就类似“，” 号</span><br><span class="line"></span><br><span class="line">语法：</span><br><span class="line"></span><br><span class="line">select 字段，...</span><br><span class="line">from 表1</span><br><span class="line">【inner|left outer|right outer|cross】join 表2 on  连接条件</span><br><span class="line">【inner|left outer|right outer|cross】join 表3 on  连接条件</span><br><span class="line">【where 筛选条件】</span><br><span class="line">【group by 分组字段】</span><br><span class="line">【having 分组后的筛选条件】</span><br><span class="line">【order by 排序的字段或表达式】</span><br><span class="line"></span><br><span class="line">好处：语句上，连接条件和筛选条件实现了分离，简洁明了！</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD42.png?raw=true" alt="MYSQL_REVIEWAD42.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD41.png?raw=true" alt="MYSQL_REVIEWAD41.png">  </p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD43.png?raw=true" alt="MYSQL_REVIEWAD43.png"></p>
+<p>外连接原理：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD44.png?raw=true" alt="MYSQL_REVIEWAD44.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD45.png?raw=true" alt="MYSQL_REVIEWAD45.png"></p>
+<p>总结：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD46.png?raw=true" alt="MYSQL_REVIEWAD46.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD47.png?raw=true" alt="MYSQL_REVIEWAD47.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD48.png?raw=true" alt="MYSQL_REVIEWAD48.png"></p>
+<p>三、自连接</p>
+<p>案例：查询员工名和直接上级的名称</p>
+<p>sql99</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT e.last_name,m.last_name</span><br><span class="line">FROM employees e</span><br><span class="line">JOIN employees m ON e.`manager_id`=m.`employee_id`;</span><br></pre></td></tr></table></figure>
+
+<p>sql92</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT e.last_name,m.last_name</span><br><span class="line">FROM employees e,employees m </span><br><span class="line">WHERE e.`manager_id`=m.`employee_id`;</span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+<h3 id="进阶7：子查询"><a href="#进阶7：子查询" class="headerlink" title="进阶7：子查询"></a>进阶7：子查询</h3><p>含义：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">一条查询语句中又嵌套了另一条完整的select语句，其中被嵌套的select语句，称为子查询或内查询</span><br><span class="line">在外面的查询语句，称为主查询或外查询</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD49.png?raw=true" alt="MYSQL_REVIEWAD49.png"></p>
+<p>特点：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1、子查询都放在小括号内</span><br><span class="line">2、子查询可以放在from后面、select后面、where后面、having后面，但一般放在条件的右侧</span><br><span class="line">3、子查询优先于主查询执行，主查询使用了子查询的执行结果</span><br><span class="line">4、子查询根据查询结果的行数不同分为以下两类：</span><br><span class="line">① 单行子查询</span><br><span class="line">	结果集只有一行</span><br><span class="line">	一般搭配单行操作符使用：&gt; &lt; = &lt;&gt; &gt;= &lt;= </span><br><span class="line">	非法使用子查询的情况：</span><br><span class="line">	a、子查询的结果为一组值</span><br><span class="line">	b、子查询的结果为空</span><br><span class="line">	</span><br><span class="line">② 多行子查询</span><br><span class="line">	结果集有多行</span><br><span class="line">	一般搭配多行操作符使用：any、all、in、not in</span><br><span class="line">	in： 属于子查询结果中的任意一个就行</span><br><span class="line">	any和all往往可以用其他查询代替</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD50.png?raw=true" alt="MYSQL_REVIEWAD50.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD51.png?raw=true" alt="MYSQL_REVIEWAD51.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD52.png?raw=true" alt="MYSQL_REVIEWAD52.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD53.png?raw=true" alt="MYSQL_REVIEWAD53.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD54.png?raw=true" alt="MYSQL_REVIEWAD54.png"></p>
+<p>any 一般情况下可以替换为min() ，in , all 替换为  max()</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD55.png?raw=true" alt="MYSQL_REVIEWAD55.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD56.png?raw=true" alt="MYSQL_REVIEWAD56.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD57.png?raw=true" alt="MYSQL_REVIEWAD57.png"></p>
+<p>（如果我们将子查询当做一张表来关联，这个子查询必须取别名）</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD58.png?raw=true" alt="MYSQL_REVIEWAD58.png"></p>
+<p>例题：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD60.png?raw=true" alt="MYSQL_REVIEWAD60.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD61.png?raw=true" alt="MYSQL_REVIEWAD61.png"></p>
+<h3 id="进阶8：分页查询"><a href="#进阶8：分页查询" class="headerlink" title="进阶8：分页查询"></a>进阶8：分页查询</h3><p>应用场景：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">实际的web项目中需要根据用户的需求提交对应的分页查询的sql语句</span><br></pre></td></tr></table></figure>
+
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select 字段|表达式,...</span><br><span class="line">from 表</span><br><span class="line">【where 条件】</span><br><span class="line">【group by 分组字段】</span><br><span class="line">【having 条件】</span><br><span class="line">【order by 排序的字段】</span><br><span class="line">limit 【起始的条目索引，起始条目索引从0开始】条目数;</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1:起始条目索引从0开始 ，如果从第一条开始，offset 可以省略。</span><br><span class="line">2.limit子句放在查询语句的最后，在执行顺序上也是最后执行。</span><br><span class="line"></span><br><span class="line">假如:</span><br><span class="line">每页显示条目数sizePerPage</span><br><span class="line">要显示的页数 page</span><br><span class="line">3.公式：select * from  表 limit （page-1）*sizePerPage,sizePerPage</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="进阶9：联合查询"><a href="#进阶9：联合查询" class="headerlink" title="进阶9：联合查询"></a>进阶9：联合查询</h3><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD62.png?raw=true" alt="MYSQL_REVIEWAD62.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD63.png?raw=true" alt="MYSQL_REVIEWAD63.png"></p>
+<p>引入：<br>​    union 联合、合并。 将多条查询语句的结果合并成一个结果。</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】 union 【all】</span><br><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】 union 【all】</span><br><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】 union  【all】</span><br><span class="line">.....</span><br><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、多条查询语句的查询的列数必须是一致的</span><br><span class="line">2、多条查询语句的查询的每一列的 类型，和顺序 一致</span><br><span class="line">3、union代表去重，union all代表不去重</span><br></pre></td></tr></table></figure>
+
+<p><strong>union和union all的区别是，union会自动压缩多个结果集合中的重复结果，而union all则将所有的结果全部显示出来，不管是不是重复。</strong></p>
+<h2 id="5-DML（数据操作）语言"><a href="#5-DML（数据操作）语言" class="headerlink" title="5 DML（数据操作）语言"></a>5 DML（数据操作）语言</h2><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD64.png?raw=true" alt="MYSQL_REVIEWAD64.png"></p>
+<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">	insert into 表名(字段名，...)</span><br><span class="line">	values(值1，...);</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">特点：</span><br><span class="line">1、字段类型和值类型一致或兼容(隐式的转换)，而且一一对应</span><br><span class="line">2、可以为空的字段，可以不用插入值，或用null填充</span><br><span class="line">3、不可以为空的字段，必须插入值</span><br><span class="line">4、字段个数和值的个数必须一致</span><br><span class="line">5、字段可以省略，但默认所有字段，并且顺序和表中的存储顺序一致</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD65.png?raw=true" alt="MYSQL_REVIEWAD65.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD66.png?raw=true" alt="MYSQL_REVIEWAD66.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD67.png?raw=true" alt="MYSQL_REVIEWAD67.png"></p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>修改单表语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 字段=新值,字段=新值</span><br><span class="line">【where 条件】</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD68.png?raw=true" alt="MYSQL_REVIEWAD68.png"></p>
+<p>修改多表语法：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD69.png?raw=true" alt="MYSQL_REVIEWAD69.png"></p>
+<p>多表修改语法的本质： 就是将多张表连接成一个大的结果集，然后进行修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">update 表1 别名1,表2 别名2</span><br><span class="line">set 字段=新值，字段=新值</span><br><span class="line">where 连接条件</span><br><span class="line">and 筛选条件</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD70.png?raw=true" alt="MYSQL_REVIEWAD70.png"> </p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>方式1：delete语句 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">单表的删除： ★</span><br><span class="line">	delete from 表名 【where 筛选条件】</span><br><span class="line"></span><br><span class="line">多表的删除：</span><br><span class="line">	delete 别名1，别名2</span><br><span class="line">	from 表1 别名1，表2 别名2</span><br><span class="line">	where 连接条件</span><br><span class="line">	and 筛选条件;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD71.png?raw=true" alt="MYSQL_REVIEWAD71.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD72.png?raw=true" alt="MYSQL_REVIEWAD72.png"></p>
+<p>方式2：truncate语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">truncate table 表名</span><br><span class="line">不能加where语句，truncate代表清空</span><br></pre></td></tr></table></figure>
+
+<p>两种方式的区别【面试题】    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#1.truncate不能加where条件，而delete可以加where条件</span><br><span class="line"></span><br><span class="line">#2.truncate的效率较高一丢丢</span><br><span class="line"></span><br><span class="line">#3.truncate 删除带自增长的列的表后，如果再插入数据，数据从1开始</span><br><span class="line">#delete 删除带自增长列的表后，如果再插入数据，数据从上一次的断点处开始</span><br><span class="line"></span><br><span class="line">#4.truncate删除不能回滚，delete删除可以回滚</span><br><span class="line"></span><br><span class="line">#5 truncate删除没有返回值，delete删除有返回值(返回删除了几行)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD73.png?raw=true" alt="MYSQL_REVIEWAD73.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD74.png?raw=true" alt="MYSQL_REVIEWAD74.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD75.png?raw=true" alt="MYSQL_REVIEWAD75.png"></p>
+<h2 id="6-DDL-数据定义-语句"><a href="#6-DDL-数据定义-语句" class="headerlink" title="6 DDL  数据定义  语句"></a>6 DDL  数据定义  语句</h2><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD76.png?raw=true" alt="MYSQL_REVIEWAD76.png"></p>
+<h3 id="库和表的管理"><a href="#库和表的管理" class="headerlink" title="库和表的管理"></a>库和表的管理</h3><p>库的管理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">一、创建库</span><br><span class="line">create database 库名</span><br><span class="line">二、删除库</span><br><span class="line">drop database 库名</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD77.png?raw=true" alt="MYSQL_REVIEWAD77.png"></p>
+<p>表的管理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#1.创建表</span><br><span class="line">CREATE TABLE IF NOT EXISTS stuinfo(</span><br><span class="line">	stuId INT,</span><br><span class="line">	stuName VARCHAR(20),</span><br><span class="line">	gender CHAR,</span><br><span class="line">	bornDate DATETIME</span><br><span class="line">	);</span><br><span class="line"></span><br><span class="line">DESC studentinfo;</span><br><span class="line">#2.修改表 alter</span><br><span class="line">语法：ALTER TABLE 表名 ADD|MODIFY|DROP|CHANGE COLUMN 字段名 【字段类型】;</span><br><span class="line"></span><br><span class="line">#①修改字段名</span><br><span class="line">ALTER TABLE studentinfo CHANGE  COLUMN sex gender CHAR;</span><br><span class="line"></span><br><span class="line">#②修改表名</span><br><span class="line">ALTER TABLE stuinfo RENAME [TO]  studentinfo;</span><br><span class="line">#③修改字段类型和列级约束</span><br><span class="line">ALTER TABLE studentinfo MODIFY COLUMN borndate DATE ;</span><br><span class="line"></span><br><span class="line">#④添加字段</span><br><span class="line"></span><br><span class="line">ALTER TABLE studentinfo ADD COLUMN email VARCHAR(20) first;</span><br><span class="line">#⑤删除字段</span><br><span class="line">ALTER TABLE studentinfo DROP COLUMN email;</span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#3.删除表</span><br><span class="line"></span><br><span class="line">DROP TABLE [IF EXISTS] studentinfo;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD78.png?raw=true" alt="MYSQL_REVIEWAD78.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD79.png?raw=true" alt="MYSQL_REVIEWAD79.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD80.png?raw=true" alt="MYSQL_REVIEWAD80.png">    </p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD81.png?raw=true" alt="MYSQL_REVIEWAD81.png"></p>
+<h3 id="常见类型"><a href="#常见类型" class="headerlink" title="常见类型"></a>常见类型</h3><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD85.png?raw=true" alt="MYSQL_REVIEWAD85.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">整型：</span><br><span class="line">	</span><br><span class="line">小数：</span><br><span class="line">	浮点型</span><br><span class="line">	定点型</span><br><span class="line">字符型： char（长度可以默认不写，默认是1）   varchar 变长</span><br><span class="line">日期型：</span><br><span class="line">Blob类型：</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD82.png?raw=true" alt="MYSQL_REVIEWAD82.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD83.png?raw=true" alt="MYSQL_REVIEWAD83.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD84.png?raw=true" alt="MYSQL_REVIEWAD84.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD86.png?raw=true" alt="MYSQL_REVIEWAD86.png"></p>
+<p>其他字符型： 存储枚举，集合。</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD87.png?raw=true" alt="MYSQL_REVIEWAD87.png"></p>
+<h3 id="常见约束"><a href="#常见约束" class="headerlink" title="常见约束"></a>常见约束</h3><p><strong>什么是约束</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD88.png?raw=true" alt="MYSQL_REVIEWAD88.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD89.png?raw=true" alt="MYSQL_REVIEWAD89.png"></p>
+<p>一种保证字段数据准确性的限制。</p>
+<p><strong>怎么使用约束</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD90.png?raw=true" alt="MYSQL_REVIEWAD90.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD91.png?raw=true" alt="MYSQL_REVIEWAD91.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD92.png?raw=true" alt="MYSQL_REVIEWAD92.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD93.png?raw=true" alt="MYSQL_REVIEWAD93.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD94.png?raw=true" alt="MYSQL_REVIEWAD94.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD95.png?raw=true" alt="MYSQL_REVIEWAD95.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD96.png?raw=true" alt="MYSQL_REVIEWAD96.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD97.png?raw=true" alt="MYSQL_REVIEWAD97.png"></p>
+<p><strong>注意事项</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">NOT NULL</span><br><span class="line">DEFAULT</span><br><span class="line">UNIQUE</span><br><span class="line">CHECK ： mysql 中不支持</span><br><span class="line">PRIMARY KEY</span><br><span class="line">FOREIGN KEY : 外键不支持列级约束。 且关联的主表的字段必须是key:一般是主键或者唯一键</span><br><span class="line">              插入数据时应该先插入主表(外键),再插入从表的</span><br><span class="line">              删除数据时， 应该先删除从表，再删除主表</span><br></pre></td></tr></table></figure>
+
+<h3 id="标识列"><a href="#标识列" class="headerlink" title="标识列"></a><strong>标识列</strong></h3><p>类似于约束</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD98.png?raw=true" alt="MYSQL_REVIEWAD98.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD99.png?raw=true" alt="MYSQL_REVIEWAD99.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD100.png?raw=true" alt="MYSQL_REVIEWAD100.png"></p>
+<h2 id="7-事务-TCL-事务控制语言"><a href="#7-事务-TCL-事务控制语言" class="headerlink" title="7 事务 (TCL 事务控制语言)"></a>7 事务 (TCL 事务控制语言)</h2><p><strong>什么是事务</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD101.png?raw=true" alt="MYSQL_REVIEWAD101.png"></p>
+<p>额外概念： 存储引擎(数据的存储技术，innodb 支持事务)</p>
+<p>事务的特点：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD102.png?raw=true" alt="MYSQL_REVIEWAD102.png"></p>
+<p>（ACID）<br>​    原子性：要么都执行，要么都回滚<br>​    一致性：保证数据的状态操作前和操作后保持一致<br>​    隔离性：多个事务同时操作相同数据库的同一个数据时，一个事务的执行不受另外一个事务的干扰<br>​    持久性：一个事务一旦提交，则数据将持久化到本地，除非其他事务对其进行修改</p>
+<p><strong>怎么使用事务</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD103.png?raw=true" alt="MYSQL_REVIEWAD103.png"></p>
+<p>事务的分类：</p>
+<p>隐式事务，没有明显的开启和结束事务的标志</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">比如</span><br><span class="line">insert、update、delete语句本身就是一个事务</span><br></pre></td></tr></table></figure>
+
+<p>显式事务，具有明显的开启和结束事务的标志</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1、开启事务</span><br><span class="line">取消自动提交事务的功能</span><br><span class="line"></span><br><span class="line">2、编写事务的一组逻辑操作单元（多条sql语句）</span><br><span class="line">insert</span><br><span class="line">update</span><br><span class="line">delete</span><br><span class="line"></span><br><span class="line">3、提交事务或回滚事务</span><br></pre></td></tr></table></figure>
+
+<p>###使用到的关键字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">set autocommit=0;</span><br><span class="line">start transaction;</span><br><span class="line">commit;</span><br><span class="line">rollback;</span><br><span class="line"></span><br><span class="line">savepoint  断点</span><br><span class="line">commit to 断点</span><br><span class="line">rollback to 断点</span><br></pre></td></tr></table></figure>
+
+<p><strong>并发事务（事务的隔离级别:）：</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD104.png?raw=true" alt="MYSQL_REVIEWAD104.png"></p>
+<p>事务并发问题如何发生？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当多个事务同时操作同一个数据库的相同数据时</span><br></pre></td></tr></table></figure>
+
+<p>事务的并发问题有哪些？ (类似于线程的并发问题)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">脏读：一个事务读取到了另外一个事务未提交的数据 （就是读取到的数据是无效的数据） </span><br><span class="line">不可重复读：同一个事务中，多次读取到的数据不一致 (因事务影响(事务没有结束时)，两次读取同一数据不一致)</span><br><span class="line">幻读：一个事务读取数据时，另外一个事务进行更新，导致第一个事务读取到了没有更新的数据</span><br><span class="line">（幻读类似于读，不过幻读针对的插入(数据条目的不一致)，脏读针对的是更新(数据值得不一致)）</span><br><span class="line"></span><br><span class="line">总结： 就是一个事务在执行过程中受到了其他事务执行结果的影响而导致的数据不一致。 添加事务隔离级别就是让每个事务的处理相对而言是独立的。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD105.png?raw=true" alt="MYSQL_REVIEWAD105.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD106.png?raw=true" alt="MYSQL_REVIEWAD106.png"></p>
+<p>如何避免事务的并发问题？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">通过设置事务的隔离级别</span><br><span class="line">1、READ UNCOMMITTED (各种情况都会出现)</span><br><span class="line">2、READ COMMITTED 可以避免脏读</span><br><span class="line">3、REPEATABLE READ 可以避免脏读、不可重复读和一部分幻读</span><br><span class="line">4、SERIALIZABLE(串行话)可以避免脏读、不可重复读和幻读</span><br><span class="line">oracle 只支持 2 和4，默认2 。 mysql都支持，默认是3.</span><br></pre></td></tr></table></figure>
+
+<p>设置隔离级别：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set session|global  transaction isolation level 隔离级别名;</span><br></pre></td></tr></table></figure>
+
+<p>查看隔离级别：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select @@tx_isolation;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD110.png?raw=true" alt="MYSQL_REVIEWAD110.png">    </p>
+<h2 id="8-视图"><a href="#8-视图" class="headerlink" title="8 视图"></a>8 视图</h2><p><strong>视图是什么</strong></p>
+<p>一张虚拟的表，不过表的数据是动态生成的，和普通的表一样使用</p>
+<p>视图是一个可以复用的复杂查询的虚拟结果集。(当我们需要频繁的使用一个复杂的查询的结果集的时候，我们可以将他抽取成一个视图(临时性的)，这样下次我们需要使用的时候，就可以直接将这个视图当成一个普通的表来进行查询)</p>
+<p>注意： 这个视图临时表中的数据是从原始表中<strong>动态查询</strong>的，原始表中数据发生改变，视图数据随之改变。视图的本质就是一个存储着的封装的查询语句。</p>
+<p>视图和表的区别：    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	使用方式	占用物理空间</span><br><span class="line"></span><br><span class="line">视图	完全相同	不占用，仅仅保存的是sql逻辑</span><br><span class="line"></span><br><span class="line">表	完全相同	占用</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>为什么需要视图</strong></p>
+<p>视图的好处：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、sql语句提高重用性，效率高</span><br><span class="line">2、和表实现了分离，提高了安全性</span><br><span class="line">3. 简单了查询</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>怎么使用视图</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD107.png?raw=true" alt="MYSQL_REVIEWAD107.png"></p>
+<p>###视图的创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">	CREATE VIEW  视图名</span><br><span class="line">	AS</span><br><span class="line">	查询语句;</span><br></pre></td></tr></table></figure>
+
+<p>###视图的增删改查​    </p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD108.png?raw=true" alt="MYSQL_REVIEWAD108.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD109.png?raw=true" alt="MYSQL_REVIEWAD109.png"></p>
+<p>视图中数据的修改：</p>
+<p>(对视图中数据的更新，会更新到含有对应字段的原始表中。 但是这样会导致数据的不安全，所以我们常常会给视图设置只读权限)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">某些视图中的数据不能更新 (不能更新到原始表中具体的字段的视图)</span><br><span class="line">	包含以下关键字的sql语句：分组函数、distinct、group  by、having、union或者union all</span><br><span class="line">	常量视图</span><br><span class="line">	Select中包含子查询</span><br><span class="line">	join</span><br><span class="line">	from一个不能更新的视图</span><br><span class="line">	where子句的子查询引用了from子句中的表</span><br></pre></td></tr></table></figure>
+
+<p>跟新视图中的数据不常用，因为这样会让原始表中的数据不安全。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1、查看视图的数据 ★</span><br><span class="line">SELECT * FROM my_v4;</span><br><span class="line">SELECT * FROM my_v1 WHERE last_name=&apos;Partners&apos;;</span><br><span class="line"></span><br><span class="line">2、插入视图的数据</span><br><span class="line">INSERT INTO my_v4(last_name,department_id) VALUES(&apos;虚竹&apos;,90);</span><br><span class="line"></span><br><span class="line">3、修改视图的数据</span><br><span class="line"></span><br><span class="line">UPDATE my_v4 SET last_name =&apos;梦姑&apos; WHERE last_name=&apos;虚竹&apos;;</span><br><span class="line"></span><br><span class="line">4、删除视图的数据</span><br><span class="line">DELETE FROM my_v4;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="9-存储过程"><a href="#9-存储过程" class="headerlink" title="9 存储过程"></a>9 存储过程</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>###系统变量<br>一、全局变量</p>
+<p>作用域：针对于所有会话（连接）有效，但不能跨重启</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">查看所有全局变量</span><br><span class="line">SHOW GLOBAL VARIABLES;</span><br><span class="line">查看满足条件的部分系统变量</span><br><span class="line">SHOW GLOBAL VARIABLES LIKE &apos;%char%&apos;;</span><br><span class="line">查看指定的系统变量的值</span><br><span class="line">SELECT @@global.autocommit;</span><br><span class="line">为某个系统变量赋值</span><br><span class="line">SET @@global.autocommit=0;</span><br><span class="line">SET GLOBAL autocommit=0;</span><br></pre></td></tr></table></figure>
+
+<p>二、会话变量</p>
+<p>作用域：针对于当前会话（连接）有效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">查看所有会话变量</span><br><span class="line">SHOW SESSION VARIABLES;</span><br><span class="line">查看满足条件的部分会话变量</span><br><span class="line">SHOW SESSION VARIABLES LIKE &apos;%char%&apos;;</span><br><span class="line">查看指定的会话变量的值</span><br><span class="line">SELECT @@autocommit;</span><br><span class="line">SELECT @@session.tx_isolation;</span><br><span class="line">为某个会话变量赋值</span><br><span class="line">SET @@session.tx_isolation=&apos;read-uncommitted&apos;;</span><br><span class="line">SET SESSION tx_isolation=&apos;read-committed&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>###自定义变量<br>一、用户变量</p>
+<p>声明并初始化：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SET @变量名=值;</span><br><span class="line">SET @变量名:=值;</span><br><span class="line">SELECT @变量名:=值;</span><br></pre></td></tr></table></figure>
+
+<p>赋值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方式一：一般用于赋简单的值</span><br><span class="line">SET 变量名=值;</span><br><span class="line">SET 变量名:=值;</span><br><span class="line">SELECT 变量名:=值;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">方式二：一般用于赋表 中的字段值</span><br><span class="line">SELECT 字段名或表达式 INTO 变量</span><br><span class="line">FROM 表;</span><br></pre></td></tr></table></figure>
+
+<p>使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select @变量名;</span><br></pre></td></tr></table></figure>
+
+<p>二、局部变量</p>
+<p>声明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">declare 变量名 类型 【default 值】;</span><br></pre></td></tr></table></figure>
+
+<p>赋值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方式一：一般用于赋简单的值</span><br><span class="line">SET 变量名=值;</span><br><span class="line">SET 变量名:=值;</span><br><span class="line">SELECT 变量名:=值;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">方式二：一般用于赋表 中的字段值</span><br><span class="line">SELECT 字段名或表达式 INTO 变量</span><br><span class="line">FROM 表;</span><br></pre></td></tr></table></figure>
+
+<p>使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 变量名</span><br></pre></td></tr></table></figure>
+
+
+
+<p>二者的区别：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">		作用域			定义位置		语法</span><br><span class="line">用户变量	当前会话		会话的任何地方		加@符号，不用指定类型</span><br><span class="line">局部变量	定义它的BEGIN END中 	BEGIN END的第一句话	一般不用加@,需要指定类型</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD111.png?raw=true" alt="MYSQL_REVIEWAD111.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD112.png?raw=true" alt="MYSQL_REVIEWAD112.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD113.png?raw=true" alt="MYSQL_REVIEWAD113.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD114.png?raw=true" alt="MYSQL_REVIEWAD114.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD115.png?raw=true" alt="MYSQL_REVIEWAD115.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD116.png?raw=true" alt="MYSQL_REVIEWAD116.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD117.png?raw=true" alt="MYSQL_REVIEWAD117.png"></p>
+<h3 id="什么是存储过程"><a href="#什么是存储过程" class="headerlink" title="什么是存储过程"></a>什么是存储过程</h3><p>含义：一组经过<strong>预先编译</strong> (下次执行无需编译，速度更快)的sql语句的集合 (批处理)</p>
+<p>类似于一个函数，一个<strong>方法</strong>。</p>
+<p><strong>为什么使用存储过程</strong></p>
+<p>好处：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、提高了sql语句的重用性，减少了开发程序员的压力</span><br><span class="line">2、提高了效率</span><br><span class="line">3、减少了传输次数</span><br></pre></td></tr></table></figure>
+
+<p>在存储过程中可以和流程控制语句如（for ,if ）等结合使用，做到类似程序中的事情。 加快执行效率。</p>
+<p><strong>如何使用存储过程</strong></p>
+<p>创建存储过程语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">create procedure 存储过程名(in|out|inout 参数名  参数类型,...)</span><br><span class="line">begin</span><br><span class="line">	存储过程体 (一组合法的sql语句)</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line">注意：</span><br><span class="line">1、需要设置新的结束标记</span><br><span class="line">delimiter 新的结束标记</span><br><span class="line">示例：</span><br><span class="line">delimiter $</span><br><span class="line"></span><br><span class="line">CREATE PROCEDURE 存储过程名(IN|OUT|INOUT 参数名  参数类型,...)</span><br><span class="line">BEGIN</span><br><span class="line">	sql语句1;</span><br><span class="line">	sql语句2;</span><br><span class="line"></span><br><span class="line">END $</span><br><span class="line"></span><br><span class="line">2、存储过程体中可以有多条sql语句，如果仅仅一条sql语句，则可以省略begin end</span><br><span class="line"></span><br><span class="line">3、参数前面的符号的意思</span><br><span class="line">in:该参数只能作为输入 （该参数不能做返回值）</span><br><span class="line">out：该参数只能作为输出（该参数只能做返回值）</span><br><span class="line">inout：既能做输入又能做输出</span><br><span class="line"></span><br><span class="line">#调用存储过程</span><br><span class="line">	call 存储过程名(实参列表)</span><br></pre></td></tr></table></figure>
+
+<p>类似于方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回类型 方法名(参数类型 参数名,...)&#123;</span><br><span class="line"></span><br><span class="line">	方法体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD118.png?raw=true" alt="MYSQL_REVIEWAD118.png"></p>
+<p>存储过程的使用示例：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD119.png?raw=true" alt="MYSQL_REVIEWAD119.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD120.png?raw=true" alt="MYSQL_REVIEWAD120.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD121.png?raw=true" alt="MYSQL_REVIEWAD121.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD122.png?raw=true" alt="MYSQL_REVIEWAD122.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD123.png?raw=true" alt="MYSQL_REVIEWAD123.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD124.png?raw=true" alt="MYSQL_REVIEWAD124.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD126.png?raw=true" alt="MYSQL_REVIEWAD126.png"></p>
+<p>存储过程的删除与查看：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD125.png?raw=true" alt="MYSQL_REVIEWAD125.png"></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">PROCEDURE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> <span class="string">`test`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> DEFINER = <span class="string">`root`</span>@<span class="string">`%`</span> <span class="keyword">PROCEDURE</span> <span class="string">`test`</span>()</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"></span><br><span class="line">	 <span class="keyword">declare</span> done <span class="built_in">int</span> <span class="keyword">default</span> <span class="literal">false</span>;  <span class="comment">/*用于判断是否结束循环*/</span></span><br><span class="line"></span><br><span class="line">	 <span class="keyword">declare</span> v_value <span class="built_in">varchar</span>(<span class="number">20</span>);</span><br><span class="line">	 <span class="keyword">declare</span> v_key <span class="built_in">varchar</span>(<span class="number">20</span>);</span><br><span class="line">	 <span class="keyword">declare</span> recordNum <span class="built_in">int</span>;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">declare</span> curInsts <span class="keyword">CURSOR</span> <span class="keyword">FOR</span> <span class="keyword">SELECT</span>  code <span class="keyword">from</span> code <span class="keyword">LIMIT</span> <span class="number">10</span>;	 </span><br><span class="line"></span><br><span class="line">	 <span class="comment">/*定义 设置循环结束标识done值怎么改变 的逻辑*/</span></span><br><span class="line">   <span class="keyword">declare</span> continue <span class="keyword">handler</span> <span class="keyword">for</span> <span class="keyword">not</span> <span class="keyword">FOUND</span> <span class="keyword">set</span> done = <span class="literal">true</span>; <span class="comment">/*done = true;*/</span></span><br><span class="line">	 open curInsts;  <span class="comment">/*打开游标*/</span></span><br><span class="line">	 <span class="comment">/* 循环开始 */</span></span><br><span class="line">    REPEAT</span><br><span class="line">		fetch curInsts into v_key;  </span><br><span class="line"></span><br><span class="line">		  <span class="keyword">SELECT</span> <span class="keyword">NOW</span>();</span><br><span class="line">		  <span class="keyword">SELECT</span> v_key;</span><br><span class="line"></span><br><span class="line">		until done <span class="keyword">end</span> <span class="keyword">repeat</span>;</span><br><span class="line"></span><br><span class="line">		close curInsts;  <span class="comment">/*关闭游标*/</span></span><br><span class="line">	<span class="comment">/* 循环结束 */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+
+<p>遍历集合，处理循环实例</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">	 <span class="keyword">declare</span> v_value <span class="built_in">varchar</span>(<span class="number">55</span>);</span><br><span class="line">	 <span class="keyword">declare</span> v_key <span class="built_in">varchar</span>(<span class="number">55</span>);</span><br><span class="line">	 <span class="keyword">declare</span> i <span class="built_in">int</span>;</span><br><span class="line">	 <span class="comment">/*声明用于循环的游标。类似于为java中集合list赋值*/</span> </span><br><span class="line">   <span class="keyword">declare</span> curInsts <span class="keyword">CURSOR</span> <span class="keyword">FOR</span> <span class="keyword">SELECT</span> <span class="keyword">id</span> <span class="keyword">from</span> car_basic_data <span class="keyword">WHERE</span> add_time &gt;=<span class="string">'2019-07-29 17:00:00'</span>;</span><br><span class="line">	 <span class="comment">/*定义循环结束标志*/</span></span><br><span class="line">     <span class="keyword">DECLARE</span> CONTINUE <span class="keyword">HANDLER</span> <span class="keyword">FOR</span> <span class="keyword">NOT</span> <span class="keyword">FOUND</span> <span class="keyword">set</span> v_key = <span class="literal">null</span>;</span><br><span class="line">     open curInsts;  <span class="comment">/*打开游标*/</span></span><br><span class="line">	 <span class="comment">/* 循环开始 */</span></span><br><span class="line">     <span class="keyword">set</span> i=<span class="number">1</span>;</span><br><span class="line"> </span><br><span class="line">     <span class="comment">/* 遍历循环，取得循环中的值放入到变量中，循环中对变量进行操作 */</span></span><br><span class="line">fetch curInsts into v_key;  </span><br><span class="line">WHILE ( v_key is not null) <span class="keyword">DO</span></span><br><span class="line">     </span><br><span class="line"><span class="comment">/* 实际的循环体 */</span></span><br><span class="line">     <span class="keyword">set</span> i=i+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">FETCH curInsts INTO v_key;</span><br><span class="line"><span class="keyword">END</span> <span class="keyword">WHILE</span>;</span><br><span class="line"></span><br><span class="line">close curInsts;  <span class="comment">/*关闭游标*/</span></span><br><span class="line"><span class="comment">/* 循环结束 */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="10-函数-与流程控制"><a href="#10-函数-与流程控制" class="headerlink" title="10 函数 与流程控制"></a>10 函数 与流程控制</h2><p><strong>什么是函数</strong><br><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD127.png?raw=true" alt="MYSQL_REVIEWAD127.png"></p>
+<p><strong>使用函数</strong></p>
+<p>学过的函数：LENGTH、SUBSTR、CONCAT等<br>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE FUNCTION 函数名(参数名 参数类型,...) RETURNS 返回类型</span><br><span class="line">BEGIN</span><br><span class="line">	函数体</span><br><span class="line">END</span><br><span class="line">###调用函数</span><br><span class="line">	SELECT 函数名（实参列表）</span><br></pre></td></tr></table></figure>
+
+<p>使用示例：</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD128.png?raw=true" alt="MYSQL_REVIEWAD128.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD129.png?raw=true" alt="MYSQL_REVIEWAD129.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD130.png?raw=true" alt="MYSQL_REVIEWAD130.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD131.png?raw=true" alt="MYSQL_REVIEWAD131.png"></p>
+<h3 id="流程控制结构"><a href="#流程控制结构" class="headerlink" title="流程控制结构"></a>流程控制结构</h3><p>###分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一、if函数</span><br><span class="line">	语法：if(条件，值1，值2) 条件成立返回1，否则返回2</span><br><span class="line">	特点：可以用在任何位置</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD132.png?raw=true" alt="MYSQL_REVIEWAD132.png"></p>
+<p>二、case语句</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">情况一：类似于switch</span><br><span class="line">case 表达式</span><br><span class="line">when 值1 then 结果1或语句1(如果是语句，需要加分号) </span><br><span class="line">when 值2 then 结果2或语句2(如果是语句，需要加分号)</span><br><span class="line">...</span><br><span class="line">else 结果n或语句n(如果是语句，需要加分号)</span><br><span class="line">end 【case】（如果是放在begin end中需要加上case，如果放在select后面不需要）</span><br><span class="line"></span><br><span class="line">情况二：类似于多重if</span><br><span class="line">case </span><br><span class="line">when 条件1 then 结果1或语句1(如果是语句，需要加分号) </span><br><span class="line">when 条件2 then 结果2或语句2(如果是语句，需要加分号)</span><br><span class="line">...</span><br><span class="line">else 结果n或语句n(如果是语句，需要加分号)</span><br><span class="line">end 【case】（如果是放在begin end中需要加上case，如果放在select后面不需要）</span><br></pre></td></tr></table></figure>
+
+<p>特点：<br>​    可以用在任何位置</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD133.png?raw=true" alt="MYSQL_REVIEWAD133.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD134.png?raw=true" alt="MYSQL_REVIEWAD134.png"></p>
+<p>三、if elseif语句</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if 情况1 then 语句1;</span><br><span class="line">elseif 情况2 then 语句2;</span><br><span class="line">...</span><br><span class="line">else 语句n;</span><br><span class="line">end if;</span><br></pre></td></tr></table></figure>
+
+<p>特点：<br>​    只能用在begin end中！！！！！！！！！！！！！！！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">三者比较：</span><br><span class="line">			应用场合</span><br><span class="line">	if函数		简单双分支</span><br><span class="line">	case结构	     等值判断 的多分支</span><br><span class="line">	if结构		区间判断 的多分支</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD135.png?raw=true" alt="MYSQL_REVIEWAD135.png"></p>
+<p>###循环</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD136.png?raw=true" alt="MYSQL_REVIEWAD136.png"></p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">【标签：】WHILE 循环条件  DO</span><br><span class="line">	循环体</span><br><span class="line">END WHILE 【标签】;</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">只能放在BEGIN END里面</span><br><span class="line"></span><br><span class="line">如果要搭配leave跳转语句，需要使用标签，否则可以不用标签</span><br><span class="line"></span><br><span class="line">leave类似于java中的break语句，跳出所在循环！！！</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD137.png?raw=true" alt="MYSQL_REVIEWAD137.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD138.png?raw=true" alt="MYSQL_REVIEWAD138.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD139.png?raw=true" alt="MYSQL_REVIEWAD139.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/MYSQL_REVIEWAD140.png?raw=true" alt="MYSQL_REVIEWAD140.png"></p>
+<p>　</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/20/mysql%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">mysql 基础回顾</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          zhaodahan
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2019/07/20/mysql基础回顾/" title="mysql 基础回顾" target="_blank">http://yoursite.com/2019/07/20/mysql基础回顾/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
 
-        <div class="article-info info-on-right">
-          
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -1383,584 +909,129 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/20/mysql%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/20/MySQL%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-07-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2019/07/22/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          java设计模式 (一)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/20/MySQL%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL高级</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/20/MySQL%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">MySQL高级</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#mysql-基础回顾"><span class="toc-number">1.</span> <span class="toc-text">mysql 基础回顾</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一：-基础"><span class="toc-number">2.</span> <span class="toc-text">一： 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-查询语句"><span class="toc-number">2.1.</span> <span class="toc-text">2 查询语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶2：条件查询"><span class="toc-number">2.1.1.</span> <span class="toc-text">进阶2：条件查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶3：排序查询"><span class="toc-number">2.1.2.</span> <span class="toc-text">进阶3：排序查询</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-函数"><span class="toc-number">2.2.</span> <span class="toc-text">3 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶4：常见函数"><span class="toc-number">2.2.1.</span> <span class="toc-text">进阶4：常见函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、分组函数"><span class="toc-number">2.2.2.</span> <span class="toc-text">二、分组函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-高级查询"><span class="toc-number">2.3.</span> <span class="toc-text">4 高级查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶5：分组查询"><span class="toc-number">2.3.1.</span> <span class="toc-text">进阶5：分组查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶6：多表连接查询"><span class="toc-number">2.3.2.</span> <span class="toc-text">进阶6：多表连接查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶7：子查询"><span class="toc-number">2.3.3.</span> <span class="toc-text">进阶7：子查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶8：分页查询"><span class="toc-number">2.3.4.</span> <span class="toc-text">进阶8：分页查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶9：联合查询"><span class="toc-number">2.3.5.</span> <span class="toc-text">进阶9：联合查询</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-DML（数据操作）语言"><span class="toc-number">2.4.</span> <span class="toc-text">5 DML（数据操作）语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#插入"><span class="toc-number">2.4.1.</span> <span class="toc-text">插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改"><span class="toc-number">2.4.2.</span> <span class="toc-text">修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除"><span class="toc-number">2.4.3.</span> <span class="toc-text">删除</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-DDL-数据定义-语句"><span class="toc-number">2.5.</span> <span class="toc-text">6 DDL  数据定义  语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#库和表的管理"><span class="toc-number">2.5.1.</span> <span class="toc-text">库和表的管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见类型"><span class="toc-number">2.5.2.</span> <span class="toc-text">常见类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见约束"><span class="toc-number">2.5.3.</span> <span class="toc-text">常见约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标识列"><span class="toc-number">2.5.4.</span> <span class="toc-text">标识列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-事务-TCL-事务控制语言"><span class="toc-number">2.6.</span> <span class="toc-text">7 事务 (TCL 事务控制语言)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-视图"><span class="toc-number">2.7.</span> <span class="toc-text">8 视图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-存储过程"><span class="toc-number">2.8.</span> <span class="toc-text">9 存储过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#变量"><span class="toc-number">2.8.1.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是存储过程"><span class="toc-number">2.8.2.</span> <span class="toc-text">什么是存储过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-函数-与流程控制"><span class="toc-number">2.9.</span> <span class="toc-text">10 函数 与流程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#流程控制结构"><span class="toc-number">2.9.1.</span> <span class="toc-text">流程控制结构</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/13/JUC%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/13/JUC%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JUC 多线程</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/13/NIO%E5%9B%9E%E9%A1%BE%E5%8A%A0%E5%BC%BA/" class="archive-article-date">
-        <time datetime="2019-07-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/13/NIO%E5%9B%9E%E9%A1%BE%E5%8A%A0%E5%BC%BA/" target="_blank">NIO</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NIO</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95/" target="_blank">java数据结构与算法 (一)</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">java数据结构与算法__数据结构(一)</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95%20-%20%E4%BA%8C/" target="_blank">java数据结构与算法 (二)</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%BA%8C/" target="_blank">java数据结构与算法__数据结构(二)</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%B8%89/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%B8%89/" target="_blank">java数据结构与算法__数据结构(三)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/JAVAWeb%20%E4%B8%ADservlet%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/JAVAWeb%20%E4%B8%ADservlet%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JAVAWeb回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/java%20JDBC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/java%20JDBC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JDBC</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">jdbc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE(%E7%AC%AC%E4%B8%80%E7%89%88)/" class="archive-article-date">
-        <time datetime="2019-07-10T11:30:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE(%E7%AC%AC%E4%B8%80%E7%89%88)/" target="_blank">java 基础回顾 (第一版)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -2001,8 +1072,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

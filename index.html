@@ -78,9 +78,9 @@
 			
 				<li><a href="/" target="_blank">主页</a></li>
 	        
-				<li><a href="/tags/%E7%AC%94%E8%AE%B0/" target="_blank">笔记</a></li>
+				<li><a href="/tags/note" target="_blank">笔记</a></li>
 	        
-				<li><a href="/tags/%E9%97%AE%E9%A2%98/" target="_blank">解决的问题</a></li>
+				<li><a href="/tags/issue/" target="_blank">解决的问题</a></li>
 	        
 				<li><a href="/tags/book/" target="_blank">读书笔记</a></li>
 	        
@@ -181,9 +181,9 @@
 				
 					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+					<li style="width: 25%"><a href="/tags/note">笔记</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/%E9%97%AE%E9%A2%98/">解决的问题</a></li>
+					<li style="width: 25%"><a href="/tags/issue/">解决的问题</a></li>
 		        
 					<li style="width: 25%"><a href="/tags/book/">读书笔记</a></li>
 		        
@@ -204,7 +204,7 @@
             
 
   
-    <article id="post-主页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-sql 常用技巧语句" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -212,7 +212,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2019/10/23/%E4%B8%BB%E9%A1%B5/" target="_blank">主页</a>
+	  <a class="article-title" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" target="_blank">sql 问题解决记录</a>
   
     </h1>
   
@@ -220,8 +220,8 @@
 
   
   
-<a href="/2019/10/23/%E4%B8%BB%E9%A1%B5/" class="archive-article-date">
-        <time datetime="2019-10-23T14:28:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
+<a href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" class="archive-article-date">
+        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
 </a>
 
   
@@ -233,6 +233,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
+    <h1 id="SQL常用技巧语句汇总"><a href="#SQL常用技巧语句汇总" class="headerlink" title="SQL常用技巧语句汇总"></a>SQL常用技巧语句汇总</h1><h2 id="查询出表中某个字段重复的语句"><a href="#查询出表中某个字段重复的语句" class="headerlink" title="查询出表中某个字段重复的语句"></a>查询出表中某个字段重复的语句</h2><p><strong>以查询出 a 表中 method_name字段重复为例子</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	*</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	a </span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">	method_name <span class="keyword">IN</span> (</span><br><span class="line">		<span class="keyword">SELECT</span></span><br><span class="line">			method_name</span><br><span class="line">		<span class="keyword">FROM</span></span><br><span class="line">			a</span><br><span class="line">		<span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">			method_name</span><br><span class="line">		<span class="keyword">HAVING</span></span><br><span class="line">			<span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span></span><br><span class="line">	)</span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/#more">more >></a>
     
     
 
@@ -249,7 +253,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">indexz</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sql</a>
         		</li>
       		
 		</ul>
@@ -259,90 +267,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2019/10/23/%E4%B8%BB%E9%A1%B5/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git 笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/10/21/git%20%E7%AC%94%E8%AE%B0/" target="_blank">git 笔记</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/10/21/git%20%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-10-21T13:41:06.006Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="GIT-笔记"><a href="#GIT-笔记" class="headerlink" title="GIT 笔记"></a>GIT 笔记</h1><h1 id="搭建git-仓库"><a href="#搭建git-仓库" class="headerlink" title="搭建git 仓库"></a>搭建git 仓库</h1><h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><hr>
-<p>介绍window系统如何安装<br>下载路径：<a href="http://git-scm.com/download" target="_blank" rel="noopener">Git客户端</a><br>安装后再任意地方鼠标右键就会出现如下，<code>Git Bash Here</code>就是我们的客户端<br><a href="http://upload-images.jianshu.io/upload_images/1637925-3982651ccae9e7db.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/1637925-3982651ccae9e7db.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a><br><a href="http://upload-images.jianshu.io/upload_images/1637925-1a5cde2c6ea71d56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/1637925-1a5cde2c6ea71d56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></a></p>
-<h2 id="初次运行-Git-前的配置"><a href="#初次运行-Git-前的配置" class="headerlink" title="初次运行 Git 前的配置"></a>初次运行 Git 前的配置</h2><hr>
-<p>安装完<code>Git</code>应该做的第一件事就是设置你的用户名称与邮件地址。 这样做很重要，因为每一个<code>Git</code>的提交都会使用这些信息，并且它会写入到你的每一次提交中，不可更改：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;zhaodahan&quot;</span><br><span class="line">git config --global user.email 1791154630@qq.com</span><br></pre></td></tr></table></figure>
-
-<p>再次强调，使用了 <code>--global</code> 选项，那么该命令只需要运行一次，因为之后无论你在该系统上做任何事情， Git 都会使用那些信息。 当你想针对特定项目使用不同的用户名称与邮件地址时，可以在那个项目目录下运行没有 <code>--global</code> 选项的命令来配置。</p>
-    
-    <a class="article-more-a" href="/2019/10/21/git%20%E7%AC%94%E8%AE%B0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/10/21/git%20%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+      <a class="article-more-a" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/">展开全文 >></a>
     </p>
     
 
@@ -380,7 +305,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2019/10/21/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" target="_blank">git 问题解决记录</a>
+	  <a class="article-title" href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" target="_blank">git 问题解决记录</a>
   
     </h1>
   
@@ -388,8 +313,8 @@
 
   
   
-<a href="/2019/10/21/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-        <time datetime="2019-10-21T13:37:52.191Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
+<a href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" class="archive-article-date">
+        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
 </a>
 
   
@@ -407,25 +332,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br></pre></td></tr></table></figure>
 
 <p>然后就成功pull</p>
-<h1 id="本地库已经删除了，但是依旧提交到了远程库"><a href="#本地库已经删除了，但是依旧提交到了远程库" class="headerlink" title="本地库已经删除了，但是依旧提交到了远程库"></a>本地库已经删除了，但是依旧提交到了远程库</h1><p>远程库与本地库不一致，使用git pull 无法将多余的文件拉取下来。</p>
-<p>解决思路： 用远程库覆盖本地版本库。 然后修改后重新提交。</p>
-<h1 id="git-clone-和pull-速度太慢解决方案"><a href="#git-clone-和pull-速度太慢解决方案" class="headerlink" title="git clone 和pull  速度太慢解决方案"></a>git clone 和pull  速度太慢解决方案</h1><p>windows上进入c:\windows\system32\drivers\etc，找到hosts</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">151.101.72.249 http://global-ssl.fastly.Net</span><br><span class="line">192.30.253.112 http://github.com</span><br></pre></td></tr></table></figure>
-
-<p>cmd : 刷新DNS来生效</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
-
-<p>修改使用ssr 来连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy https://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-
-<p>使用完之后取消代理以便不会影响提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="使用git提交代码到github-每次都要输入用户名和密码的解决方法"><a href="#使用git提交代码到github-每次都要输入用户名和密码的解决方法" class="headerlink" title="使用git提交代码到github,每次都要输入用户名和密码的解决方法"></a>使用git提交代码到github,每次都要输入用户名和密码的解决方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">找到项目的.git目录下的config文件： </span><br><span class="line">修改url路径</span><br><span class="line">将其改为如下格式： </span><br><span class="line">https://username:password@github.com/username/project.git </span><br><span class="line">在这里，username就是你的用户名，比如我的用户名是CmderQ，那么改成之后的结果是： </span><br><span class="line">url= https://CmderQ:#####@github.com/CmderQ/hello.git </span><br><span class="line">这里的”#####”代表的就是我这个账户的密码。改完之后，保存</span><br><span class="line"></span><br><span class="line">例如: 我的修改</span><br><span class="line">#	url = https://github.com/zhaodahan/zhao_Note.git</span><br><span class="line">    url = https://zhaodahan:zhao7494@github.com/zhaodahan/zhao_Note.git</span><br></pre></td></tr></table></figure>
-
-
+    
+    <a class="article-more-a" href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/#more">more >></a>
+    
     
 
     
@@ -436,11 +345,26 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2019/10/21/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/">展开全文 >></a>
+      <a class="article-more-a" href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/">展开全文 >></a>
     </p>
     
 
@@ -470,6 +394,812 @@
 
 
   
+    <article id="post-redis基础回顾笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" target="_blank">Redis基础回顾笔记</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <time datetime="2019-09-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Redis基础回顾笔记"><a href="#Redis基础回顾笔记" class="headerlink" title="Redis基础回顾笔记"></a>Redis基础回顾笔记</h1><p>Redis是一个key-value存储系统，是当下互联网公司常用的NoSQL数据库之一</p>
+<h1 id="NOSQL"><a href="#NOSQL" class="headerlink" title="NOSQL"></a>NOSQL</h1><p>redis是nosql的一种落地实现。</p>
+<h2 id="我们已经有了关系型数据库，为什么还会有NOSQL"><a href="#我们已经有了关系型数据库，为什么还会有NOSQL" class="headerlink" title="我们已经有了关系型数据库，为什么还会有NOSQL"></a>我们已经有了关系型数据库，为什么还会有NOSQL</h2><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS6.png?raw=true" alt="JAVA_REDIS6.png"></p>
+<p><strong>横向扩展和纵向扩展</strong></p>
+    
+    <a class="article-more-a" href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nosql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-shiro学习笔记 " class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" target="_blank">Shiro学习笔记</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" class="archive-article-date">
+        <time datetime="2019-09-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Shiro学习笔记"><a href="#Shiro学习笔记" class="headerlink" title="Shiro学习笔记"></a>Shiro学习笔记</h1><p>Apache Shiro 是目前使用率较高的一个 Java 安全框架。内容涵盖 Shiro 认证、加密、授权、安全标签、安全注解、会话管理、缓存、Rememberme 等 JavaEE 企业级开发的核心技术</p>
+    
+    <a class="article-more-a" href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shiro</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SpringBoot高级整合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/" target="_blank">SpringBoot高级(整合篇)</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/" class="archive-article-date">
+        <time datetime="2019-09-12T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="尚硅谷-SpringBoot高级-整合篇"><a href="#尚硅谷-SpringBoot高级-整合篇" class="headerlink" title="尚硅谷_SpringBoot高级(整合篇)"></a>尚硅谷_SpringBoot高级(整合篇)</h1><p>着重介绍SpringBoot的与各大场景的整合使用，内容包括：缓存（整合Redis）、消息中间件（整合RabbitMQ）、检索（整合ElasticSearch）、任务（异步任务，定时任务，邮件任务）、安全（整合SpringSecurity）、分布式（整合Zookeeper/dubbo，整合SpringCloud）、SpringBoot应用监管</p>
+    
+    <a class="article-more-a" href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Spring Boot核心技术" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" target="_blank">Spring Boot核心技术</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" class="archive-article-date">
+        <time datetime="2019-09-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Spring-Boot核心技术"><a href="#Spring-Boot核心技术" class="headerlink" title="Spring Boot核心技术"></a>Spring Boot核心技术</h1><h1 id="springBoot入门"><a href="#springBoot入门" class="headerlink" title="springBoot入门"></a>springBoot入门</h1><p>这个项目的目的就是为了简化spring的开发。 以前我们开发一个应用需要进行各式配置。 使用springBoot后，springBoot已经默认帮我配置好了(默认的帮我们配置了很多东西)，我们只需要简单的操作就可以直接使用。</p>
+<h2 id="Spring-Boot-HelloWorld"><a href="#Spring-Boot-HelloWorld" class="headerlink" title="Spring Boot HelloWorld"></a>Spring Boot HelloWorld</h2><p>一个功能：浏览器发送hello请求，服务器接受请求并处理，响应Hello World字符串；</p>
+<p>以前我们想实现这个功能，创建一个web项目，导入spring，springmvc一系列jar包依赖，配置大量的配置信息，然后将项目打包成war包放在Tomcat中运行。</p>
+    
+    <a class="article-more-a" href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-spring 基础回顾" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">spring 基础回顾</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
+        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="spring-基础回顾"><a href="#spring-基础回顾" class="headerlink" title="spring 基础回顾"></a>spring 基础回顾</h1><h2 id="spring-是什么"><a href="#spring-是什么" class="headerlink" title="spring 是什么"></a>spring 是什么</h2><p>Spring 是一个 IOC(DI)和AOP容器框架.  spring框架的源码十分优秀。</p>
+    
+    <a class="article-more-a" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Spring Cloud 学习视频" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" target="_blank">Spring Cloud学习笔记</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" class="archive-article-date">
+        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Spring-Cloud学习笔记"><a href="#Spring-Cloud学习笔记" class="headerlink" title="Spring Cloud学习笔记"></a>Spring Cloud学习笔记</h1><p>解决分布式微服务的各种情况的整套架构,Spring Cloud 是一整套技术集合。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SpringCloud分布式开发五大常用组件</span><br><span class="line">服务发现——Netflix Eureka</span><br><span class="line">客服端负载均衡——Netflix Ribbon</span><br><span class="line">断路器——Netflix Hystrix</span><br><span class="line">服务网关——Netflix Zuul</span><br><span class="line">分布式配置——Spring Cloud Config</span><br></pre></td></tr></table></figure>
+
+<p>参考文档：<a href="https://springcloud.cc/spring-cloud-netflix.html" target="_blank" rel="noopener">https://springcloud.cc/spring-cloud-netflix.html</a></p>
+<p><a href="https://springcloud.cc/spring-cloud-dalston.html" target="_blank" rel="noopener">https://springcloud.cc/spring-cloud-dalston.html</a></p>
+    
+    <a class="article-more-a" href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">springCloud</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SpringMVC基础回顾" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">SpringMVC基础回顾</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
+        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="SpringMVC基础回顾"><a href="#SpringMVC基础回顾" class="headerlink" title="SpringMVC基础回顾"></a>SpringMVC基础回顾</h1><h2 id="什么是springMVC"><a href="#什么是springMVC" class="headerlink" title="什么是springMVC"></a>什么是springMVC</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring 提供的最主流的基于 MVC 设计理念的优秀的Web 框架</span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">springmvc</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Spring注解驱动开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" target="_blank">Spring注解驱动开发</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" class="archive-article-date">
+        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Spring注解驱动开发"><a href="#Spring注解驱动开发" class="headerlink" title="Spring注解驱动开发"></a>Spring注解驱动开发</h1><p>spring注解： 在spring基础框架上解放配置(以前需要配置在配置文件中的内容，现在一个注解就搞定)</p>
+<p>注解的核心本质是java类，是动态代理，是spring的后置处理器</p>
+    
+    <a class="article-more-a" href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">注解</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -599,7 +1329,103 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">indexz</a>
+                <a href="javascript:void(0)" class="js-tag color5">note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java高级</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">持久化框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">jdbc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">issue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">NIO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nosql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">spring</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">springCloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">springmvc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shiro</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">注解</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
             
             <div class="clearfix"></div>

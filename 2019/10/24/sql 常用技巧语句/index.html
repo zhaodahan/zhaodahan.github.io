@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 赵大汉的个人博客</title>
+  <title>sql 问题解决记录 | 赵大汉的个人博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="们常常犯的三种错误：第一，听到了，就以为已经明白了；第二，知道了，就以为自己做到了；第三，心动了，就以为自己在行动">
-<meta name="keywords" content="开发者,程序猿,编程,代码,开源,IT网站,Developer,Programmer,Coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="赵大汉的个人博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="SQL常用技巧语句汇总查询出表中某个字段重复的语句以查询出 a 表中 method_name字段重复为例子 123456789101112131415SELECT	*FROM	a WHERE	method_name IN (		SELECT			method_name		FROM			a		GROUP BY			method_name		HAVING			COUNT(*) &amp;gt; 1	)">
+<meta name="keywords" content="issue,sql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql 问题解决记录">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;24&#x2F;sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5&#x2F;index.html">
 <meta property="og:site_name" content="赵大汉的个人博客">
-<meta property="og:description" content="们常常犯的三种错误：第一，听到了，就以为已经明白了；第二，知道了，就以为自己做到了；第三，心动了，就以为自己在行动">
+<meta property="og:description" content="SQL常用技巧语句汇总查询出表中某个字段重复的语句以查询出 a 表中 method_name字段重复为例子 123456789101112131415SELECT	*FROM	a WHERE	method_name IN (		SELECT			method_name		FROM			a		GROUP BY			method_name		HAVING			COUNT(*) &amp;gt; 1	)">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-24T13:53:27.275Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="赵大汉的个人博客" type="application/atom+xml">
@@ -198,41 +199,182 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-sql 常用技巧语句" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" class="archive-article-date">
-        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" target="_blank">sql 问题解决记录</a>
   
+    <h1 class="article-title" itemprop="name">
+      sql 问题解决记录
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" class="archive-article-date">
+        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">3.2k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">17分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="SQL常用技巧语句汇总"><a href="#SQL常用技巧语句汇总" class="headerlink" title="SQL常用技巧语句汇总"></a>SQL常用技巧语句汇总</h1><h2 id="查询出表中某个字段重复的语句"><a href="#查询出表中某个字段重复的语句" class="headerlink" title="查询出表中某个字段重复的语句"></a>查询出表中某个字段重复的语句</h2><p><strong>以查询出 a 表中 method_name字段重复为例子</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	*</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	a </span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">	method_name <span class="keyword">IN</span> (</span><br><span class="line">		<span class="keyword">SELECT</span></span><br><span class="line">			method_name</span><br><span class="line">		<span class="keyword">FROM</span></span><br><span class="line">			a</span><br><span class="line">		<span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">			method_name</span><br><span class="line">		<span class="keyword">HAVING</span></span><br><span class="line">			<span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span></span><br><span class="line">	)</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2 id="删除重复的记录-并且只保留-id-最小的一条"><a href="#删除重复的记录-并且只保留-id-最小的一条" class="headerlink" title="删除重复的记录 并且只保留 id 最小的一条"></a>删除重复的记录 并且只保留 id 最小的一条</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--- 删除重复的记录 并且只保留 id 最小的一条</span></span><br><span class="line"><span class="keyword">DELETE</span></span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	a</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">	standard_no <span class="keyword">IN</span> (</span><br><span class="line">		<span class="keyword">SELECT</span></span><br><span class="line">			standard_no</span><br><span class="line">		<span class="keyword">FROM</span></span><br><span class="line">			a</span><br><span class="line">		<span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">			standard_no</span><br><span class="line">		<span class="keyword">HAVING</span></span><br><span class="line">			<span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span></span><br><span class="line">	)</span><br><span class="line"><span class="keyword">AND</span> <span class="keyword">id</span> <span class="keyword">NOT</span> <span class="keyword">IN</span> (</span><br><span class="line">	<span class="keyword">SELECT</span></span><br><span class="line">		<span class="keyword">min</span>(<span class="keyword">id</span>)</span><br><span class="line">	<span class="keyword">FROM</span></span><br><span class="line">		a</span><br><span class="line">	<span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">		standard_no</span><br><span class="line">	<span class="keyword">HAVING</span></span><br><span class="line">		<span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h2 id="三列中的结果-合并到一起"><a href="#三列中的结果-合并到一起" class="headerlink" title="三列中的结果 合并到一起"></a>三列中的结果 合并到一起</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> SYSUSER.ID,</span><br><span class="line">      SYSUSER.USERID,</span><br><span class="line">      SYSUSER.USERNAME,</span><br><span class="line">      SYSUSER.GROUPID,</span><br><span class="line">      SYSUSER.SYSID,</span><br><span class="line">      <span class="keyword">decode</span>(SYSUSER.GROUPID,</span><br><span class="line">      <span class="string">'1'</span>,(<span class="keyword">SELECT</span> mc <span class="keyword">FROM</span> USERJD <span class="keyword">WHERE</span> <span class="keyword">ID</span> = sysuser.SYSID),</span><br><span class="line">      <span class="string">'2'</span>,(<span class="keyword">SELECT</span> mc <span class="keyword">FROM</span> USERJD <span class="keyword">WHERE</span> <span class="keyword">ID</span> = sysuser.SYSID),</span><br><span class="line">      <span class="string">'3'</span>,(<span class="keyword">SELECT</span> mc <span class="keyword">FROM</span> USERYY <span class="keyword">WHERE</span> <span class="keyword">ID</span> = sysuser.SYSID),</span><br><span class="line">      <span class="string">'4'</span>,(<span class="keyword">SELECT</span> mc <span class="keyword">FROM</span> USERGYS <span class="keyword">WHERE</span> <span class="keyword">ID</span> = sysuser.SYSID)</span><br><span class="line">      )  <span class="keyword">as</span> sysms</span><br><span class="line"><span class="keyword">FROM</span> SYSUSER</span><br><span class="line"></span><br><span class="line">===============================================================</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> SYSUSER.ID,</span><br><span class="line">      SYSUSER.USERID,</span><br><span class="line">      SYSUSER.USERNAME,</span><br><span class="line">      SYSUSER.GROUPID,</span><br><span class="line">      SYSUSER.SYSID,</span><br><span class="line">      nvl(USERJD.MC, nvl(USERYY.MC,USERGYS.MC)) <span class="keyword">as</span> sysmc</span><br><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> SYSUSER</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> USERJD</span><br><span class="line">  <span class="keyword">on</span> SYSUSER.SYSID = USERJD.ID</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> USERYY</span><br><span class="line">  <span class="keyword">on</span> SYSUSER.SYSID = USERYY.ID</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> USERGYS</span><br><span class="line">  <span class="keyword">ON</span> SYSUSER.SYSID = USERGYS.ID</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">===================================================</span><br><span class="line">nvl()函数简介：</span><br><span class="line">nvl()是<span class="keyword">oracle</span>中的函数，从两个表达式返回一个非 <span class="literal">null</span> 值。</span><br><span class="line"></span><br><span class="line">语法</span><br><span class="line">NVL(eExpression1, eExpression2)</span><br><span class="line"></span><br><span class="line">如果 eExpression1 的计算结果为 <span class="literal">null</span> 值，则 NVL( ) 返回 eExpression2。如果 eExpression1 的计算结果不是 <span class="literal">null</span> 值，则返回 eExpression1。eExpression1 和 eExpression2 可以是任意一种数据类型。如果 eExpression1 与 eExpression2 的结果皆为 <span class="literal">null</span> 值，则 NVL( ) 返回 .NULL.。</span><br><span class="line"></span><br><span class="line">===================================================</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">===================================================</span><br><span class="line">decode()函数简介：</span><br><span class="line">主要作用：将查询结果翻译成其他值（即以其他形式表现出来，举例说明）；</span><br><span class="line">使用方法：</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line"><span class="keyword">decode</span>（columnname，值<span class="number">1</span>,翻译值<span class="number">1</span>,值<span class="number">2</span>,翻译值<span class="number">2</span>,...值n,翻译值n,缺省值）</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	talbename</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">	…</span><br><span class="line"></span><br><span class="line">其中columnname为要选择要翻译的的<span class="keyword">table</span>中所定义的<span class="keyword">column</span></span><br><span class="line">·含义解释：</span><br><span class="line"><span class="keyword">decode</span>(条件,值<span class="number">1</span>,翻译值<span class="number">1</span>,值<span class="number">2</span>,翻译值<span class="number">2</span>,...值n,翻译值n,缺省值)的理解如下：</span><br><span class="line"><span class="keyword">if</span> （条件==值<span class="number">1</span>）</span><br><span class="line"> <span class="keyword">then</span>　　　　</span><br><span class="line"><span class="keyword">return</span>(翻译值<span class="number">1</span>)</span><br><span class="line"><span class="keyword">elsif</span> （条件==值<span class="number">2</span>）</span><br><span class="line"><span class="keyword">then</span>　　　　</span><br><span class="line"><span class="keyword">return</span>(翻译值<span class="number">2</span>)　　　　</span><br><span class="line">......</span><br><span class="line"><span class="keyword">elsif</span> （条件==值n）</span><br><span class="line"> <span class="keyword">then</span>　　　　</span><br><span class="line"><span class="keyword">return</span>(翻译值n)</span><br><span class="line"><span class="keyword">else</span>　　　　</span><br><span class="line"><span class="keyword">return</span>(缺省值)</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">if</span></span><br><span class="line">注：其中缺省值可以是你要选择的<span class="keyword">column</span> <span class="keyword">name</span> 本身，也可以是你想定义的其他值，比如Other等；</span><br><span class="line"></span><br><span class="line">举例说明：</span><br><span class="line">现定义一<span class="keyword">table</span>名为<span class="keyword">output</span>，其中定义两个<span class="keyword">column</span>分别为monthid（<span class="keyword">var</span>型）和sale（<span class="built_in">number</span>型），若sale值=<span class="number">1000</span>时翻译为D，=<span class="number">2000</span>时翻译为C，=<span class="number">3000</span>时翻译为B，=<span class="number">4000</span>时翻译为A，如是其他值则翻译为Other；</span><br><span class="line"></span><br><span class="line"><span class="keyword">SQL</span>如下：</span><br><span class="line"><span class="keyword">Select</span> monthid , <span class="keyword">decode</span> (sale,<span class="number">1000</span>,<span class="string">'D'</span>,<span class="number">2000</span>,<span class="string">'C'</span>,<span class="number">3000</span>,<span class="string">'B'</span>,<span class="number">4000</span>,<span class="string">'A'</span>,’Other’) sale <span class="keyword">from</span> <span class="keyword">output</span></span><br><span class="line"></span><br><span class="line">特殊情况：若只与一个值进行比较</span><br><span class="line"><span class="keyword">Select</span> monthid ,<span class="keyword">decode</span>（sale， <span class="literal">NULL</span>，‘<span class="comment">---’，sale） sale from output</span></span><br><span class="line"></span><br><span class="line">另：<span class="keyword">decode</span>中可使用其他函数，如nvl函数或<span class="keyword">sign</span>（）函数等 </span><br><span class="line">NVL(EXPR1,EXPR2)</span><br><span class="line">若EXPR1是<span class="literal">NULL</span>,则返回EXPR2,否则返回EXPR1.</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">NAME</span>,NVL(TO_CHAR(COMM),<span class="string">'NOT APPLICATION'</span>) <span class="keyword">FROM</span> TABLE1;</span><br><span class="line"></span><br><span class="line">如果用到decode函数中就是</span><br><span class="line"><span class="keyword">select</span> monthid,<span class="keyword">decode</span>(nvl(sale,<span class="number">6000</span>),<span class="number">6000</span>,<span class="string">'NG'</span>,<span class="string">'OK'</span>) <span class="keyword">from</span> <span class="keyword">output</span></span><br><span class="line">===================================================</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="数据库量表来求差集"><a href="#数据库量表来求差集" class="headerlink" title="数据库量表来求差集"></a>数据库量表来求差集</h1><h2 id="什么是差集"><a href="#什么是差集" class="headerlink" title="什么是差集"></a>什么是差集</h2><p>一般地，设A，B是两个 集合，由所有属于A且不属于B的元素组成的集合，叫做集合A减 集合B( 或 集合A与集合B之差)</p>
+<p>A={1,2,3,4}</p>
+<p>B={1,4,5}</p>
+<p>A-B={2,3}</p>
+<h2 id="实际的应用场景"><a href="#实际的应用场景" class="headerlink" title="实际的应用场景"></a>实际的应用场景</h2><p>需求： 有两张数据库表 A（会员表）， B (需要加权限的表) 。现在需要去除掉A表中和B表某一字段相同的一些记录。</p>
+<p> 方案一：not in的查询</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	<span class="keyword">id</span></span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	blog </span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">	<span class="keyword">id</span> <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> <span class="keyword">id</span> <span class="keyword">FROM</span> usertable)</span><br><span class="line">// 这里usertable是B表，blog表示A表</span><br><span class="line">//缺点：<span class="keyword">not</span> <span class="keyword">in</span>的查询效率是极度低下的</span><br></pre></td></tr></table></figure>
+
+
+
+<p>方案二：左链接查询</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	<span class="keyword">id</span></span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	blog </span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (<span class="keyword">SELECT</span> <span class="keyword">id</span> <span class="keyword">AS</span> i <span class="keyword">FROM</span> usertable) <span class="keyword">AS</span> t1 <span class="keyword">ON</span> usertable.id = t1.i</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">	t1.i <span class="keyword">IS</span> <span class="literal">NULL</span></span><br><span class="line">//// 这里usertable是B表，blog表示A表</span><br><span class="line">//这里blog的<span class="keyword">id</span>，也就是t1中的<span class="keyword">id</span>，还必须换成i，或者其它变量名，不然连接的时候会出现混乱</span><br><span class="line">对上面<span class="keyword">sql</span>语句解释 </span><br><span class="line">A  <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line">B  <span class="number">1</span>     <span class="number">4</span> <span class="number">5</span></span><br><span class="line">A <span class="keyword">left</span> <span class="keyword">join</span> B</span><br><span class="line">  <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>|</span><br><span class="line">  <span class="number">1</span>     <span class="number">4</span>| <span class="number">5</span></span><br><span class="line">然后取B中在左联合中为空那就是<span class="number">2</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>实际例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">		*</span><br><span class="line">		FROM</span><br><span class="line">		(</span><br><span class="line">		SELECT</span><br><span class="line">		*</span><br><span class="line">		FROM</span><br><span class="line">		member</span><br><span class="line">		LEFT JOIN (</span><br><span class="line">		SELECT</span><br><span class="line">		USER_MOBILE AS i</span><br><span class="line">		FROM</span><br><span class="line">		databoard_user</span><br><span class="line">		) AS t1 ON member.MOBILE = t1.i</span><br><span class="line">		WHERE</span><br><span class="line">		t1.i IS NULL</span><br><span class="line">		) AS a</span><br><span class="line">		&lt;dynamic prepend=&quot;where&quot;&gt;</span><br><span class="line">			&lt;isNotEmpty prepend=&quot;and&quot; property=&quot;mobile&quot;&gt;</span><br><span class="line">				a.MOBILE=#mobile#</span><br><span class="line">			&lt;/isNotEmpty&gt;</span><br><span class="line">		&lt;/dynamic&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="数据库使用UNION-来进行复杂的排序"><a href="#数据库使用UNION-来进行复杂的排序" class="headerlink" title="数据库使用UNION 来进行复杂的排序"></a>数据库使用UNION 来进行复杂的排序</h1><p>需求： 数据需要排序，先根据sort 字段进行排序， 如果这个字段不为null ,就根据这个字段排序，如果sort字段相同，就根据updateTime字段进行排序，如果这个字段是空 ， 就根据typename 字段排序。 数字&gt; 字母 &gt;汉字 </p>
+<p>思路解析： 先拆分需求， 将数据分成两部分排序，然后union 成一个整体。  第一部分为sort 字段不为空的。 第二部分是sort 字段为null的。   数字&gt; 字母 &gt;汉字  这个排序规则 sql 天然满足。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM (SELECT * FROM car_type ct WHERE ct.`sort` IS NOT NULL AND ct.sort!=&apos;&apos;</span><br><span class="line">AND (ct.`sort` REGEXP &apos;[^0-9.]&apos;)=0</span><br><span class="line"> ORDER BY  CONVERT(ct.`sort` ,SIGNED) ASC) a</span><br><span class="line"> UNION ALL</span><br><span class="line">SELECT * FROM (SELECT * FROM car_type ct WHERE ct.`sort` IS NOT NULL AND ct.sort!=&apos;&apos;</span><br><span class="line">AND (ct.`sort` REGEXP &apos;[^0-9.]&apos;)=1</span><br><span class="line"> ORDER BY  CONVERT(ct.`sort` USING gbk) ASC) b</span><br><span class="line"> </span><br><span class="line">UNION ALL</span><br><span class="line">SELECT * FROM (</span><br><span class="line">SELECT * FROM car_type ct WHERE (ct.`sort` IS  NULL OR ct.sort=&apos;&apos;)</span><br><span class="line"></span><br><span class="line"> ORDER BY  CONVERT(ct.car_type_name USING gbk) ASC</span><br><span class="line">) c</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">select</span><br><span class="line">		cb.id as carBrandId,</span><br><span class="line">		cb.car_brand_name as carBrandName,</span><br><span class="line">		cs.id as carSeriesId,</span><br><span class="line">		cs.car_series_name as carSeriesName,</span><br><span class="line">		ct.id as id,</span><br><span class="line">		ct.car_type_name as</span><br><span class="line">		carTypeName,</span><br><span class="line">		ct.car_code as carCode,</span><br><span class="line">		ct.sort as sort,</span><br><span class="line">		ct.is_enable as</span><br><span class="line">		isEnable,</span><br><span class="line">		ct.add_time as addTime,</span><br><span class="line">		ct.update_time as updateTime,</span><br><span class="line">		ct.create_user_id as</span><br><span class="line">		createUserId,</span><br><span class="line">		ct.create_user_name as createUserName,</span><br><span class="line">		d1.dict_value as</span><br><span class="line">		seatNumber,</span><br><span class="line">		cbd.displacement displacementKey,</span><br><span class="line">		cbd.guide_price as</span><br><span class="line">		guidePrice</span><br><span class="line">		from </span><br><span class="line">		(SELECT * FROM (SELECT * FROM (select * from car_type group by car_type_name) ct  WHERE ct.`sort` IS NOT NULL AND ct.sort!=&apos;&apos;</span><br><span class="line">		AND (ct.`sort` REGEXP &apos;[^0-9.]&apos;)=0</span><br><span class="line">		 ORDER BY  CONVERT(ct.`sort` ,SIGNED) ASC) a</span><br><span class="line"> 		UNION ALL</span><br><span class="line">		SELECT * FROM (SELECT * FROM (select * from car_type group by car_type_name) ct WHERE ct.`sort` IS NOT NULL AND ct.sort!=&apos;&apos;</span><br><span class="line">		AND (ct.`sort` REGEXP &apos;[^0-9.]&apos;)=1</span><br><span class="line"> 		ORDER BY  CONVERT(ct.`sort` USING gbk) ASC) b</span><br><span class="line">		UNION ALL</span><br><span class="line">		SELECT * FROM (</span><br><span class="line">		SELECT * FROM (select * from car_type group by car_type_name) ct WHERE (ct.`sort` IS  NULL OR ct.sort=&apos;&apos;)</span><br><span class="line"> 		ORDER BY  CONVERT(ct.car_type_name USING gbk) ASC</span><br><span class="line">		) c )  ct</span><br><span class="line">		inner join car_series cs on ct.car_series_id = cs.id</span><br><span class="line">		inner join car_brand cb on cb.id = cs.car_brand_id</span><br><span class="line">		left join car_basic_data cbd on ct.id = cbd.car_type_id</span><br><span class="line">		left join dict d1</span><br><span class="line">		on d1.dict_key = cbd.seat_number and d1.dict_type=&apos;seat_number&apos;</span><br><span class="line">		&lt;where&gt;</span><br><span class="line">			&lt;if test=&quot;carBrandId !=null and carBrandId !=&apos;&apos; and carBrandId!=&apos;null&apos;&quot;&gt;</span><br><span class="line">				and ct.car_brand_id =#&#123;carBrandId&#125;</span><br><span class="line">			&lt;/if&gt;</span><br><span class="line">			&lt;if test=&quot;carSeriesId !=null and carSeriesId !=&apos;&apos; and carSeriesId!=&apos;null&apos;&quot;&gt;</span><br><span class="line">				and ct.car_series_id =#&#123;carSeriesId&#125;</span><br><span class="line">			&lt;/if&gt;</span><br><span class="line">			&lt;if test=&quot;carTypeName !=null and carTypeName !=&apos;&apos; and carTypeName!=&apos;null&apos;&quot;&gt;</span><br><span class="line">				and ct.car_type_name like CONCAT(CONCAT(&apos;%&apos;,</span><br><span class="line">				#&#123;carTypeName&#125;), &apos;%&apos;)</span><br><span class="line">			&lt;/if&gt;</span><br><span class="line">			&lt;if test=&quot;id !=null and id !=&apos;&apos; and id!=&apos;null&apos;&quot;&gt;</span><br><span class="line">				and ct.id =#&#123;id&#125;</span><br><span class="line">			&lt;/if&gt;</span><br><span class="line">			&lt;if test=&quot;guidePrice !=null &quot;&gt;</span><br><span class="line">				and cbd.guide_price = #&#123;guidePrice&#125;</span><br><span class="line">			&lt;/if&gt;</span><br><span class="line">			&lt;if test=&quot;displacementKey !=null and displacementKey !=&apos;&apos;&quot;&gt;</span><br><span class="line">				and cbd.displacement =#&#123;displacementKey&#125;</span><br><span class="line">			&lt;/if&gt;</span><br><span class="line">			&lt;if test=&quot;seatNumber !=null and seatNumber !=&apos;&apos;&quot;&gt;</span><br><span class="line">				and d1.dict_key = #&#123;seatNumber&#125;</span><br><span class="line">			&lt;/if&gt;</span><br><span class="line">		&lt;/where&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>简单格式： 就是两部分查询合在一起</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line">select * from (SELECT </span><br><span class="line">		cb.id as carBrandId,</span><br><span class="line">		cb.car_brand_name as carBrandName,</span><br><span class="line">		cs.id as carSeriesId,</span><br><span class="line">		cs.car_series_name as carSeriesName,</span><br><span class="line">		ct.id as id,</span><br><span class="line">		ct.car_type_name as carTypeName,</span><br><span class="line">		ct.car_code as carCode,</span><br><span class="line">		ct.sort as sort,</span><br><span class="line">		ct.is_enable as isEnable, </span><br><span class="line">		ct.add_time as addTime,</span><br><span class="line">		ct.update_time as updateTime,</span><br><span class="line">		ct.create_user_id as createUserId,</span><br><span class="line">		ct.create_user_name as createUserName,</span><br><span class="line">		d1.dict_value as seatNumber,</span><br><span class="line">		cbd.displacement displacementKey,</span><br><span class="line">		cbd.guide_price as guidePrice</span><br><span class="line">from car_type  ct</span><br><span class="line">		inner join car_series cs on ct.car_series_id = cs.id </span><br><span class="line">		inner join car_brand cb on cb.id = cs.car_brand_id </span><br><span class="line">		left join car_basic_data cbd on ct.id = cbd.car_type_id</span><br><span class="line">		left join dict d1 on d1.dict_key = cbd.seat_number and d1.dict_type=&apos;seat_number&apos;</span><br><span class="line">WHERE ct.`sort` IS NOT NULL AND ct.sort!=&apos;&apos;</span><br><span class="line">AND (ct.`sort` REGEXP &apos;[^0-9.]&apos;)=0</span><br><span class="line">group by ct.car_type_name</span><br><span class="line"></span><br><span class="line">ORDER BY CAST(ct.sort AS SIGNED),ct.update_time DESC</span><br><span class="line">) as a</span><br><span class="line"></span><br><span class="line">UNION</span><br><span class="line"></span><br><span class="line">select * from </span><br><span class="line"></span><br><span class="line">(SELECT </span><br><span class="line">		cb.id as carBrandId,</span><br><span class="line">		cb.car_brand_name as carBrandName,</span><br><span class="line">		cs.id as carSeriesId,</span><br><span class="line">		cs.car_series_name as carSeriesName,</span><br><span class="line">		ct.id as id,</span><br><span class="line">		ct.car_type_name as carTypeName,</span><br><span class="line">		ct.car_code as carCode,</span><br><span class="line">		ct.sort as sort,</span><br><span class="line">		ct.is_enable as isEnable, </span><br><span class="line">		ct.add_time as addTime,</span><br><span class="line">		ct.update_time as updateTime,</span><br><span class="line">		ct.create_user_id as createUserId,</span><br><span class="line">		ct.create_user_name as createUserName,</span><br><span class="line">		d1.dict_value as seatNumber,</span><br><span class="line">		cbd.displacement displacementKey,</span><br><span class="line">		cbd.guide_price as guidePrice</span><br><span class="line">from car_type  ct</span><br><span class="line">		inner join car_series cs on ct.car_series_id = cs.id </span><br><span class="line">		inner join car_brand cb on cb.id = cs.car_brand_id </span><br><span class="line">		left join car_basic_data cbd on ct.id = cbd.car_type_id</span><br><span class="line">		left join dict d1 on d1.dict_key = cbd.seat_number and d1.dict_type=&apos;seat_number&apos;</span><br><span class="line">WHERE</span><br><span class="line">ct.`sort` IS  NULL OR ct.sort=&apos;&apos;</span><br><span class="line">group by ct.car_type_name</span><br><span class="line">ORDER BY CONVERT(ct.car_type_name USING gbk) ASC) as b</span><br><span class="line"></span><br><span class="line">UNION</span><br><span class="line"></span><br><span class="line">select * from </span><br><span class="line">(SELECT </span><br><span class="line">		cb.id as carBrandId,</span><br><span class="line">		cb.car_brand_name as carBrandName,</span><br><span class="line">		cs.id as carSeriesId,</span><br><span class="line">		cs.car_series_name as carSeriesName,</span><br><span class="line">		ct.id as id,</span><br><span class="line">		ct.car_type_name as carTypeName,</span><br><span class="line">		ct.car_code as carCode,</span><br><span class="line">		ct.sort as sort,</span><br><span class="line">		ct.is_enable as isEnable, </span><br><span class="line">		ct.add_time as addTime,</span><br><span class="line">		ct.update_time as updateTime,</span><br><span class="line">		ct.create_user_id as createUserId,</span><br><span class="line">		ct.create_user_name as createUserName,</span><br><span class="line">		d1.dict_value as seatNumber,</span><br><span class="line">		cbd.displacement displacementKey,</span><br><span class="line">		cbd.guide_price as guidePrice</span><br><span class="line">from car_type  ct</span><br><span class="line">		inner join car_series cs on ct.car_series_id = cs.id </span><br><span class="line">		inner join car_brand cb on cb.id = cs.car_brand_id </span><br><span class="line">		left join car_basic_data cbd on ct.id = cbd.car_type_id</span><br><span class="line">		left join dict d1 on d1.dict_key = cbd.seat_number and d1.dict_type=&apos;seat_number&apos;</span><br><span class="line">WHERE</span><br><span class="line">ct.`sort` IS  NULL OR ct.sort=&apos;&apos;</span><br><span class="line">group by ct.car_type_name</span><br><span class="line">ORDER BY CONVERT(ct.car_type_name USING gbk) ASC) as c</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="mybatise-根据时间段来查询"><a href="#mybatise-根据时间段来查询" class="headerlink" title="mybatise 根据时间段来查询"></a>mybatise 根据时间段来查询</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;if test="beginDate != null and beginDate != ''"&gt;</span><br><span class="line">AND stock_bill.bill_date &lt;![CDATA[&gt;=]]&gt; #&#123;beginDate&#125;</span><br><span class="line">&lt;/if&gt;</span><br><span class="line">&lt;if test="endDate != null and endDate != ''"&gt;</span><br><span class="line">AND stock_bill.bill_date &lt;![CDATA[&lt;=]]&gt;#&#123;endDate&#125;</span><br><span class="line">&lt;/if&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="mybatise实现批量插入和批量更新"><a href="#mybatise实现批量插入和批量更新" class="headerlink" title="mybatise实现批量插入和批量更新"></a>mybatise实现批量插入和批量更新</h1><p>批量前提：需要在数据库链接上加上<code>allowMultiQueries=true</code>且他需要加在<code>？</code>后面，作为第一个</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: jdbc:mysql://10.64.14.115:3306/test_cb_broker?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"addSellerList"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.List"</span>&gt;</span></span><br><span class="line">     insert into seller</span><br><span class="line">        (phone, name, dealer_id, dealer_name,is_cancel,role_flag,add_user_id,add_time,update_time,id)</span><br><span class="line">     values</span><br><span class="line">     <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span> =<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"item"</span> <span class="attr">index</span>= <span class="string">"index"</span> <span class="attr">separator</span> =<span class="string">","</span>&gt;</span></span><br><span class="line">         (                </span><br><span class="line">            #&#123;item.phone,jdbcType=VARCHAR&#125;,</span><br><span class="line">            #&#123;item.name,jdbcType=INTEGER&#125;,</span><br><span class="line">            #&#123;item.dealerId,jdbcType=VARCHAR&#125;,</span><br><span class="line">            #&#123;item.dealerName,jdbcType=VARCHAR&#125;,</span><br><span class="line">            #&#123;item.isCancel,jdbcType=VARCHAR&#125;,</span><br><span class="line">            #&#123;item.roleFlag,jdbcType=VARCHAR&#125;,</span><br><span class="line">            #&#123;item.addUserId,jdbcType=VARCHAR&#125;,</span><br><span class="line">            now(),now(),</span><br><span class="line">            #&#123;item.id,jdbcType=VARCHAR&#125;</span><br><span class="line">         )</span><br><span class="line">     <span class="tag">&lt;/<span class="name">foreach</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"updateSellerList"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.List"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"item"</span> <span class="attr">index</span>=<span class="string">"index"</span> <span class="attr">separator</span>=<span class="string">";"</span>&gt;</span></span><br><span class="line">        update seller</span><br><span class="line">        <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"item.name !=null and item.name !=''"</span>&gt;</span></span><br><span class="line">                name = #&#123;item.name&#125;,</span><br><span class="line">            <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"item.dealerId !=null and item.dealerId !=''"</span>&gt;</span></span><br><span class="line">                dealer_id = #&#123;item.dealerId&#125;,</span><br><span class="line">            <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"item.dealerName !=null and item.dealerName !=''"</span>&gt;</span></span><br><span class="line">                dealer_name = #&#123;item.dealerName&#125;,</span><br><span class="line">            <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"item.isCancel !=null and item.isCancel !=''"</span>&gt;</span></span><br><span class="line">                is_cancel = #&#123;item.isCancel&#125;,</span><br><span class="line">            <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"item.isCloud !=null and item.isCloud !=''"</span>&gt;</span></span><br><span class="line">                is_cloud = #&#123;item.isCloud&#125;,</span><br><span class="line">            <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"item.roleFlag !=null and item.roleFlag !=''"</span>&gt;</span></span><br><span class="line">                role_flag = #&#123;item.roleFlag&#125;,</span><br><span class="line">            <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"item.addUserId !=null and item.addUserId !=''"</span>&gt;</span></span><br><span class="line">                add_user_id = #&#123;item.addUserId&#125;,</span><br><span class="line">            <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">            update_time = now()</span><br><span class="line">        <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">        where</span><br><span class="line">        phone = #&#123;item.phone&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"item.id !=null and item.id !=''"</span>&gt;</span></span><br><span class="line">                and  id = #&#123;item.id&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="mybatise实现-复杂的分析统计"><a href="#mybatise实现-复杂的分析统计" class="headerlink" title="mybatise实现 复杂的分析统计"></a>mybatise实现 复杂的分析统计</h1><p>分步走,每一次统计一项</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"getSellerStatisticalList"</span> <span class="attr">resultType</span>=<span class="string">"com.ec.changan.cb.entity.po.SellerPO"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">parameterType</span>=<span class="string">"com.ec.changan.cb.entity.dto.SellerParamDTO"</span>&gt;</span></span><br><span class="line">       SELECT  a1.phone</span><br><span class="line">               ,a1.dealerId</span><br><span class="line">               ,IFNULL(a1.recommendTotalNums, "") AS recommendTotalNums</span><br><span class="line">               ,IFNULL(a1.recommendFinishTotalNums,"") AS recommendFinishTotalNums</span><br><span class="line">               ,IFNULL(a1.inviteTotalNums, "") AS inviteTotalNums</span><br><span class="line">       FROM    (</span><br><span class="line">                   SELECT  b1.brokerId AS brokerId</span><br><span class="line">                           ,b1.dealerId</span><br><span class="line">                           ,b1.phone</span><br><span class="line">                           ,b1.recommendTotalNums AS recommendTotalNums</span><br><span class="line">                           ,b1.recommendFinishTotalNums AS recommendFinishTotalNums</span><br><span class="line">                           ,count(b2.id) AS inviteTotalNums</span><br><span class="line">                   FROM    (</span><br><span class="line">                               SELECT  c1.brokerId</span><br><span class="line">                                       ,c1.dealerId</span><br><span class="line">                                       ,c1.phone</span><br><span class="line">                                       ,c1.recommendTotalNums</span><br><span class="line">                                       ,count(c2.id) AS recommendFinishTotalNums</span><br><span class="line">                               FROM    (</span><br><span class="line">                                           SELECT  d1.brokerId</span><br><span class="line">                                                   ,d1.phone</span><br><span class="line">                                                   ,d1.dealerId</span><br><span class="line">                                                   ,count(d2.id) AS recommendTotalNums</span><br><span class="line">                                           FROM    (</span><br><span class="line">                                                       SELECT  e2.id AS brokerId</span><br><span class="line">                                                               ,e1.phone</span><br><span class="line">                                                               ,e1.dealer_id as dealerId</span><br><span class="line">                                                       FROM    seller AS e1</span><br><span class="line">                                                       LEFT JOIN broker AS e2</span><br><span class="line">                                                       ON e1.phone = e2.phone</span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"sellerIds !=null"</span>&gt;</span></span><br><span class="line">                                                           and e1.id in</span><br><span class="line">                                                           <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"sellerIds"</span> <span class="attr">item</span>=<span class="string">"sellerId"</span></span></span><br><span class="line"><span class="tag">                                                               <span class="attr">index</span>=<span class="string">"index"</span> <span class="attr">open</span>=<span class="string">"("</span> <span class="attr">close</span>=<span class="string">")"</span> <span class="attr">separator</span>=<span class="string">","</span>&gt;</span></span><br><span class="line">                                                               #&#123;sellerId&#125;</span><br><span class="line">                                                           <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"name !=null and name !=''"</span>&gt;</span></span><br><span class="line">                                                           and e1.name like concat('%',#&#123;name&#125;,'%')</span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"phone !=null and phone !=''"</span>&gt;</span></span><br><span class="line">                                                           and e1.phone like concat('%',#&#123;phone&#125;,'%')</span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"dealerName !=null and dealerName !=''"</span>&gt;</span></span><br><span class="line">                                                           and e1.dealer_name like concat('%',#&#123;dealerName&#125;,'%')</span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"dealerId !=null and dealerId !=''"</span>&gt;</span></span><br><span class="line">                                                           and e1.dealer_id = #&#123;dealerId&#125;</span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"addUserId !=null and addUserId !=''"</span>&gt;</span></span><br><span class="line">                                                           and e1.add_user_id = #&#123;addUserId&#125;</span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"isCancel !=null and isCancel !=''"</span>&gt;</span></span><br><span class="line">                                                           and e1.is_cancel = #&#123;isCancel&#125;</span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"isCloud !=null and isCloud !=''"</span>&gt;</span></span><br><span class="line">                                                           and e1.is_cloud = #&#123;isCloud&#125;</span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"roleFlag !=null and roleFlag !=''"</span>&gt;</span></span><br><span class="line">                                                           and e1.role_flag = #&#123;roleFlag&#125;</span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                           </span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"createTimeStart != null and createTimeStart !=''"</span>&gt;</span></span><br><span class="line">                                                           and e1.add_time &gt;=#&#123;createTimeStart,jdbcType=TIMESTAMP&#125;</span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"createTimeEnd != null and createTimeEnd !=''"</span>&gt;</span></span><br><span class="line">                                                           and e1.add_time &lt;![CDATA[ &lt; ]]&gt;#&#123;createTimeEnd,jdbcType=TIMESTAMP&#125;</span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">                                                       <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">                                                       GROUP BY</span><br><span class="line">                                                       e1.phone,</span><br><span class="line">                                                       e1.dealer_id</span><br><span class="line">                                                   )d1</span><br><span class="line">                                           LEFT JOIN broker_recommend d2 </span><br><span class="line">                                           ON  d1.brokerId = d2.broker_id</span><br><span class="line">                                           AND d1.dealerId = d2.create_dealer_id</span><br><span class="line">                                           and d2.create_is_seller='Y'</span><br><span class="line">                                           GROUP BY</span><br><span class="line">                                           d1.brokerId,</span><br><span class="line">                                           d1.dealerId</span><br><span class="line">                                       )c1</span><br><span class="line">                               LEFT JOIN   (</span><br><span class="line">                                               SELECT  d3.broker_id AS brokerId</span><br><span class="line">                                                       ,d3.create_dealer_id</span><br><span class="line">                                                       ,d3.id</span><br><span class="line">                                               FROM    broker_recommend d3</span><br><span class="line">                                               WHERE</span><br><span class="line">                                               d3.`status` = '2' </span><br><span class="line">											and d3.create_is_seller='Y'</span><br><span class="line">                                           )c2 </span><br><span class="line">                               ON c1.brokerId = c2.brokerId </span><br><span class="line">                               and c1.dealerId=c2.create_dealer_id</span><br><span class="line">                               GROUP BY</span><br><span class="line">                               c1.brokerId,</span><br><span class="line">                               c1.dealerId</span><br><span class="line">                   ) b1</span><br><span class="line">                   LEFT JOIN broker b2 </span><br><span class="line">                   ON  b1.brokerId = b2.recommend_broker_id</span><br><span class="line">                   AND b1.dealerId =b2.create_dealer_id</span><br><span class="line">                   AND b2.create_is_seller='Y'</span><br><span class="line">                   GROUP BY</span><br><span class="line">                   b1.brokerId,</span><br><span class="line">                   b1.dealerId</span><br><span class="line">                   )a1</span><br><span class="line">       GROUP BY</span><br><span class="line">       a1.brokerId,</span><br><span class="line">       a1.dealerId</span><br><span class="line">   <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="修改表结构sql语句"><a href="#修改表结构sql语句" class="headerlink" title="修改表结构sql语句"></a>修改表结构sql语句</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1.删除一列</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">drop</span> <span class="keyword">column</span> stuPhone</span><br><span class="line"></span><br><span class="line"><span class="comment">--2.添加一列</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">add</span>  stuPhone <span class="built_in">char</span>(<span class="number">11</span>)</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> broker <span class="keyword">add</span> create_dealer_id <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'经纪人推荐人所在的部门'</span>;</span><br><span class="line"><span class="comment">--3.修改字段的数据类型(表中Gender列不能有数据)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">alter</span> <span class="keyword">column</span> stuGender <span class="keyword">nchar</span>(<span class="number">1</span>)</span><br><span class="line"><span class="comment">--4.添加主键约束</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">add</span> <span class="keyword">constraint</span> PK_TbStudent_stuId primary <span class="keyword">key</span>(stuId)</span><br><span class="line"><span class="comment">--5.添加唯一性约束</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">add</span> <span class="keyword">constraint</span> UK_TbStudent_stuName <span class="keyword">unique</span>(stuName)</span><br><span class="line"><span class="comment">--6.添加check约束</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">add</span> <span class="keyword">constraint</span> CK_TbStudent_stuAge</span><br><span class="line"> </span><br><span class="line"><span class="keyword">check</span>(stuAge&gt;=<span class="number">18</span> <span class="keyword">and</span> stuAge&lt;=<span class="number">35</span>)</span><br><span class="line"><span class="comment">--7.添加非空约束,实际上就是对列的数据类型修改</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">alter</span> <span class="keyword">column</span> stuPhone <span class="built_in">char</span>(<span class="number">11</span>) <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line"><span class="comment">--8.添加外键约束</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">add</span> <span class="keyword">constraint</span> FK_TbStudent_stuClassId</span><br><span class="line"> </span><br><span class="line"><span class="keyword">foreign</span> <span class="keyword">key</span>(stuClassId) <span class="keyword">references</span> TbClass(clsId)</span><br><span class="line"><span class="comment">--9.外键的级联删除/更新</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--语法： on delete [no action cascade]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--       on update [no action cascade]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">add</span> <span class="keyword">constraint</span> FK_TbStudent_stuClassId</span><br><span class="line"> </span><br><span class="line"><span class="keyword">foreign</span> <span class="keyword">key</span>(stuClassId) <span class="keyword">references</span> TbClass(clsId) <span class="keyword">on</span> <span class="keyword">delete</span> <span class="keyword">cascade</span></span><br><span class="line"><span class="comment">--10.删除约束</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">drop</span> <span class="keyword">constraint</span> Fk_TbStudent_stuClassId</span><br><span class="line"><span class="comment">--11.一条语句删除多条约束</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">drop</span> <span class="keyword">constraint</span> Fk_TbStudent_stuClassId,CK_TbStudent_stuAge</span><br><span class="line"> <span class="comment">--12.添加一条语句，添加多个约束</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">alter</span> <span class="keyword">table</span> TbStudent <span class="keyword">add</span></span><br><span class="line"> </span><br><span class="line">  <span class="keyword">constraint</span> FK_TbStudent_stuClassId <span class="keyword">foreign</span> <span class="keyword">key</span>(stuClassId) <span class="keyword">references</span> TbClass(clsId)</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">constraint</span> PK_TbStudent_stuId primary <span class="keyword">key</span>(stuId)</span><br></pre></td></tr></table></figure>
+
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          zhaodahan
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2019/10/24/sql 常用技巧语句/" title="sql 问题解决记录" target="_blank">http://yoursite.com/2019/10/24/sql 常用技巧语句/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -248,1719 +390,120 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" target="_blank">git 问题解决记录</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-09-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" target="_blank">Redis基础回顾笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nosql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" class="archive-article-date">
-        <time datetime="2019-09-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" target="_blank">Shiro学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shiro</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/" class="archive-article-date">
-        <time datetime="2019-09-12T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/" target="_blank">SpringBoot高级(整合篇)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" class="archive-article-date">
-        <time datetime="2019-09-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" target="_blank">Spring Boot核心技术</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">spring 基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" target="_blank">Spring Cloud学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">springCloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">SpringMVC基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">springmvc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" target="_blank">Spring注解驱动开发</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">注解</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Git&GitHub%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Git&GitHub%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" target="_blank">Git&amp;GitHub学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/MyBatis%20%E9%80%9A%E7%94%A8mapper%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-23T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/23/MyBatis%20%E9%80%9A%E7%94%A8mapper%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">通用mapper</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/21/MyBatisPlus%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-21T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/21/MyBatisPlus%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">MyBatisPlus 学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/20/Mybatis%E5%BA%94%E7%94%A8%E2%80%94SSM%E6%95%B4%E5%90%88/" class="archive-article-date">
-        <time datetime="2019-08-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/20/Mybatis%E5%BA%94%E7%94%A8%E2%80%94SSM%E6%95%B4%E5%90%88/" target="_blank">SSM整合</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/20/MyBatis%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-08-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/20/MyBatis%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">MyBatis基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/13/SSSP%20%E6%95%B4%E5%90%88%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/13/SSSP%20%E6%95%B4%E5%90%88%E7%AC%94%E8%AE%B0/" target="_blank">SSSP整合</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/12/SpringData%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-12T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/12/SpringData%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">SpringData 学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/11/JPA%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-08-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/11/JPA%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JPA 基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/10/Hibernate%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/10/Hibernate%E7%AC%94%E8%AE%B0/" target="_blank">Hibernate笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/23/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-23T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/23/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E4%BA%8C/" target="_blank">java设计模式 (二)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/22/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-        <time datetime="2019-07-22T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-22</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/22/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank">java设计模式 (一)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/20/mysql%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/20/mysql%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">mysql 基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/20/MySQL%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-07-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/20/MySQL%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">MySQL高级</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/13/JUC%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/13/JUC%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JUC 多线程</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/13/NIO%E5%9B%9E%E9%A1%BE%E5%8A%A0%E5%BC%BA/" class="archive-article-date">
-        <time datetime="2019-07-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/13/NIO%E5%9B%9E%E9%A1%BE%E5%8A%A0%E5%BC%BA/" target="_blank">NIO</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NIO</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95/" target="_blank">java数据结构与算法 (一)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">java数据结构与算法__数据结构(一)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95%20-%20%E4%BA%8C/" target="_blank">java数据结构与算法 (二)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%BA%8C/" target="_blank">java数据结构与算法__数据结构(二)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%B8%89/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%B8%89/" target="_blank">java数据结构与算法__数据结构(三)</a>
   
-    </h1>
+    <a href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git 问题解决记录</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
+</nav>
 
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/JAVAWeb%20%E4%B8%ADservlet%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL常用技巧语句汇总"><span class="toc-number">1.</span> <span class="toc-text">SQL常用技巧语句汇总</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#查询出表中某个字段重复的语句"><span class="toc-number">1.1.</span> <span class="toc-text">查询出表中某个字段重复的语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除重复的记录-并且只保留-id-最小的一条"><span class="toc-number">1.2.</span> <span class="toc-text">删除重复的记录 并且只保留 id 最小的一条</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三列中的结果-合并到一起"><span class="toc-number">1.3.</span> <span class="toc-text">三列中的结果 合并到一起</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库量表来求差集"><span class="toc-number">2.</span> <span class="toc-text">数据库量表来求差集</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是差集"><span class="toc-number">2.1.</span> <span class="toc-text">什么是差集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实际的应用场景"><span class="toc-number">2.2.</span> <span class="toc-text">实际的应用场景</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库使用UNION-来进行复杂的排序"><span class="toc-number">3.</span> <span class="toc-text">数据库使用UNION 来进行复杂的排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mybatise-根据时间段来查询"><span class="toc-number">4.</span> <span class="toc-text">mybatise 根据时间段来查询</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mybatise实现批量插入和批量更新"><span class="toc-number">5.</span> <span class="toc-text">mybatise实现批量插入和批量更新</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mybatise实现-复杂的分析统计"><span class="toc-number">6.</span> <span class="toc-text">mybatise实现 复杂的分析统计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改表结构sql语句"><span class="toc-number">7.</span> <span class="toc-text">修改表结构sql语句</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/JAVAWeb%20%E4%B8%ADservlet%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JAVAWeb回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/java%20JDBC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/java%20JDBC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JDBC</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">jdbc</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE(%E7%AC%AC%E4%B8%80%E7%89%88)/" class="archive-article-date">
-        <time datetime="2019-07-10T11:30:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE(%E7%AC%AC%E4%B8%80%E7%89%88)/" target="_blank">java 基础回顾 (第一版)</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
 
 
           </div>
@@ -2001,8 +544,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

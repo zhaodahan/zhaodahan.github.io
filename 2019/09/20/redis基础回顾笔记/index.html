@@ -6,19 +6,48 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 赵大汉的个人博客</title>
+  <title>Redis基础回顾笔记 | 赵大汉的个人博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="们常常犯的三种错误：第一，听到了，就以为已经明白了；第二，知道了，就以为自己做到了；第三，心动了，就以为自己在行动">
-<meta name="keywords" content="开发者,程序猿,编程,代码,开源,IT网站,Developer,Programmer,Coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="赵大汉的个人博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="Redis基础回顾笔记Redis是一个key-value存储系统，是当下互联网公司常用的NoSQL数据库之一 NOSQLredis是nosql的一种落地实现。 我们已经有了关系型数据库，为什么还会有NOSQL 横向扩展和纵向扩展">
+<meta name="keywords" content="note,redis,nosql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis基础回顾笔记">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;09&#x2F;20&#x2F;redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="赵大汉的个人博客">
-<meta property="og:description" content="们常常犯的三种错误：第一，听到了，就以为已经明白了；第二，知道了，就以为自己做到了；第三，心动了，就以为自己在行动">
+<meta property="og:description" content="Redis基础回顾笔记Redis是一个key-value存储系统，是当下互联网公司常用的NoSQL数据库之一 NOSQLredis是nosql的一种落地实现。 我们已经有了关系型数据库，为什么还会有NOSQL 横向扩展和纵向扩展">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS6.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS1.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS2.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS3.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS4.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS5.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS7.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS8.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS9.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS10.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS11.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS12.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS13.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS14.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS15.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS16.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS17.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS18.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS19.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS20.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS21.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS22.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS26.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS23.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS24.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS25.png?raw=true">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS27.png?raw=true">
+<meta property="og:updated_time" content="2019-10-24T14:55:06.246Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_REDIS6.png?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="赵大汉的个人博客" type="application/atom+xml">
   
@@ -198,135 +227,272 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-redis基础回顾笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" class="archive-article-date">
-        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" target="_blank">sql 问题解决记录</a>
   
+    <h1 class="article-title" itemprop="name">
+      Redis基础回顾笔记
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" target="_blank">git 问题解决记录</a>
-  
-    </h1>
-  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 <a href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" class="archive-article-date">
         <time datetime="2019-09-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">9.5k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">36分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Redis基础回顾笔记"><a href="#Redis基础回顾笔记" class="headerlink" title="Redis基础回顾笔记"></a>Redis基础回顾笔记</h1><p>Redis是一个key-value存储系统，是当下互联网公司常用的NoSQL数据库之一</p>
+<h1 id="NOSQL"><a href="#NOSQL" class="headerlink" title="NOSQL"></a>NOSQL</h1><p>redis是nosql的一种落地实现。</p>
+<h2 id="我们已经有了关系型数据库，为什么还会有NOSQL"><a href="#我们已经有了关系型数据库，为什么还会有NOSQL" class="headerlink" title="我们已经有了关系型数据库，为什么还会有NOSQL"></a>我们已经有了关系型数据库，为什么还会有NOSQL</h2><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS6.png?raw=true" alt="JAVA_REDIS6.png"></p>
+<p><strong>横向扩展和纵向扩展</strong></p>
+  <a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">纵向： 类似于我们计算机中的扩内存， 不断的加内存条</span><br><span class="line">横向： 类似于多核处理器。 我们将几个电脑封装起来(集群)，对外的时候别人看起来就像是一台电脑而已</span><br></pre></td></tr></table></figure>
+
+<p><strong>单机MYSQL</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS1.png?raw=true" alt="JAVA_REDIS1.png"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">我们做的简单的项目，基本访问量不大，使用单个数据库就足以响应。</span><br><span class="line">这种项目一般就三层结构。 就app——》应用层——》数据库</span><br><span class="line"></span><br><span class="line">但是总有一天，当我们的数据量增大到一定程度，成为了瓶颈后。</span><br><span class="line">随着当下互联网的飞速发张，随随便便的数据量都是破百万千万的。关系型数据库已经不堪负重。</span><br><span class="line">当数据量庞大之后，为了优化查询我们会建立数据库索引。这个时候数据库的索引，一般的机器都会放不下。</span><br><span class="line">且当我们的访问量增大了以后，(读写混合)一个实例不能承受。这时候我们常常使用的优化方式就是读写分离，分库分表。</span><br><span class="line">如果我们的系统无法满足访问量递增之后的性能要求，这时候就需要改变我们的架构</span><br></pre></td></tr></table></figure>
+
+<p> <strong>Memcached(缓存)+MySQL+垂直拆分</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS2.png?raw=true" alt="JAVA_REDIS2.png"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">随着访问量的上升，几乎大部分使用MySQL架构的网站在数据库上都开始出现了性能问题，web程序不再仅仅专注在功能上，同时也在追求性能。程序员们开始大量的使用缓存技术来缓解数据库的压力，优化数据库的结构和索引。</span><br><span class="line"></span><br><span class="line">开始比较流行的是通过文件缓存来缓解数据库压力，但是当访问量继续增大的时候，多台web机器通过文件缓存不能共享，大量的小文件缓存也带了了比较高的IO压力。在这个时候，Memcached就自然的成为一个非常时尚的技术产品。</span><br><span class="line"></span><br><span class="line">总结： 就是在数据库的前面加一个缓存层</span><br></pre></td></tr></table></figure>
+
+<p><strong>Mysql主从读写分离</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS3.png?raw=true" alt="JAVA_REDIS3.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">由于数据库的写入压力增加，Memcached只能缓解数据库的读取压力。读写集中在一个数据库上让数据库不堪重负，大部分网站开始使用主从复制技术来达到读写分离，以提高读写性能和读库的可扩展性。Mysql的master-slave模式成为这个时候的网站标配了。</span><br><span class="line"></span><br><span class="line">对于第一个数据库的信息，“写” 我们都放在主库，“读” 我们都放在从库</span><br></pre></td></tr></table></figure>
+
+<p><strong>分表分库+水平拆分+mysql集群</strong></p>
+<p>(主库的写压力出现了瓶颈)</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS4.png?raw=true" alt="JAVA_REDIS4.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">在Memcached的高速缓存，MySQL的主从复制，读写分离的基础之上，这时MySQL主库的写压力开始出现瓶颈，而数据量的持续猛增，由于MyISAM使用表锁，在高并发下会出现严重的锁问题，大量的高并发MySQL应用开始使用InnoDB引擎代替MyISAM。</span><br><span class="line"></span><br><span class="line">同时，开始流行使用分表分库来缓解写压力和数据增长的扩展问题。这个时候，分表分库成了一个热门技术</span><br><span class="line"></span><br><span class="line">MySQL推出了MySQL Cluster集群，但性能也不能很好满足互联网的要求，只是在高可靠性上提供了非常大的保证。</span><br></pre></td></tr></table></figure>
+
+<p><strong>MySQL的扩展性瓶颈</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">即使进行了类似于上面的这么多的优化，mysql任然可能存储瓶颈。如： 大数据，图片的存储。</span><br></pre></td></tr></table></figure>
+
+<p><strong>今天的架构</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS5.png?raw=true" alt="JAVA_REDIS5.png"></p>
+<p><strong>为什么使用NoSQL</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">随着数据量的增长，和关系的越来越复杂。 如：复杂的社交关系 ，如Facebook等软件中的社交关系(全球)</span><br><span class="line"></span><br><span class="line">传统的关系型数据库已经不能够满足需求。</span><br></pre></td></tr></table></figure>
+
+<h2 id="什么是NOSQL"><a href="#什么是NOSQL" class="headerlink" title="什么是NOSQL"></a>什么是NOSQL</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">NoSQL(NoSQL = Not Only SQL )，意即“不仅仅是SQL”。泛指非关系型的数据库</span><br><span class="line"></span><br><span class="line">这些类型的数据存储不需要固定的模式，无需多余操作就可以横向扩展。</span><br><span class="line"></span><br><span class="line">固定的模式：  </span><br><span class="line">我们在关系型数据库中。定义一张表person， 其中包含字段id,name，age...</span><br><span class="line">如果我们想要在这个表总增加一列字段，需要去修改表的结构。 他是十分严格且有限的。一个表不可能有一万个字段。但是对于大数据时代这些修改特点非常巨量，我们的数据也非常的巨量。传统的关系型数据库已经不能满足需求了。</span><br></pre></td></tr></table></figure>
+
+<h3 id="NOSQL-能干什么"><a href="#NOSQL-能干什么" class="headerlink" title="NOSQL 能干什么"></a>NOSQL 能干什么</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">易扩展</span><br><span class="line">数据之间无关系(对表横向，纵向的扩展无压力)，这样就非常容易扩展。也无形之间，在架构的层面上带来了可扩展的能力。</span><br><span class="line">所以数据之间没有关系，那么我们可以用一个统一的对象，如Map(key-value字符串) 来操作所有的数据。 那么这样程序的扩展性不就更强了吗？ 如： 我们做分页操作，查询不同的数据我们都试用一个方法，一个对象去接收不同的数据就可以了</span><br><span class="line"></span><br><span class="line">大数据量高性能</span><br><span class="line">NOSQL 数据库常用来做缓存。可想而知其速度性能。 </span><br><span class="line"></span><br><span class="line">多样灵活的数据模型</span><br><span class="line">关系数据库里，增删字段是一件非常麻烦的事情。如果是非常大数据量的表，增加字段简直就是一个噩梦。数据量大后增删数据列对数据表的影响就很大。</span><br><span class="line">但是对于nosql就不存在这样的问题。他们本质上就类似于一个键值对。NoSQL无需事先为要存储的数据建立字段，随时可以存储自定义的数据格式。</span><br><span class="line"></span><br><span class="line">常用表现形式</span><br><span class="line">KV</span><br><span class="line">Cache</span><br><span class="line">Persistence</span><br></pre></td></tr></table></figure>
+
+<p><strong>传统关系型数据库与NOSQL比较</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">RDBMS vs NoSQL</span><br><span class="line"> </span><br><span class="line">RDBMS</span><br><span class="line">- 高度组织化结构化数据</span><br><span class="line">- 结构化查询语言（SQL）</span><br><span class="line">- 数据和关系都存储在单独的表中。</span><br><span class="line">- 数据操纵语言，数据定义语言</span><br><span class="line">- 严格的一致性</span><br><span class="line">- 基础事务</span><br><span class="line"> </span><br><span class="line">NoSQL</span><br><span class="line">- 代表着不仅仅是SQL</span><br><span class="line">- 没有声明性查询语言</span><br><span class="line">- 没有预定义的模式</span><br><span class="line">-键 - 值对存储，列存储，文档存储，图形数据库</span><br><span class="line">- 最终一致性，而非ACID属性</span><br><span class="line">- 非结构化和不可预知的数据</span><br><span class="line">- CAP定理</span><br><span class="line">- 高性能，高可用性和可伸缩性</span><br></pre></td></tr></table></figure>
+
+<h3 id="NOSQL的数据模型"><a href="#NOSQL的数据模型" class="headerlink" title="NOSQL的数据模型"></a>NOSQL的数据模型</h3><p>聚合模型</p>
+<p>(1) key_value（KV键值）</p>
+<p>(2)Bson</p>
+<p>(3)列族</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS7.png?raw=true" alt="JAVA_REDIS7.png"></p>
+<p>(4)图形</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS8.png?raw=true" alt="JAVA_REDIS8.png"></p>
+<h3 id="NoSQL数据库的四大分类"><a href="#NoSQL数据库的四大分类" class="headerlink" title="NoSQL数据库的四大分类"></a>NoSQL数据库的四大分类</h3><p><strong>KV键值</strong></p>
+<p>一般的使用都会使用它。如Redis </p>
+<p><strong>文档型数据库(bson格式比较多)</strong></p>
+<p>一般的实现就是MongoDB</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。</span><br><span class="line"> </span><br><span class="line">MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</span><br></pre></td></tr></table></figure>
+
+<p><strong>列存储数据库</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cassandra, HBase</span><br><span class="line">分布式文件系统</span><br></pre></td></tr></table></figure>
+
+<p><strong>图关系数据库</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">它不是放图形的，放的是关系比如:朋友圈社交网络、广告推荐系统</span><br><span class="line">社交网络，推荐系统等。专注于构建关系图谱</span><br><span class="line">Neo4J, InfoGrid</span><br></pre></td></tr></table></figure>
+
+<h3 id="分布式数据库中CAP原理CAP-BASE"><a href="#分布式数据库中CAP原理CAP-BASE" class="headerlink" title="分布式数据库中CAP原理CAP+BASE"></a>分布式数据库中CAP原理CAP+BASE</h3><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS9.png?raw=true" alt="JAVA_REDIS9.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CAP理论的核心是：一个分布式系统不可能同时很好的满足一致性，可用性和分区容错性这三个需求，</span><br><span class="line">最多只能同时较好的满足两个。</span><br><span class="line">CA - 单点集群，满足一致性，可用性的系统，通常在可扩展性上不太强大。(侧重强一致性)</span><br><span class="line">CP - 满足强一致性，分区容忍必的系统，通常性能不是特别高。  (redis ,Mongodb)</span><br><span class="line">AP - 满足可用性，分区容忍性的系统，通常可能对一致性要求低一些。 (在使用NOSQL的场景，使用的最常用，大多数网站架构的选择，需要高可用+ 最终一致性)</span><br><span class="line"></span><br><span class="line">对于我们NOSQL数据库，分区容忍性是我们必须需要实现的</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS10.png?raw=true" alt="JAVA_REDIS10.png"></p>
+<p>什么是分区容错性 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">简而言之：就是多个节点数据备份</span><br><span class="line"></span><br><span class="line">一个分布式系统里面，节点组成的网络本来应该是连通的。然而可能因为一些故障，使得有些节点之间不连通了，整个网络就分成了几块区域。数据就散布在了这些不连通的区域中。这就叫分区。</span><br><span class="line"></span><br><span class="line">当你一个数据项只在一个节点中保存，那么分区出现后，和这个节点不连通的部分就访问不到这个数据了。这时分区就是无法容忍的。</span><br><span class="line"></span><br><span class="line">提高分区容忍性的办法就是一个数据项复制到多个节点上，那么出现分区之后，这一数据项就可能分布到各个区里。容忍性就提高了。</span><br><span class="line"></span><br><span class="line">然而，要把数据复制到多个节点，就会带来一致性的问题，就是多个节点上面的数据可能是不一致的。要保证一致，每次写操作就都要等待全部节点写成功，而这等待又会带来可用性的问题。总的来说就是，数据存在的节点越多，分区容忍性越高，但要复制更新的数据就越多，一致性就越难保证。为了保证一致性，更新所有节点数据所需要的时间就越长，可用性就会降低。</span><br></pre></td></tr></table></figure>
+
+<p><strong>Base</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">BASE其实是下面三个术语的缩写：</span><br><span class="line">    基本可用（Basically Available）</span><br><span class="line">    软状态（Soft state）</span><br><span class="line">    最终一致（Eventually consistent）</span><br><span class="line">它的思想是通过让系统放松对某一时刻数据一致性的要求来换取系统整体伸缩性和性能上改观。 就是牺牲C换取A</span><br></pre></td></tr></table></figure>
+
+<h3 id="分布式-集群"><a href="#分布式-集群" class="headerlink" title="分布式+集群"></a>分布式+集群</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">分布式：不同的多台服务器上面部署不同的服务模块（工程），他们之间通过Rpc/Rmi之间通信和调用，对外提供服务和组内协作</span><br><span class="line">分布式就是分工协作</span><br><span class="line"></span><br><span class="line">集群：不同的多台服务器上面部署相同的服务模块，通过分布式调度软件进行统一的调度，对外提供服务和访问。</span><br><span class="line">集群就是人多力量大。</span><br></pre></td></tr></table></figure>
+
+<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h2 id="redis-是什么"><a href="#redis-是什么" class="headerlink" title="redis 是什么"></a>redis 是什么</h2><p>Redis是 <strong>分布式</strong> <strong>内存</strong> 数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Redis:REmote DIctionary Server(远程字典服务器)</span><br><span class="line">完全开源免费的，用C语言编写的，遵守BSD协议，是一个高性能的(key/value)分布式内存数据库，基于内存运行并支持持久化的NoSQL数据库，是当前最热门的NoSql数据库之一,也被人们称为数据结构服务器</span><br><span class="line"></span><br><span class="line">三个特点</span><br><span class="line">Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用</span><br><span class="line">————内存存储和持久化：redis支持异步将内存中的数据写到硬盘上，同时不影响继续服务</span><br><span class="line"></span><br><span class="line">Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储</span><br><span class="line">Redis支持数据的备份，即master-slave模式的数据备份</span><br><span class="line"></span><br><span class="line">redis能做的事：</span><br><span class="line">取最新N个数据的操作，如：可以将最新的10条评论的ID放在Redis的List集合里面</span><br><span class="line">模拟类似于HttpSession这种需要设定过期时间的功能</span><br><span class="line">发布、订阅消息系统</span><br><span class="line">定时器、计数器</span><br><span class="line"></span><br><span class="line">redis服务器一般安装在Linux上。(他类似于mysql的模式,他的本质是一个数据库)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Redis启动后杂项基础知识讲解"><a href="#Redis启动后杂项基础知识讲解" class="headerlink" title="Redis启动后杂项基础知识讲解"></a>Redis启动后杂项基础知识讲解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1: Redis单进程 </span><br><span class="line">单进程模型来处理客户端的请求。</span><br><span class="line">对读写等事件的响应，是通过对epoll函数的包装来做到的。Redis的实际处理速度完全依靠主进程的执行效率</span><br><span class="line">(Epoll 是一种高效的管理socket的模型,Epoll是Linux内核为处理大批量文件描述符而作了改进的epoll，是Linux下多路复用IO接口select/poll的增强版本，它能显著提高程序在大量并发连接中只有少量活跃的情况下的系统CPU利用率。)</span><br><span class="line"></span><br><span class="line">2：Redis默认有16个库</span><br><span class="line">默认16个数据库，类似数组下表从零开始，初始默认使用零号库 (和数据库服务下有多个数据库类似)</span><br><span class="line">Select命令切换数据库  select n （切换到n-1号库）</span><br><span class="line">Dbsize查看当前数据库的key的数量</span><br><span class="line">Flushdb：清空当前库</span><br><span class="line">Flushall；通杀全部库</span><br><span class="line">统一密码管理，16个库都是同样密码，要么都OK要么一个也连接不上</span><br><span class="line">Redis索引都是从零开始</span><br><span class="line"></span><br><span class="line">3：默认端口是6379</span><br></pre></td></tr></table></figure>
+
+<h2 id="Redis的五大数据类型"><a href="#Redis的五大数据类型" class="headerlink" title="Redis的五大数据类型"></a>Redis的五大数据类型</h2><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS11.png?raw=true" alt="JAVA_REDIS11.png"></p>
+<p>这里所谓的类型是value 对应存储的类型。 </p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS12.png?raw=true" alt="JAVA_REDIS12.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">String（字符串）</span><br><span class="line">string是redis最基本的类型，一个key对应一个value。（最常用）一个redis中字符串value最多可以是512M</span><br><span class="line">string类型是二进制安全的。意思是redis的string可以包含任何数据。比如jpg图片或者序列化的对象 </span><br><span class="line"></span><br><span class="line">Hash（哈希，类似java里的Map）</span><br><span class="line">Redis hash 是一个《键值对集合》。</span><br><span class="line">Redis hash是一个string类型的field和value的映射表，hash特别适合用于存储对象。类似Java里面的Map&lt;String,Object&gt; </span><br><span class="line">KV模式不变，但V是一个键值对</span><br><span class="line"></span><br><span class="line">List（列表）</span><br><span class="line">Redis 列表是简单的字符串列表(LinkedList,它的底层实际是个链表)，按照插入顺序排序。你可以添加一个元素导列表的头部（左边 lpush）或者尾部（右边 rpush）。 </span><br><span class="line">lrange key 0 -1 查看list中的所有值</span><br><span class="line">push ,pop 这些命令类似于java中操作栈。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Set（集合）</span><br><span class="line">Redis的Set是string类型的无序集合。它是通过HashTable实现实现的(HashTable 的底层就是new了一个hashMap)</span><br><span class="line"></span><br><span class="line">Zset(sorted set：有序集合)</span><br><span class="line">Redis zset 和 set 一样也是string类型元素的集合,且不允许重复的成员。</span><br><span class="line">不同的是zset中每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。zset的成员是唯一的,但分数(score)却可以重复。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Redis配置-redis-cof"><a href="#Redis配置-redis-cof" class="headerlink" title="Redis配置 redis.cof"></a>Redis配置 redis.cof</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">参数说明</span><br><span class="line">redis.conf 配置项说明如下：</span><br><span class="line">1. Redis默认不是以守护进程的方式运行，可以通过该配置项修改，使用yes启用守护进程</span><br><span class="line">  daemonize no</span><br><span class="line">2. 当Redis以守护进程方式运行时，Redis默认会把pid写入/var/run/redis.pid文件，可以通过pidfile指定</span><br><span class="line">  pidfile /var/run/redis.pid</span><br><span class="line">3. 指定Redis监听端口，默认端口为6379，作者在自己的一篇博文中解释了为什么选用6379作为默认端口，因为6379在手机按键上MERZ对应的号码，而MERZ取自意大利歌女Alessia Merz的名字</span><br><span class="line">  port 6379</span><br><span class="line">4. 绑定的主机地址</span><br><span class="line">  bind 127.0.0.1</span><br><span class="line">5.当 客户端闲置多长时间后关闭连接，如果指定为0，表示关闭该功能</span><br><span class="line">  timeout 300</span><br><span class="line">6. 指定日志记录级别，Redis总共支持四个级别：debug、verbose、notice、warning，默认为verbose</span><br><span class="line">  loglevel verbose</span><br><span class="line">7. 日志记录方式，默认为标准输出，如果配置Redis为守护进程方式运行，而这里又配置为日志记录方式为标准输出，则日志将会发送给/dev/null</span><br><span class="line">  logfile stdout</span><br><span class="line">8. 设置数据库的数量，默认数据库为0，可以使用SELECT &lt;dbid&gt;命令在连接上指定数据库id</span><br><span class="line">  databases 16</span><br><span class="line">9. 指定在多长时间内，有多少次更新操作，就将数据同步到数据文件，可以多个条件配合</span><br><span class="line">  save &lt;seconds&gt; &lt;changes&gt;</span><br><span class="line">  Redis默认配置文件中提供了三个条件：</span><br><span class="line">  save 900 1</span><br><span class="line">  save 300 10</span><br><span class="line">  save 60 10000</span><br><span class="line">  分别表示900秒（15分钟）内有1个更改，300秒（5分钟）内有10个更改以及60秒内有10000个更改。</span><br><span class="line"> </span><br><span class="line">10. 指定存储至本地数据库时是否压缩数据，默认为yes，Redis采用LZF压缩，如果为了节省CPU时间，可以关闭该选项，但会导致数据库文件变的巨大</span><br><span class="line">  rdbcompression yes</span><br><span class="line">11. 指定本地数据库文件名，默认值为dump.rdb</span><br><span class="line">  dbfilename dump.rdb</span><br><span class="line">12. 指定本地数据库存放目录</span><br><span class="line">  dir ./</span><br><span class="line">13. 设置当本机为slav服务时，设置master服务的IP地址及端口，在Redis启动时，它会自动从master进行数据同步</span><br><span class="line">  slaveof &lt;masterip&gt; &lt;masterport&gt;</span><br><span class="line">14. 当master服务设置了密码保护时，slav服务连接master的密码</span><br><span class="line">  masterauth &lt;master-password&gt;</span><br><span class="line">15. 设置Redis连接密码，如果配置了连接密码，客户端在连接Redis时需要通过AUTH &lt;password&gt;命令提供密码，默认关闭</span><br><span class="line">  requirepass foobared</span><br><span class="line">16. 设置同一时间最大客户端连接数，默认无限制，Redis可以同时打开的客户端连接数为Redis进程可以打开的最大文件描述符数，如果设置 maxclients 0，表示不作限制。当客户端连接数到达限制时，Redis会关闭新的连接并向客户端返回max number of clients reached错误信息</span><br><span class="line">  maxclients 128</span><br><span class="line">17. 指定Redis最大内存限制，Redis在启动时会把数据加载到内存中，达到最大内存后，Redis会先尝试清除已到期或即将到期的Key，当此方法处理 后，仍然到达最大内存设置，将无法再进行写入操作，但仍然可以进行读取操作。Redis新的vm机制，会把Key存放内存，Value会存放在swap区</span><br><span class="line">  maxmemory &lt;bytes&gt;</span><br><span class="line">18. 指定是否在每次更新操作后进行日志记录，Redis在默认情况下是异步的把数据写入磁盘，如果不开启，可能会在断电时导致一段时间内的数据丢失。因为 redis本身同步数据文件是按上面save条件来同步的，所以有的数据会在一段时间内只存在于内存中。默认为no</span><br><span class="line">  appendonly no</span><br><span class="line">19. 指定更新日志文件名，默认为appendonly.aof</span><br><span class="line">   appendfilename appendonly.aof</span><br><span class="line">20. 指定更新日志条件，共有3个可选值： </span><br><span class="line">  no：表示等操作系统进行数据缓存同步到磁盘（快） </span><br><span class="line">  always：表示每次更新操作后手动调用fsync()将数据写到磁盘（慢，安全） </span><br><span class="line">  everysec：表示每秒同步一次（折衷，默认值）</span><br><span class="line">  appendfsync everysec</span><br><span class="line"> </span><br><span class="line">21. 指定是否启用虚拟内存机制，默认值为no，简单的介绍一下，VM机制将数据分页存放，由Redis将访问量较少的页即冷数据swap到磁盘上，访问多的页面由磁盘自动换出到内存中（在后面的文章我会仔细分析Redis的VM机制）</span><br><span class="line">   vm-enabled no</span><br><span class="line">22. 虚拟内存文件路径，默认值为/tmp/redis.swap，不可多个Redis实例共享</span><br><span class="line">   vm-swap-file /tmp/redis.swap</span><br><span class="line">23. 将所有大于vm-max-memory的数据存入虚拟内存,无论vm-max-memory设置多小,所有索引数据都是内存存储的(Redis的索引数据 就是keys),也就是说,当vm-max-memory设置为0的时候,其实是所有value都存在于磁盘。默认值为0</span><br><span class="line">   vm-max-memory 0</span><br><span class="line">24. Redis swap文件分成了很多的page，一个对象可以保存在多个page上面，但一个page上不能被多个对象共享，vm-page-size是要根据存储的 数据大小来设定的，作者建议如果存储很多小对象，page大小最好设置为32或者64bytes；如果存储很大大对象，则可以使用更大的page，如果不 确定，就使用默认值</span><br><span class="line">   vm-page-size 32</span><br><span class="line">25. 设置swap文件中的page数量，由于页表（一种表示页面空闲或使用的bitmap）是在放在内存中的，，在磁盘上每8个pages将消耗1byte的内存。</span><br><span class="line">   vm-pages 134217728</span><br><span class="line">26. 设置访问swap文件的线程数,最好不要超过机器的核数,如果设置为0,那么所有对swap文件的操作都是串行的，可能会造成比较长时间的延迟。默认值为4</span><br><span class="line">   vm-max-threads 4</span><br><span class="line">27. 设置在向客户端应答时，是否把较小的包合并为一个包发送，默认为开启</span><br><span class="line">  glueoutputbuf yes</span><br><span class="line">28. 指定在超过一定的数量或者最大的元素超过某一临界值时，采用一种特殊的哈希算法</span><br><span class="line">  hash-max-zipmap-entries 64</span><br><span class="line">  hash-max-zipmap-value 512</span><br><span class="line">29. 指定是否激活重置哈希，默认为开启（后面在介绍Redis的哈希算法时具体介绍）</span><br><span class="line">  activerehashing yes</span><br><span class="line">30. 指定包含其它的配置文件，可以在同一主机上多个Redis实例之间使用同一份配置文件，而同时各个实例又拥有自己的特定配置文件</span><br><span class="line">  include /path/to/local.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Redis的持久化-rdb-aof"><a href="#Redis的持久化-rdb-aof" class="headerlink" title="Redis的持久化 rdb aof"></a>Redis的持久化 rdb aof</h2><p>Redis的持久化就是red的备份。</p>
+<h3 id="RDB（Redis-DataBase）"><a href="#RDB（Redis-DataBase）" class="headerlink" title="RDB（Redis DataBase）"></a>RDB（Redis DataBase）</h3><p>在指定的时间间隔内将内存中的数据集快照写入磁盘，也就是行话讲的Snapshot快照，它恢复时是将快照文件直接读到内存里</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS13.png?raw=true" alt="JAVA_REDIS13.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Redis会单独创建（fork）一个子进程来进行持久化，会先将数据写入到一个临时文件中，待持久化过程都结束了，再用这个临时文件替换上次持久化好的文件。整个过程中，主进程是不进行任何IO操作的，这就确保了极高的性能如果需要进行大规模数据的恢复，且对于《数据恢复的完整性不是非常敏感》，那RDB方式要比AOF方式更加的高效。RDB的缺点是最后一次持久化后的数据可能丢失。</span><br><span class="line"></span><br><span class="line">Fork的作用是复制一个与当前进程一样的进程。新进程的所有数据（变量、环境变量、程序计数器等）数值都和原进程一致，但是是一个全新的进程，并作为原进程的子进程</span><br><span class="line"></span><br><span class="line">注意，他做的是全量更新。Rdb 保存的是dump.rdb文件</span><br><span class="line"></span><br><span class="line">如何触发RDB快照？</span><br><span class="line">1：配置文件中默认的快照配置</span><br><span class="line">2：命令save或者是bgsave</span><br><span class="line">Save：save时只管保存，其它不管，全部阻塞</span><br><span class="line">BGSAVE：Redis会在后台异步进行快照操作，快照同时还可以响应客户端请求。可以通过lastsave命令获取最后一次成功执行快照的时间</span><br><span class="line">3:执行flushall命令，也会产生dump.rdb文件，但里面是空的，无意义</span><br><span class="line"></span><br><span class="line">如何恢复?</span><br><span class="line">1:将备份文件 (dump.rdb) 移动到 redis 安装目录并启动服务即可</span><br><span class="line">2:CONFIG GET dir获取目录</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="AOF（Append-Only-File）"><a href="#AOF（Append-Only-File）" class="headerlink" title="AOF（Append Only File）"></a>AOF（Append Only File）</h3><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS14.png?raw=true" alt="JAVA_REDIS14.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">AOF的出现是为了弥补RDB可能丢失最后一次备份的问题</span><br><span class="line"></span><br><span class="line">AOF是什么？ </span><br><span class="line"></span><br><span class="line">就是类似一个日志脚本，以日志的形式来记录每个写操作，将Redis执行过的所有写指令记录下来(读操作不记录)。</span><br><span class="line">当我们需要进行恢复的时候，就执行日志中记录的操作。这样我们就可以获得一个一样的数据了</span><br><span class="line">只许追加文件但不可以改写文件，redis启动之初会读取该文件重新构建数据，换言之，redis重启的话就根据日志文件的内容将写指令从前到后执行一次以完成数据的恢复工作</span><br><span class="line"></span><br><span class="line">Aof保存的是appendonly.aof文件</span><br><span class="line"></span><br><span class="line">AOF的备份策略Appendfsync？</span><br><span class="line">Always：同步持久化 每次发生数据变更会被立即记录到磁盘  性能较差但数据完整性比较好</span><br><span class="line">Everysec：出厂默认推荐，异步操作，每秒记录   如果一秒内宕机，有数据丢失</span><br><span class="line">No</span><br><span class="line"></span><br><span class="line">Rewrite 重写</span><br><span class="line">AOF采用文件追加方式，文件会越来越大为避免出现此种情况，新增了重写机制,当AOF文件的大小超过所设定的阈值时，Redis就会启动AOF文件的内容压缩，只保留可以恢复数据的最小指令集.可以使用命令bgrewriteaof</span><br><span class="line"></span><br><span class="line">重写原理：</span><br><span class="line">AOF文件持续增长而过大时，会fork出一条新进程来将文件重写(也是先写临时文件最后再rename)，遍历新进程的内存中数据，每条记录有一条的Set语句。重写aof文件的操作，并没有读取旧的aof文件，而是将整个内存中的数据库内容用命令的方式重写了一个新的aof文件，这点和快照有点类似</span><br><span class="line">(就是对aof中的命令进行优化瘦身)</span><br><span class="line"></span><br><span class="line">触发机制</span><br><span class="line">Redis会记录上次重写时的AOF大小，默认配置是当AOF文件大小是上次rewrite后大小的一倍且文件大于64M时触发 </span><br><span class="line"></span><br><span class="line">优势： 可以灵活配置，每秒同步，尽可能的保证数据的一致性</span><br><span class="line">劣势：相同数据集的数据而言aof文件要远大于rdb文件，恢复速度慢于rdb。Aof运行效率要慢于rdb,每秒同步策略效率较好，不同步效率和rdb相同</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS15.png?raw=true" alt="JAVA_REDIS15.png"></p>
+<h3 id="总结-Which-one"><a href="#总结-Which-one" class="headerlink" title="总结(Which one)"></a>总结(Which one)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">RDB持久化方式能够在指定的时间间隔能对你的数据进行快照存储</span><br><span class="line"></span><br><span class="line">AOF持久化方式记录每次对服务器写的操作,当服务器重启的时候会重新执行这些。命令来恢复原始的数据,AOF命令以redis协议追加保存每次写的操作到文件末尾.Redis还能对AOF文件进行后台重写,使得AOF文件的体积不至于过大</span><br><span class="line"></span><br><span class="line">只做缓存：如果你只希望你的数据在服务器运行的时候存在,你也可以不使用任何持久化方式</span><br><span class="line"></span><br><span class="line">建议：同时开启两种持久化方式：</span><br><span class="line">在这种情况下,当redis重启的时候会优先载入AOF文件来恢复原始的数据,因为在通常情况下AOF文件保存的数据集要比RDB文件保存的数据集要完整</span><br><span class="line">RDB的数据不实时，同时使用两者时服务器重启也只会找AOF文件。那要不要只使用AOF呢？</span><br><span class="line">作者建议不要，因为RDB更适合用于备份数据库(AOF在不断变化不好备份)，快速重启，而且不会有AOF可能潜在的bug，留着作为一个万一的手段。</span><br></pre></td></tr></table></figure>
+
+<p>最终的性能建议：(需要配合主从复制使用)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">因为RDB文件只用作后备用途，建议只在Slave上持久化RDB文件，而且只要15分钟备份一次就够了，只保留save 900 1这条规则。</span><br><span class="line"> </span><br><span class="line">如果Enalbe AOF，好处是在最恶劣情况下也只会丢失不超过两秒数据，启动脚本较简单只load自己的AOF文件就可以了。代价一是带来了持续的IO，二是AOF rewrite的最后将rewrite过程中产生的新数据写到新文件造成的阻塞几乎是不可避免的。只要硬盘许可，应该尽量减少AOF rewrite的频率，AOF重写的基础大小默认值64M太小了，可以设到5G以上。默认超过原大小100%大小时重写可以改到适当的数值。</span><br><span class="line"> </span><br><span class="line">如果不Enable AOF ，仅靠Master-Slave Replication 实现高可用性也可以。能省掉一大笔IO也减少了rewrite时带来的系统波动。代价是如果Master/Slave同时倒掉，会丢失十几分钟的数据，启动脚本也要比较两个Master/Slave中的RDB文件，载入较新的那个。新浪微博就选用了这种架构</span><br></pre></td></tr></table></figure>
+
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">事务的本质是一组命令的集合，按顺序地串行化执行而不会被其它命令插入，不许加塞</span><br><span class="line">(redis 的事务就是多个Redis命令一起执行)</span><br><span class="line"></span><br><span class="line">Redis支持事务吗，它能干什么？</span><br><span class="line">一个队列中，一次性、顺序性、排他性的执行一系列命令</span><br><span class="line"></span><br><span class="line">如何使用Redis事务？</span><br><span class="line">使用MULTI命令(open tranction)输入一个Redis事务。该命令总是返回OK。此时，用户可以发出多个命令。Redis将不执行这些命令，而是对它们进行排队。一旦调用EXEC（commit），命令就会执行相反，调用丢弃将刷新事务队列并退出事务。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS16.png?raw=true" alt="JAVA_REDIS16.png"></p>
+<p>Redis对事务的支持是部分支持。<br>体现在运行时异常上。如果是在加入事务时运行时抛异常，支持事务。否则不支持</p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS17.png?raw=true" alt="JAVA_REDIS17.png"></p>
+<h3 id="watch监控"><a href="#watch监控" class="headerlink" title="watch监控"></a>watch监控</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">缓存中的数据，大家都来修改，为了避免冲突和覆盖。为其加上标记</span><br><span class="line"></span><br><span class="line">悲观锁/乐观锁/CAS(Check And Set)</span><br><span class="line">悲观锁：对事情的发展很悲观，认为一定会出事。为了避免出事，将整张表都锁住。(表锁，并发性差，但是一致性更好)</span><br><span class="line"></span><br><span class="line">乐观锁：很乐观，不会上锁，但是在更新的时候会判断一下在此期间别人有没有去更新这个数据，可以使用版本号等机制(在每条记录后面加一个版本号来保证数据的一致性)。一般使用的都是乐观锁</span><br><span class="line">乐观锁策略:提交版本必须大于记录当前版本才能执行更新</span><br><span class="line"></span><br><span class="line">watch监控：</span><br><span class="line">先监控再开启multi，保证两笔金额变动在同一个事务内</span><br><span class="line">Watch指令，类似乐观锁，事务提交时，如果Key的值已被别的客户端改变，比如某个list已被别的客户端push/pop过了，整个事务队列都不会被执行。</span><br><span class="line">通过WATCH命令在事务执行之前监控了多个Keys，倘若在WATCH之后有任何Key的值发生了变化，EXEC命令执行的事务都将被放弃，同时返回Nullmulti-bulk应答以通知调用者事务执行失败</span><br><span class="line"></span><br><span class="line">一旦执行了exec之前加的监控锁都会被取消掉了</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS18.png?raw=true" alt="JAVA_REDIS18.png"></p>
+<h2 id="Redis的发布订阅"><a href="#Redis的发布订阅" class="headerlink" title="Redis的发布订阅"></a>Redis的发布订阅</h2><p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS19.png?raw=true" alt="JAVA_REDIS19.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">发布与订阅就类似于消息，要收到消息就需要先订阅</span><br><span class="line">进程间的一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。</span><br><span class="line"></span><br><span class="line">Redis支持消息的发布和订阅，但很少使用，因为他的主业还是分布式的内存数据保存</span><br><span class="line"></span><br><span class="line">先订阅后发布后才能收到消息，</span><br><span class="line">1 可以一次性订阅多个，SUBSCRIBE c1 c2 c3</span><br><span class="line"> </span><br><span class="line">2 消息发布，PUBLISH c2 hello-redis</span><br><span class="line">=================================================================================================== </span><br><span class="line">3 订阅多个，通配符*， PSUBSCRIBE new*</span><br><span class="line">4 收取消息， PUBLISH new1 redis2015</span><br><span class="line"></span><br><span class="line">就类似于公共聊天室的效果</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS20.png?raw=true" alt="JAVA_REDIS20.png"></p>
+<h2 id="Redis的复制-Master-Slave"><a href="#Redis的复制-Master-Slave" class="headerlink" title="Redis的复制(Master/Slave)"></a>Redis的复制(Master/Slave)</h2><p>Redis的主从复制和读写分离</p>
+<p>主从复制：主机数据更新后根据配置和策略，自动同步到备机  的master/slaver机制，Master以写为主，Slave以读为主</p>
+<p>能干什么？</p>
+<p>读写分离，容灾恢复</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">怎么使用主从复制，读写分离？</span><br><span class="line">1：配置我们的主从数据库是哪些</span><br><span class="line"> 配从(库)不配主(库)：对指定的从数据库进行配置，告诉它，它是从库。需要观察着主库。同步主库的数据</span><br><span class="line"> 从库配置：</span><br><span class="line"> slaveof 主库IP 主库端口。</span><br><span class="line">主从体系搭建完成后，每次从库与master断开之后，都需要配置从库重新连接，除非你配置进redis.conf文件(一般都写进配置文件)</span><br><span class="line"></span><br><span class="line">2：主从复制常用3板斧</span><br></pre></td></tr></table></figure>
+
+<p><strong>一主二仆</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS21.png?raw=true" alt="JAVA_REDIS21.png"></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS22.png?raw=true" alt="JAVA_REDIS22.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(一个Master两个Slave)</span><br><span class="line">从机slave一旦监控上主机，就会将主机上所有的数据备份。(初次连接是全量备份，后面慢慢的是增量)</span><br><span class="line">读写分离，只有主机能写，从机写会报错</span><br><span class="line"></span><br><span class="line">默认情况下主机死了，从机会原地待命，不会上位。当主机复活仍然是老大</span><br><span class="line">从机死了再复活后，如果没有将我们的配置信息写入到配置文件，这次复活的机器会是一个原生机器，不在原来的主从体系中。(印证了上面说的从库与master断开之后，都需要配置从库重新连接)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS26.png?raw=true" alt="JAVA_REDIS26.png"></p>
+<p><strong>薪火相传</strong></p>
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS23.png?raw=true" alt="JAVA_REDIS23.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解决的是去中心话，减轻主机的负担</span><br><span class="line">中途变更转向:会清除之前的数据，重新建立拷贝最新的</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS24.png?raw=true" alt="JAVA_REDIS24.png"></p>
+<p><strong>反客为主</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使当前数据库停止与其他数据库的同步，转成主数据库</span><br><span class="line"></span><br><span class="line">默认的主从复制都是主机挂了，从机待命。 但是实际的需求是需要我们从机上位(反客为主)，尽快响应。</span><br><span class="line">这时候需要使用新的命令 SLAVEOF no one (主动的让当前从机上位，剩余从机改换门庭)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS25.png?raw=true" alt="JAVA_REDIS25.png"></p>
+<h3 id="哨兵模式-sentinel"><a href="#哨兵模式-sentinel" class="headerlink" title="哨兵模式(sentinel)"></a>哨兵模式(sentinel)</h3><p>反客为主的自动版，能够后台监控主机是否故障，如果故障了根据投票数自动将从库转换为主库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">使用步骤：</span><br><span class="line">1：在一主二从的模式下的配置文件所在目录下新建sentinel.conf文件。</span><br><span class="line">2：配置哨兵</span><br><span class="line">sentinel monitor 被监控数据库名字(自己起名字) 127.0.0.1 6379 1</span><br><span class="line">上面最后一个数字1，表示主机挂掉后salve投票看让谁接替成为主机，得票数多少后成为主机</span><br><span class="line">3：启动哨兵 (在多台机器之外单独启动)</span><br><span class="line">edis-sentinel /myredis/sentinel.conf </span><br><span class="line"></span><br><span class="line">一组sentinel能同时监控多个Master</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_REDIS27.png?raw=true" alt="JAVA_REDIS27.png"></p>
+<p>哨兵模式的问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果之前的master重启回来，会不会双master冲突？</span><br><span class="line">不会，以前的老大，复活后一开始已经脱离原有的主从体系。这时候会以一个原生的主机存在。但是他会被哨兵给检测到。 检测到后，因为原生体系中已经有一个新老大了，这时候原来的主机会作为一个新人，重新加入</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Redis的Java客户端Jedis"><a href="#Redis的Java客户端Jedis" class="headerlink" title="Redis的Java客户端Jedis"></a>Redis的Java客户端Jedis</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisPoolUtil</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> JedisPool jedisPool = <span class="keyword">null</span>;<span class="comment">//被volatile修饰的变量不会被本地线程缓存，对该变量的读写都是直接操作共享内存。</span></span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="title">JedisPoolUtil</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> JedisPool <span class="title">getJedisPoolInstance</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> </span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(<span class="keyword">null</span> == jedisPool)</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="keyword">synchronized</span> (JedisPoolUtil.class)</span><br><span class="line">      &#123;</span><br><span class="line">          <span class="keyword">if</span>(<span class="keyword">null</span> == jedisPool)</span><br><span class="line">         &#123;</span><br><span class="line">           JedisPoolConfig poolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">           poolConfig.setMaxActive(<span class="number">1000</span>);</span><br><span class="line">           poolConfig.setMaxIdle(<span class="number">32</span>);</span><br><span class="line">           poolConfig.setMaxWait(<span class="number">100</span>*<span class="number">1000</span>);</span><br><span class="line">           poolConfig.setTestOnBorrow(<span class="keyword">true</span>);</span><br><span class="line">            </span><br><span class="line">            jedisPool = <span class="keyword">new</span> JedisPool(poolConfig,<span class="string">"127.0.0.1"</span>);</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">     <span class="keyword">return</span> jedisPool;</span><br><span class="line"> &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">release</span><span class="params">(JedisPool jedisPool,Jedis jedis)</span></span></span><br><span class="line"><span class="function"> </span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(<span class="keyword">null</span> != jedis)</span><br><span class="line">    &#123;</span><br><span class="line">      jedisPool.returnResourceObject(jedis);</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">     JedisPool jedisPool = JedisPoolUtil.getJedisPoolInstance();</span><br><span class="line">     Jedis jedis = <span class="keyword">null</span>;</span><br><span class="line">     </span><br><span class="line">     <span class="keyword">try</span> </span><br><span class="line">     &#123;</span><br><span class="line">       jedis = jedisPool.getResource();</span><br><span class="line">       jedis.set(<span class="string">"k18"</span>,<span class="string">"v183"</span>);</span><br><span class="line">       </span><br><span class="line">     &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">       e.printStackTrace();</span><br><span class="line">     &#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">       JedisPoolUtil.release(jedisPool, jedis);</span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line"> </span><br><span class="line">     Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">"127.0.0.1"</span>,<span class="number">6379</span>);</span><br><span class="line">     <span class="comment">//key</span></span><br><span class="line">     Set&lt;String&gt; keys = jedis.keys(<span class="string">"*"</span>);</span><br><span class="line">     <span class="keyword">for</span> (Iterator iterator = keys.iterator(); iterator.hasNext();) &#123;</span><br><span class="line">       String key = (String) iterator.next();</span><br><span class="line">       System.out.println(key);</span><br><span class="line">     &#125;</span><br><span class="line">     System.out.println(<span class="string">"jedis.exists====&gt;"</span>+jedis.exists(<span class="string">"k2"</span>));</span><br><span class="line">     System.out.println(jedis.ttl(<span class="string">"k1"</span>));</span><br><span class="line">     <span class="comment">//String</span></span><br><span class="line">     <span class="comment">//jedis.append("k1","myreids");</span></span><br><span class="line">     System.out.println(jedis.get(<span class="string">"k1"</span>));</span><br><span class="line">     jedis.set(<span class="string">"k4"</span>,<span class="string">"k4_redis"</span>);</span><br><span class="line">     System.out.println(<span class="string">"----------------------------------------"</span>);</span><br><span class="line">     jedis.mset(<span class="string">"str1"</span>,<span class="string">"v1"</span>,<span class="string">"str2"</span>,<span class="string">"v2"</span>,<span class="string">"str3"</span>,<span class="string">"v3"</span>);</span><br><span class="line">     System.out.println(jedis.mget(<span class="string">"str1"</span>,<span class="string">"str2"</span>,<span class="string">"str3"</span>));</span><br><span class="line">     <span class="comment">//list</span></span><br><span class="line">     System.out.println(<span class="string">"----------------------------------------"</span>);</span><br><span class="line">     <span class="comment">//jedis.lpush("mylist","v1","v2","v3","v4","v5");</span></span><br><span class="line">     List&lt;String&gt; list = jedis.lrange(<span class="string">"mylist"</span>,<span class="number">0</span>,-<span class="number">1</span>);</span><br><span class="line">     <span class="keyword">for</span> (String element : list) &#123;</span><br><span class="line">       System.out.println(element);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">//set</span></span><br><span class="line">     jedis.sadd(<span class="string">"orders"</span>,<span class="string">"jd001"</span>);</span><br><span class="line">     jedis.sadd(<span class="string">"orders"</span>,<span class="string">"jd002"</span>);</span><br><span class="line">     jedis.sadd(<span class="string">"orders"</span>,<span class="string">"jd003"</span>);</span><br><span class="line">     Set&lt;String&gt; set1 = jedis.smembers(<span class="string">"orders"</span>);</span><br><span class="line">     <span class="keyword">for</span> (Iterator iterator = set1.iterator(); iterator.hasNext();) &#123;</span><br><span class="line">       String string = (String) iterator.next();</span><br><span class="line">       System.out.println(string);</span><br><span class="line">     &#125;</span><br><span class="line">     jedis.srem(<span class="string">"orders"</span>,<span class="string">"jd002"</span>);</span><br><span class="line">     System.out.println(jedis.smembers(<span class="string">"orders"</span>).size());</span><br><span class="line">     <span class="comment">//hash</span></span><br><span class="line">     jedis.hset(<span class="string">"hash1"</span>,<span class="string">"userName"</span>,<span class="string">"lisi"</span>);</span><br><span class="line">     System.out.println(jedis.hget(<span class="string">"hash1"</span>,<span class="string">"userName"</span>));</span><br><span class="line">     Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;String,String&gt;();</span><br><span class="line">     map.put(<span class="string">"telphone"</span>,<span class="string">"13811814763"</span>);</span><br><span class="line">     map.put(<span class="string">"address"</span>,<span class="string">"atguigu"</span>);</span><br><span class="line">     map.put(<span class="string">"email"</span>,<span class="string">"abc@163.com"</span>);</span><br><span class="line">     jedis.hmset(<span class="string">"hash2"</span>,map);</span><br><span class="line">     List&lt;String&gt; result = jedis.hmget(<span class="string">"hash2"</span>, <span class="string">"telphone"</span>,<span class="string">"email"</span>);</span><br><span class="line">     <span class="keyword">for</span> (String element : result) &#123;</span><br><span class="line">       System.out.println(element);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">//zset</span></span><br><span class="line">     jedis.zadd(<span class="string">"zset01"</span>,<span class="number">60</span>d,<span class="string">"v1"</span>);</span><br><span class="line">     jedis.zadd(<span class="string">"zset01"</span>,<span class="number">70</span>d,<span class="string">"v2"</span>);</span><br><span class="line">     jedis.zadd(<span class="string">"zset01"</span>,<span class="number">80</span>d,<span class="string">"v3"</span>);</span><br><span class="line">     jedis.zadd(<span class="string">"zset01"</span>,<span class="number">90</span>d,<span class="string">"v4"</span>);</span><br><span class="line">     </span><br><span class="line">     Set&lt;String&gt; s1 = jedis.zrange(<span class="string">"zset01"</span>,<span class="number">0</span>,-<span class="number">1</span>);</span><br><span class="line">     <span class="keyword">for</span> (Iterator iterator = s1.iterator(); iterator.hasNext();) &#123;</span><br><span class="line">       String string = (String) iterator.next();</span><br><span class="line">       System.out.println(string);</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">          </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>事务</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line"> </span><br><span class="line">     Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">"127.0.0.1"</span>,<span class="number">6379</span>);</span><br><span class="line">     <span class="comment">//key</span></span><br><span class="line">     Set&lt;String&gt; keys = jedis.keys(<span class="string">"*"</span>);</span><br><span class="line">     <span class="keyword">for</span> (Iterator iterator = keys.iterator(); iterator.hasNext();) &#123;</span><br><span class="line">       String key = (String) iterator.next();</span><br><span class="line">       System.out.println(key);</span><br><span class="line">     &#125;</span><br><span class="line">     System.out.println(<span class="string">"jedis.exists====&gt;"</span>+jedis.exists(<span class="string">"k2"</span>));</span><br><span class="line">     System.out.println(jedis.ttl(<span class="string">"k1"</span>));</span><br><span class="line">     <span class="comment">//String</span></span><br><span class="line">     <span class="comment">//jedis.append("k1","myreids");</span></span><br><span class="line">     System.out.println(jedis.get(<span class="string">"k1"</span>));</span><br><span class="line">     jedis.set(<span class="string">"k4"</span>,<span class="string">"k4_redis"</span>);</span><br><span class="line">     System.out.println(<span class="string">"----------------------------------------"</span>);</span><br><span class="line">     jedis.mset(<span class="string">"str1"</span>,<span class="string">"v1"</span>,<span class="string">"str2"</span>,<span class="string">"v2"</span>,<span class="string">"str3"</span>,<span class="string">"v3"</span>);</span><br><span class="line">     System.out.println(jedis.mget(<span class="string">"str1"</span>,<span class="string">"str2"</span>,<span class="string">"str3"</span>));</span><br><span class="line">     <span class="comment">//list</span></span><br><span class="line">     System.out.println(<span class="string">"----------------------------------------"</span>);</span><br><span class="line">     <span class="comment">//jedis.lpush("mylist","v1","v2","v3","v4","v5");</span></span><br><span class="line">     List&lt;String&gt; list = jedis.lrange(<span class="string">"mylist"</span>,<span class="number">0</span>,-<span class="number">1</span>);</span><br><span class="line">     <span class="keyword">for</span> (String element : list) &#123;</span><br><span class="line">       System.out.println(element);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">//set</span></span><br><span class="line">     jedis.sadd(<span class="string">"orders"</span>,<span class="string">"jd001"</span>);</span><br><span class="line">     jedis.sadd(<span class="string">"orders"</span>,<span class="string">"jd002"</span>);</span><br><span class="line">     jedis.sadd(<span class="string">"orders"</span>,<span class="string">"jd003"</span>);</span><br><span class="line">     Set&lt;String&gt; set1 = jedis.smembers(<span class="string">"orders"</span>);</span><br><span class="line">     <span class="keyword">for</span> (Iterator iterator = set1.iterator(); iterator.hasNext();) &#123;</span><br><span class="line">       String string = (String) iterator.next();</span><br><span class="line">       System.out.println(string);</span><br><span class="line">     &#125;</span><br><span class="line">     jedis.srem(<span class="string">"orders"</span>,<span class="string">"jd002"</span>);</span><br><span class="line">     System.out.println(jedis.smembers(<span class="string">"orders"</span>).size());</span><br><span class="line">     <span class="comment">//hash</span></span><br><span class="line">     jedis.hset(<span class="string">"hash1"</span>,<span class="string">"userName"</span>,<span class="string">"lisi"</span>);</span><br><span class="line">     System.out.println(jedis.hget(<span class="string">"hash1"</span>,<span class="string">"userName"</span>));</span><br><span class="line">     Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;String,String&gt;();</span><br><span class="line">     map.put(<span class="string">"telphone"</span>,<span class="string">"13811814763"</span>);</span><br><span class="line">     map.put(<span class="string">"address"</span>,<span class="string">"atguigu"</span>);</span><br><span class="line">     map.put(<span class="string">"email"</span>,<span class="string">"abc@163.com"</span>);</span><br><span class="line">     jedis.hmset(<span class="string">"hash2"</span>,map);</span><br><span class="line">     List&lt;String&gt; result = jedis.hmget(<span class="string">"hash2"</span>, <span class="string">"telphone"</span>,<span class="string">"email"</span>);</span><br><span class="line">     <span class="keyword">for</span> (String element : result) &#123;</span><br><span class="line">       System.out.println(element);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">//zset</span></span><br><span class="line">     jedis.zadd(<span class="string">"zset01"</span>,<span class="number">60</span>d,<span class="string">"v1"</span>);</span><br><span class="line">     jedis.zadd(<span class="string">"zset01"</span>,<span class="number">70</span>d,<span class="string">"v2"</span>);</span><br><span class="line">     jedis.zadd(<span class="string">"zset01"</span>,<span class="number">80</span>d,<span class="string">"v3"</span>);</span><br><span class="line">     jedis.zadd(<span class="string">"zset01"</span>,<span class="number">90</span>d,<span class="string">"v4"</span>);</span><br><span class="line">     </span><br><span class="line">     Set&lt;String&gt; s1 = jedis.zrange(<span class="string">"zset01"</span>,<span class="number">0</span>,-<span class="number">1</span>);</span><br><span class="line">     <span class="keyword">for</span> (Iterator iterator = s1.iterator(); iterator.hasNext();) &#123;</span><br><span class="line">       String string = (String) iterator.next();</span><br><span class="line">       System.out.println(string);</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">          </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">=====加锁</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">transMethod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">"127.0.0.1"</span>, <span class="number">6379</span>);</span><br><span class="line">     <span class="keyword">int</span> balance;<span class="comment">// 可用余额</span></span><br><span class="line">     <span class="keyword">int</span> debt;<span class="comment">// 欠额</span></span><br><span class="line">     <span class="keyword">int</span> amtToSubtract = <span class="number">10</span>;<span class="comment">// 实刷额度</span></span><br><span class="line"> </span><br><span class="line">     jedis.watch(<span class="string">"balance"</span>);</span><br><span class="line">     <span class="comment">//jedis.set("balance","5");//此句不该出现，讲课方便。模拟其他程序已经修改了该条目</span></span><br><span class="line">     balance = Integer.parseInt(jedis.get(<span class="string">"balance"</span>));</span><br><span class="line">     <span class="keyword">if</span> (balance &lt; amtToSubtract) &#123;</span><br><span class="line">       jedis.unwatch();</span><br><span class="line">       System.out.println(<span class="string">"modify"</span>);</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">       System.out.println(<span class="string">"***********transaction"</span>);</span><br><span class="line">       Transaction transaction = jedis.multi();</span><br><span class="line">       transaction.decrBy(<span class="string">"balance"</span>, amtToSubtract);</span><br><span class="line">       transaction.incrBy(<span class="string">"debt"</span>, amtToSubtract);</span><br><span class="line">       transaction.exec();</span><br><span class="line">       balance = Integer.parseInt(jedis.get(<span class="string">"balance"</span>));</span><br><span class="line">       debt = Integer.parseInt(jedis.get(<span class="string">"debt"</span>));</span><br><span class="line"> </span><br><span class="line">       System.out.println(<span class="string">"*******"</span> + balance);</span><br><span class="line">       System.out.println(<span class="string">"*******"</span> + debt);</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 通俗点讲，watch命令就是标记一个键，如果标记了一个键， 在提交事务前如果该键被别人修改过，那事务就会失败，这种情况通常可以在程序中</span></span><br><span class="line"><span class="comment">   * 重新再尝试一次。</span></span><br><span class="line"><span class="comment">   * 首先标记了键balance，然后检查余额是否足够，不足就取消标记，并不做扣减； 足够的话，就启动事务进行更新操作，</span></span><br><span class="line"><span class="comment">   * 如果在此期间键balance被其它人修改， 那在提交事务（执行exec）时就会报错， 程序中通常可以捕获这类错误再重新执行一次，直到成功。</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">     TestTransaction test = <span class="keyword">new</span> TestTransaction();</span><br><span class="line">     <span class="keyword">boolean</span> retValue = test.transMethod();</span><br><span class="line">     System.out.println(<span class="string">"main retValue-------: "</span> + retValue);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" target="_blank">Redis基础回顾笔记</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          zhaodahan
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2019/09/20/redis基础回顾笔记/" title="Redis基础回顾笔记" target="_blank">http://yoursite.com/2019/09/20/redis基础回顾笔记/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
 
-        <div class="article-info info-on-right">
-          
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -346,1621 +512,129 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/20/redis%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" class="archive-article-date">
-        <time datetime="2019-09-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          git 问题解决记录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Shiro学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/13/shiro%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20/" target="_blank">Shiro学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shiro</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis基础回顾笔记"><span class="toc-number">1.</span> <span class="toc-text">Redis基础回顾笔记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NOSQL"><span class="toc-number">2.</span> <span class="toc-text">NOSQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#我们已经有了关系型数据库，为什么还会有NOSQL"><span class="toc-number">2.1.</span> <span class="toc-text">我们已经有了关系型数据库，为什么还会有NOSQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是NOSQL"><span class="toc-number">2.2.</span> <span class="toc-text">什么是NOSQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NOSQL-能干什么"><span class="toc-number">2.2.1.</span> <span class="toc-text">NOSQL 能干什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NOSQL的数据模型"><span class="toc-number">2.2.2.</span> <span class="toc-text">NOSQL的数据模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NoSQL数据库的四大分类"><span class="toc-number">2.2.3.</span> <span class="toc-text">NoSQL数据库的四大分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式数据库中CAP原理CAP-BASE"><span class="toc-number">2.2.4.</span> <span class="toc-text">分布式数据库中CAP原理CAP+BASE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式-集群"><span class="toc-number">2.2.5.</span> <span class="toc-text">分布式+集群</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis"><span class="toc-number">3.</span> <span class="toc-text">Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#redis-是什么"><span class="toc-number">3.1.</span> <span class="toc-text">redis 是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis启动后杂项基础知识讲解"><span class="toc-number">3.2.</span> <span class="toc-text">Redis启动后杂项基础知识讲解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis的五大数据类型"><span class="toc-number">3.3.</span> <span class="toc-text">Redis的五大数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis配置-redis-cof"><span class="toc-number">3.4.</span> <span class="toc-text">Redis配置 redis.cof</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis的持久化-rdb-aof"><span class="toc-number">3.5.</span> <span class="toc-text">Redis的持久化 rdb aof</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#RDB（Redis-DataBase）"><span class="toc-number">3.5.1.</span> <span class="toc-text">RDB（Redis DataBase）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AOF（Append-Only-File）"><span class="toc-number">3.5.2.</span> <span class="toc-text">AOF（Append Only File）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结-Which-one"><span class="toc-number">3.5.3.</span> <span class="toc-text">总结(Which one)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事务"><span class="toc-number">3.6.</span> <span class="toc-text">事务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#watch监控"><span class="toc-number">3.6.1.</span> <span class="toc-text">watch监控</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis的发布订阅"><span class="toc-number">3.7.</span> <span class="toc-text">Redis的发布订阅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis的复制-Master-Slave"><span class="toc-number">3.8.</span> <span class="toc-text">Redis的复制(Master/Slave)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#哨兵模式-sentinel"><span class="toc-number">3.8.1.</span> <span class="toc-text">哨兵模式(sentinel)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis的Java客户端Jedis"><span class="toc-number">3.9.</span> <span class="toc-text">Redis的Java客户端Jedis</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/" class="archive-article-date">
-        <time datetime="2019-09-12T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
+        
+    </div>
+</aside>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/12/SpringBoot%E9%AB%98%E7%BA%A7%E6%95%B4%E5%90%88/" target="_blank">SpringBoot高级(整合篇)</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" class="archive-article-date">
-        <time datetime="2019-09-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
-</a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/11/Spring%20Boot%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" target="_blank">Spring Boot核心技术</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">spring 基础回顾</a>
-  
-    </h1>
-  
 
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" target="_blank">Spring Cloud学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">springCloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">SpringMVC基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">springmvc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" target="_blank">Spring注解驱动开发</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">注解</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/10/Git&GitHub%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/10/Git&GitHub%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" target="_blank">Git&amp;GitHub学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/23/MyBatis%20%E9%80%9A%E7%94%A8mapper%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-23T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/23/MyBatis%20%E9%80%9A%E7%94%A8mapper%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">通用mapper</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/21/MyBatisPlus%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-21T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/21/MyBatisPlus%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">MyBatisPlus 学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/20/Mybatis%E5%BA%94%E7%94%A8%E2%80%94SSM%E6%95%B4%E5%90%88/" class="archive-article-date">
-        <time datetime="2019-08-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/20/Mybatis%E5%BA%94%E7%94%A8%E2%80%94SSM%E6%95%B4%E5%90%88/" target="_blank">SSM整合</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/20/MyBatis%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-08-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/20/MyBatis%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">MyBatis基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/13/SSSP%20%E6%95%B4%E5%90%88%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/13/SSSP%20%E6%95%B4%E5%90%88%E7%AC%94%E8%AE%B0/" target="_blank">SSSP整合</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/12/SpringData%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-12T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/12/SpringData%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">SpringData 学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/11/JPA%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-08-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/11/JPA%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JPA 基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/08/10/Hibernate%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-08-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/08/10/Hibernate%E7%AC%94%E8%AE%B0/" target="_blank">Hibernate笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">持久化框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/23/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-23T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/23/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E4%BA%8C/" target="_blank">java设计模式 (二)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/22/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-        <time datetime="2019-07-22T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-22</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/22/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank">java设计模式 (一)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/20/mysql%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/20/mysql%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">mysql 基础回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/20/MySQL%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2019-07-20T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/20/MySQL%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank">MySQL高级</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/13/JUC%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/13/JUC%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JUC 多线程</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/13/NIO%E5%9B%9E%E9%A1%BE%E5%8A%A0%E5%BC%BA/" class="archive-article-date">
-        <time datetime="2019-07-13T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/13/NIO%E5%9B%9E%E9%A1%BE%E5%8A%A0%E5%BC%BA/" target="_blank">NIO</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java高级</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NIO</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95/" target="_blank">java数据结构与算法 (一)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">java数据结构与算法__数据结构(一)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA%20-%20%E7%AE%97%E6%B3%95%20-%20%E4%BA%8C/" target="_blank">java数据结构与算法 (二)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%BA%8C/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%BA%8C/" target="_blank">java数据结构与算法__数据结构(二)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%B8%89/" class="archive-article-date">
-        <time datetime="2019-07-11T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/11/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%8A%A0%E5%BC%BA-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20-%20%E4%B8%89/" target="_blank">java数据结构与算法__数据结构(三)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/JAVAWeb%20%E4%B8%ADservlet%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/JAVAWeb%20%E4%B8%ADservlet%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JAVAWeb回顾</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/java%20JDBC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-07-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/java%20JDBC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">JDBC</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">jdbc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/07/10/java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE(%E7%AC%AC%E4%B8%80%E7%89%88)/" class="archive-article-date">
-        <time datetime="2019-07-10T11:30:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/07/10/java%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE(%E7%AC%AC%E4%B8%80%E7%89%88)/" target="_blank">java 基础回顾 (第一版)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -2001,8 +675,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
