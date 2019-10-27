@@ -116,6 +116,18 @@
 		        
 			</div>
 		
+			
+			
+			
+			
+			<div>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=1334445174&auto=1&height=66"></iframe>
+			</div>
+			
+				
+				<p style="font-size: 12px;">本博客的背景音乐，请尽情的欣赏吧！<p>
+			
+		
 		</nav>
 	</header>		
 </div>
@@ -204,7 +216,7 @@
             
 
   
-    <article id="post-sql 常用技巧语句" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Home" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -212,7 +224,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" target="_blank">sql 问题解决记录</a>
+	  <a class="article-title" href="/2019/10/27/Home/" target="_blank">博客首页</a>
   
     </h1>
   
@@ -220,8 +232,8 @@
 
   
   
-<a href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" class="archive-article-date">
-        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
+<a href="/2019/10/27/Home/" class="archive-article-date">
+        <time datetime="2019-10-27T07:17:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-27</time>
 </a>
 
   
@@ -233,11 +245,12 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="SQL常用技巧语句汇总"><a href="#SQL常用技巧语句汇总" class="headerlink" title="SQL常用技巧语句汇总"></a>SQL常用技巧语句汇总</h1><h2 id="查询出表中某个字段重复的语句"><a href="#查询出表中某个字段重复的语句" class="headerlink" title="查询出表中某个字段重复的语句"></a>查询出表中某个字段重复的语句</h2><p><strong>以查询出 a 表中 method_name字段重复为例子</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	*</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	a </span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">	method_name <span class="keyword">IN</span> (</span><br><span class="line">		<span class="keyword">SELECT</span></span><br><span class="line">			method_name</span><br><span class="line">		<span class="keyword">FROM</span></span><br><span class="line">			a</span><br><span class="line">		<span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">			method_name</span><br><span class="line">		<span class="keyword">HAVING</span></span><br><span class="line">			<span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span></span><br><span class="line">	)</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/#more">more >></a>
-    
+    <h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><p>制作这个博客的主要目的是为了方便我自己阅读我的笔记</p>
+<p>人们常常犯的三种错误：</p>
+<p>第一，听到了，就以为已经明白了 </p>
+<p>第二，知道了，就以为自己做到了</p>
+<p>第三，心动了，就以为自己在行动</p>
+
     
 
     
@@ -247,17 +260,26 @@
   </div>
   <div class="article-info article-info-index">
     
+    <div class="article-pop-out tagcloud">
+      <i class="icon-tuding"></i>
+      <a class="article-tag-list-link color3">置顶</a>
+    </div>
+    
     
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sql</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">book</a>
         		</li>
       		
 		</ul>
@@ -267,7 +289,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/">展开全文 >></a>
+      <a class="article-more-a" href="/2019/10/27/Home/">展开全文 >></a>
     </p>
     
 
@@ -365,6 +387,99 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2019/10/24/git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-sql 常用技巧语句" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" target="_blank">sql 问题解决记录</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/" class="archive-article-date">
+        <time datetime="2019-10-24T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="SQL常用技巧语句汇总"><a href="#SQL常用技巧语句汇总" class="headerlink" title="SQL常用技巧语句汇总"></a>SQL常用技巧语句汇总</h1><h2 id="查询出表中某个字段重复的语句"><a href="#查询出表中某个字段重复的语句" class="headerlink" title="查询出表中某个字段重复的语句"></a>查询出表中某个字段重复的语句</h2><p><strong>以查询出 a 表中 method_name字段重复为例子</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	*</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	a </span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">	method_name <span class="keyword">IN</span> (</span><br><span class="line">		<span class="keyword">SELECT</span></span><br><span class="line">			method_name</span><br><span class="line">		<span class="keyword">FROM</span></span><br><span class="line">			a</span><br><span class="line">		<span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">			method_name</span><br><span class="line">		<span class="keyword">HAVING</span></span><br><span class="line">			<span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span></span><br><span class="line">	)</span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/10/24/sql%20%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E8%AF%AD%E5%8F%A5/">展开全文 >></a>
     </p>
     
 
@@ -791,210 +906,6 @@
 
 
   
-    <article id="post-spring 基础回顾" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">spring 基础回顾</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="spring-基础回顾"><a href="#spring-基础回顾" class="headerlink" title="spring 基础回顾"></a>spring 基础回顾</h1><h2 id="spring-是什么"><a href="#spring-是什么" class="headerlink" title="spring 是什么"></a>spring 是什么</h2><p>Spring 是一个 IOC(DI)和AOP容器框架.  spring框架的源码十分优秀。</p>
-    
-    <a class="article-more-a" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring Cloud 学习视频" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" target="_blank">Spring Cloud学习笔记</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/" class="archive-article-date">
-        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="Spring-Cloud学习笔记"><a href="#Spring-Cloud学习笔记" class="headerlink" title="Spring Cloud学习笔记"></a>Spring Cloud学习笔记</h1><p>解决分布式微服务的各种情况的整套架构,Spring Cloud 是一整套技术集合。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SpringCloud分布式开发五大常用组件</span><br><span class="line">服务发现——Netflix Eureka</span><br><span class="line">客服端负载均衡——Netflix Ribbon</span><br><span class="line">断路器——Netflix Hystrix</span><br><span class="line">服务网关——Netflix Zuul</span><br><span class="line">分布式配置——Spring Cloud Config</span><br></pre></td></tr></table></figure>
-
-<p>参考文档：<a href="https://springcloud.cc/spring-cloud-netflix.html" target="_blank" rel="noopener">https://springcloud.cc/spring-cloud-netflix.html</a></p>
-<p><a href="https://springcloud.cc/spring-cloud-dalston.html" target="_blank" rel="noopener">https://springcloud.cc/spring-cloud-dalston.html</a></p>
-    
-    <a class="article-more-a" href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">springCloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/09/10/Spring%20Cloud%20%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-SpringMVC基础回顾" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1066,6 +977,102 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2019/09/10/SpringMVC%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-spring 基础回顾" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" target="_blank">spring 基础回顾</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
+        <time datetime="2019-09-10T12:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="spring-基础回顾"><a href="#spring-基础回顾" class="headerlink" title="spring 基础回顾"></a>spring 基础回顾</h1><h2 id="spring-是什么"><a href="#spring-是什么" class="headerlink" title="spring 是什么"></a>spring 是什么</h2><p>Spring 是一个 IOC(DI)和AOP容器框架.  spring框架的源码十分优秀。</p>
+    
+    <a class="article-more-a" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/09/10/spring%20%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/">展开全文 >></a>
     </p>
     
 
@@ -1337,11 +1344,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color1">issue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java高级</a>
+                <a href="javascript:void(0)" class="js-tag color5">book</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1353,15 +1364,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java高级</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">jdbc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">issue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1373,11 +1384,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1617,6 +1628,56 @@
   
   <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
   
+  
+    <script type="text/javascript" src="/plugins/live2d-widget.js/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+  /**
+   * 完整配置请参考：https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
+   */
+  var pluginModelPath = "assets/", // 模型的文件路径，无需更改
+    pluginRootPath = "/live2d_models/"; // 插件的路径，无需更改
+  //特定的模型json文件名称
+  var modelPathJson = {
+    "epsilon2_1": "Epsilon2.1",
+    "gf": "Gantzert_Felixander",
+    "haru/01": "haru01",
+    "haru/02": "haru02",
+    "nietzsche": "nietzche"
+  }
+
+  
+    var modelName = "hibiki";
+  
+
+  var modelJsonPath = "";
+  if (modelPathJson[modelName]) {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelPathJson[modelName] +
+      ".model.json";
+  } else {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelName + ".model.json";
+  }
+  L2Dwidget.init({
+    model: {
+      jsonPath: modelJsonPath
+    },
+    display: {
+       position: "right", 
+       width: 145, 
+       height: 315, 
+       hOffset: 50, 
+      
+    },
+    mobile: {
+       show: false, 
+       scale: 0.6 
+    },
+    react: {
+       opacity: 0.8 
+    }
+  })
+
+</script>
+
   
   
 </body>
