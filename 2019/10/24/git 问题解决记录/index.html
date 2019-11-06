@@ -11,14 +11,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="description" content="git 问题解决记录unable to access ‘XXX’:Empty reply from server12$ git pull origin masterfatal: unable to access &amp;apos;https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note.git&#x2F;&amp;apos;: Empty reply from server  解决：重置git配置的h">
-<meta name="keywords" content="issue,git">
+<meta name="keywords" content="git,issue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 问题解决记录">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;24&#x2F;git%20%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95&#x2F;index.html">
 <meta property="og:site_name" content="赵大汉的个人博客">
 <meta property="og:description" content="git 问题解决记录unable to access ‘XXX’:Empty reply from server12$ git pull origin masterfatal: unable to access &amp;apos;https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note.git&#x2F;&amp;apos;: Empty reply from server  解决：重置git配置的h">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-27T08:45:16.279Z">
+<meta property="og:updated_time" content="2019-11-06T12:27:58.243Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="赵大汉的个人博客" type="application/atom+xml">
@@ -244,7 +244,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">413字</span>
+      <span class="post-count">425字</span>
     </span>
   </span>
 
@@ -270,8 +270,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br></pre></td></tr></table></figure>
 
 <p>然后就成功pull</p>
-<a id="more"></a>
-
 <h1 id="本地库已经删除了，但是依旧提交到了远程库"><a href="#本地库已经删除了，但是依旧提交到了远程库" class="headerlink" title="本地库已经删除了，但是依旧提交到了远程库"></a>本地库已经删除了，但是依旧提交到了远程库</h1><p>远程库与本地库不一致，使用git pull 无法将多余的文件拉取下来。</p>
 <p>解决思路： 用远程库覆盖本地版本库。 然后修改后重新提交。</p>
 <h1 id="git-clone-和pull-速度太慢解决方案"><a href="#git-clone-和pull-速度太慢解决方案" class="headerlink" title="git clone 和pull  速度太慢解决方案"></a>git clone 和pull  速度太慢解决方案</h1><p>windows上进入c:\windows\system32\drivers\etc，找到hosts</p>
@@ -288,9 +286,11 @@
 
 
 
+<h1 id="git-pull-卡死情况"><a href="#git-pull-卡死情况" class="headerlink" title="git pull 卡死情况"></a>git pull 卡死情况</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">先执行 git gc</span><br></pre></td></tr></table></figure>
+
+
+
 <h1 id="使用git提交代码到github-每次都要输入用户名和密码的解决方法"><a href="#使用git提交代码到github-每次都要输入用户名和密码的解决方法" class="headerlink" title="使用git提交代码到github,每次都要输入用户名和密码的解决方法"></a>使用git提交代码到github,每次都要输入用户名和密码的解决方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">找到项目的.git目录下的config文件： </span><br><span class="line">修改url路径</span><br><span class="line">将其改为如下格式： </span><br><span class="line">https://username:password@github.com/username/project.git </span><br><span class="line">在这里，username就是你的用户名，比如我的用户名是CmderQ，那么改成之后的结果是： </span><br><span class="line">url= https://CmderQ:#####@github.com/CmderQ/hello.git </span><br><span class="line">这里的”#####”代表的就是我这个账户的密码。改完之后，保存</span><br><span class="line"></span><br><span class="line">例如: 我的修改</span><br><span class="line">#	url = https://github.com/zhaodahan/zhao_Note.git</span><br><span class="line">    url = https://zhaodahan:zhao7494@github.com/zhaodahan/zhao_Note.git</span><br></pre></td></tr></table></figure>
-
-
 
 <h1 id="Github下载仓库中单个文件的方法"><a href="#Github下载仓库中单个文件的方法" class="headerlink" title="Github下载仓库中单个文件的方法"></a>Github下载仓库中单个文件的方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">使用下述规则下载</span><br><span class="line">https://raw.githubusercontent.com/【user】/【repository】/【branch】/【filename】</span><br><span class="line">如：https://raw.githubusercontent.com/afad-dataset/tarball/master/AFAD-Full.tar.xzae</span><br></pre></td></tr></table></figure>
 
@@ -359,11 +359,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">issue</a>
         		</li>
       		
 		</ul>
@@ -472,7 +472,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git-问题解决记录"><span class="toc-number">1.</span> <span class="toc-text">git 问题解决记录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#unable-to-access-‘XXX’-Empty-reply-from-server"><span class="toc-number">2.</span> <span class="toc-text">unable to access ‘XXX’:Empty reply from server</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本地库已经删除了，但是依旧提交到了远程库"><span class="toc-number">3.</span> <span class="toc-text">本地库已经删除了，但是依旧提交到了远程库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-clone-和pull-速度太慢解决方案"><span class="toc-number">4.</span> <span class="toc-text">git clone 和pull  速度太慢解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用git提交代码到github-每次都要输入用户名和密码的解决方法"><span class="toc-number">5.</span> <span class="toc-text">使用git提交代码到github,每次都要输入用户名和密码的解决方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Github下载仓库中单个文件的方法"><span class="toc-number">6.</span> <span class="toc-text">Github下载仓库中单个文件的方法</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git-问题解决记录"><span class="toc-number">1.</span> <span class="toc-text">git 问题解决记录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#unable-to-access-‘XXX’-Empty-reply-from-server"><span class="toc-number">2.</span> <span class="toc-text">unable to access ‘XXX’:Empty reply from server</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本地库已经删除了，但是依旧提交到了远程库"><span class="toc-number">3.</span> <span class="toc-text">本地库已经删除了，但是依旧提交到了远程库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-clone-和pull-速度太慢解决方案"><span class="toc-number">4.</span> <span class="toc-text">git clone 和pull  速度太慢解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-pull-卡死情况"><span class="toc-number">5.</span> <span class="toc-text">git pull 卡死情况</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用git提交代码到github-每次都要输入用户名和密码的解决方法"><span class="toc-number">6.</span> <span class="toc-text">使用git提交代码到github,每次都要输入用户名和密码的解决方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Github下载仓库中单个文件的方法"><span class="toc-number">7.</span> <span class="toc-text">Github下载仓库中单个文件的方法</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -647,6 +647,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">issue</a>
               </li>
              
@@ -655,7 +659,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">note - Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -711,6 +715,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">redis</a>
               </li>
              
@@ -723,6 +731,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">springmvc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
               </li>
              
@@ -731,11 +743,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">springmvc</a>
+                <a href="javascript:void(0)" class="js-tag color1">shiro</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">shiro</a>
+                <a href="javascript:void(0)" class="js-tag color3">mq</a>
               </li>
              
               <li class="article-tag-list-item">
