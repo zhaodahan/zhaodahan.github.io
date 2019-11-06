@@ -10,13 +10,13 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="消息中间件之ActiveMQ 消息中间件已经成为应用系统内部通信的核心手段。它具有解耦、异步、削峰、签收、事务、流量控制、最终一致性等一系列高性能架构所需功能。 当前使用较多的消息中间件有RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ等， (重点：  1：结合Spring&#x2F;SpringBoot进行实际开发配置  2：MQ多节点集群的部署 ) 什么是mq">
+  <meta name="description" content="消息中间件之ActiveMQ消息中间件已经成为应用系统内部通信的核心手段。它具有解耦、异步、削峰、签收、事务、流量控制、最终一致性等一系列高性能架构所需功能。 当前使用较多的消息中间件有RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ等， (重点：  1：结合Spring&#x2F;SpringBoot进行实际开发配置  2：MQ多节点集群的部署 )">
 <meta name="keywords" content="note,mq">
 <meta property="og:type" content="article">
 <meta property="og:title" content="消息中间件之ActiveMQ">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;05&#x2F;%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6%E4%B9%8BActiveMQ&#x2F;index.html">
 <meta property="og:site_name" content="赵大汉的个人博客">
-<meta property="og:description" content="消息中间件之ActiveMQ 消息中间件已经成为应用系统内部通信的核心手段。它具有解耦、异步、削峰、签收、事务、流量控制、最终一致性等一系列高性能架构所需功能。 当前使用较多的消息中间件有RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ等， (重点：  1：结合Spring&#x2F;SpringBoot进行实际开发配置  2：MQ多节点集群的部署 ) 什么是mq">
+<meta property="og:description" content="消息中间件之ActiveMQ消息中间件已经成为应用系统内部通信的核心手段。它具有解耦、异步、削峰、签收、事务、流量控制、最终一致性等一系列高性能架构所需功能。 当前使用较多的消息中间件有RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ等， (重点：  1：结合Spring&#x2F;SpringBoot进行实际开发配置  2：MQ多节点集群的部署 )">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_ACTIVEMQ1.png?raw=true">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_ACTIVEMQ13.png?raw=true">
@@ -57,7 +57,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_ACTIVEMQ37.png?raw=true">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_ACTIVEMQ38.png?raw=true">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_ACTIVEMQ39.png?raw=true">
-<meta property="og:updated_time" content="2019-11-06T12:27:58.246Z">
+<meta property="og:updated_time" content="2019-11-06T13:00:20.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;zhaodahan&#x2F;zhao_Note&#x2F;blob&#x2F;master&#x2F;wiki_img&#x2F;JAVA_ACTIVEMQ1.png?raw=true">
   
@@ -304,13 +304,14 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>消息中间件之ActiveMQ</p>
-<p>消息中间件已经成为应用系统内部通信的核心手段。它具有解耦、异步、削峰、签收、事务、流量控制、最终一致性等一系列高性能架构所需功能。</p>
+    <h1 id="消息中间件之ActiveMQ"><a href="#消息中间件之ActiveMQ" class="headerlink" title="消息中间件之ActiveMQ"></a>消息中间件之ActiveMQ</h1><p>消息中间件已经成为应用系统内部通信的核心手段。它具有解耦、异步、削峰、签收、事务、流量控制、最终一致性等一系列高性能架构所需功能。</p>
 <p>当前使用较多的消息中间件有RabbitMQ、RocketMQ、ActiveMQ、Kafka、ZeroMQ、MetaMQ等，</p>
 <p>(重点：</p>
 <p> 1：结合Spring/SpringBoot进行实际开发配置</p>
 <p> 2：MQ多节点集群的部署</p>
 <p>)</p>
+<a id="more"></a>
+
 <h1 id="什么是mq"><a href="#什么是mq" class="headerlink" title="什么是mq"></a>什么是mq</h1><p>mq是分布式系统消息通信的一种方式(消息中间件)。 mq是一种具体的规范，ActiveMQ是其具体的实现。</p>
 <p><img src="https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_ACTIVEMQ1.png?raw=true" alt="JAVA_ACTIVEMQ1.png"></p>
 <p>(消息中间件的原理类似于我们发送微信消息，他也是一个三角形，消息的发送者，消息的接收者，和中间接收和发送消息的腾讯服务器)</p>
@@ -790,7 +791,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是mq"><span class="toc-number">1.</span> <span class="toc-text">什么是mq</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JMS规范"><span class="toc-number">1.1.</span> <span class="toc-text">JMS规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JMS-message"><span class="toc-number">1.1.1.</span> <span class="toc-text">JMS message</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mq-怎么使用"><span class="toc-number">2.</span> <span class="toc-text">mq 怎么使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#异步消息的消费和处理"><span class="toc-number">2.1.</span> <span class="toc-text">异步消息的消费和处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#将消息推送到mq-队列"><span class="toc-number">2.1.1.</span> <span class="toc-text">将消息推送到mq 队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将消息推送到Topic"><span class="toc-number">2.1.2.</span> <span class="toc-text">将消息推送到Topic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#topic-和queue的对比"><span class="toc-number">2.1.3.</span> <span class="toc-text">topic 和queue的对比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spring-springBoot整合简化编码"><span class="toc-number">2.2.</span> <span class="toc-text">spring/springBoot整合简化编码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#spring整合"><span class="toc-number">2.2.1.</span> <span class="toc-text">spring整合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#springBoot整合"><span class="toc-number">2.2.2.</span> <span class="toc-text">springBoot整合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#队列"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">队列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#主题"><span class="toc-number">2.2.2.2.</span> <span class="toc-text">主题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#消息延时，和定时投递"><span class="toc-number">2.3.</span> <span class="toc-text">消息延时，和定时投递</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#springBoot-整合activeMQ队列生产者定时投递"><span class="toc-number">2.3.1.</span> <span class="toc-text">springBoot 整合activeMQ队列生产者定时投递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#springBoot-整合activeMQ队列生产者延时时投递"><span class="toc-number">2.3.2.</span> <span class="toc-text">springBoot 整合activeMQ队列生产者延时时投递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#springBoot-整合activeMQ队列生产者间隔投递"><span class="toc-number">2.3.3.</span> <span class="toc-text">springBoot 整合activeMQ队列生产者间隔投递</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#消息的可靠性-非持久化和持久化"><span class="toc-number">2.4.</span> <span class="toc-text">消息的可靠性(非持久化和持久化)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#持久"><span class="toc-number">2.4.1.</span> <span class="toc-text">持久</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事务"><span class="toc-number">2.4.2.</span> <span class="toc-text">事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#签收"><span class="toc-number">2.4.3.</span> <span class="toc-text">签收</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置集群容错的mq集群"><span class="toc-number">2.5.</span> <span class="toc-text">配置集群容错的mq集群</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置集群基础broker"><span class="toc-number">2.5.1.</span> <span class="toc-text">配置集群基础broker</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mq高级特性"><span class="toc-number">3.</span> <span class="toc-text">mq高级特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ActiveMQ-传输协议"><span class="toc-number">3.1.</span> <span class="toc-text">ActiveMQ 传输协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ActiveMQ-消息存储和持久化"><span class="toc-number">3.2.</span> <span class="toc-text">ActiveMQ 消息存储和持久化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ActiveMQ-的持久化方式"><span class="toc-number">3.2.1.</span> <span class="toc-text">ActiveMQ 的持久化方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#KahaDB"><span class="toc-number">3.2.1.1.</span> <span class="toc-text">KahaDB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC"><span class="toc-number">3.2.1.2.</span> <span class="toc-text">JDBC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC持久增强Jdbc-with-journal"><span class="toc-number">3.2.1.3.</span> <span class="toc-text">JDBC持久增强Jdbc with journal</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ActiveMQ-多节点集群ZooKeeper-LevelDB"><span class="toc-number">3.3.</span> <span class="toc-text">ActiveMQ 多节点集群ZooKeeper+LevelDB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何搭建mq集群"><span class="toc-number">3.3.1.</span> <span class="toc-text">如何搭建mq集群</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高级特性和面试题"><span class="toc-number">3.4.</span> <span class="toc-text">高级特性和面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#异步投递"><span class="toc-number">3.4.1.</span> <span class="toc-text">异步投递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ActiveMQ的消息的消费重试机制"><span class="toc-number">3.4.2.</span> <span class="toc-text">ActiveMQ的消息的消费重试机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#消费重试机制"><span class="toc-number">3.4.2.1.</span> <span class="toc-text">消费重试机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#死信队列"><span class="toc-number">3.4.2.2.</span> <span class="toc-text">死信队列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防止重复消费问题，幂等性调用"><span class="toc-number">3.4.3.</span> <span class="toc-text">防止重复消费问题，幂等性调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#消息的分发策略"><span class="toc-number">3.4.4.</span> <span class="toc-text">消息的分发策略</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#queue的分发策略"><span class="toc-number">3.4.4.1.</span> <span class="toc-text">queue的分发策略</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#topic的分发策略"><span class="toc-number">3.4.4.2.</span> <span class="toc-text">topic的分发策略</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#消息中间件之ActiveMQ"><span class="toc-number">1.</span> <span class="toc-text">消息中间件之ActiveMQ</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是mq"><span class="toc-number">2.</span> <span class="toc-text">什么是mq</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JMS规范"><span class="toc-number">2.1.</span> <span class="toc-text">JMS规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JMS-message"><span class="toc-number">2.1.1.</span> <span class="toc-text">JMS message</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mq-怎么使用"><span class="toc-number">3.</span> <span class="toc-text">mq 怎么使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#异步消息的消费和处理"><span class="toc-number">3.1.</span> <span class="toc-text">异步消息的消费和处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#将消息推送到mq-队列"><span class="toc-number">3.1.1.</span> <span class="toc-text">将消息推送到mq 队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将消息推送到Topic"><span class="toc-number">3.1.2.</span> <span class="toc-text">将消息推送到Topic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#topic-和queue的对比"><span class="toc-number">3.1.3.</span> <span class="toc-text">topic 和queue的对比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spring-springBoot整合简化编码"><span class="toc-number">3.2.</span> <span class="toc-text">spring/springBoot整合简化编码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#spring整合"><span class="toc-number">3.2.1.</span> <span class="toc-text">spring整合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#springBoot整合"><span class="toc-number">3.2.2.</span> <span class="toc-text">springBoot整合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#队列"><span class="toc-number">3.2.2.1.</span> <span class="toc-text">队列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#主题"><span class="toc-number">3.2.2.2.</span> <span class="toc-text">主题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#消息延时，和定时投递"><span class="toc-number">3.3.</span> <span class="toc-text">消息延时，和定时投递</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#springBoot-整合activeMQ队列生产者定时投递"><span class="toc-number">3.3.1.</span> <span class="toc-text">springBoot 整合activeMQ队列生产者定时投递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#springBoot-整合activeMQ队列生产者延时时投递"><span class="toc-number">3.3.2.</span> <span class="toc-text">springBoot 整合activeMQ队列生产者延时时投递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#springBoot-整合activeMQ队列生产者间隔投递"><span class="toc-number">3.3.3.</span> <span class="toc-text">springBoot 整合activeMQ队列生产者间隔投递</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#消息的可靠性-非持久化和持久化"><span class="toc-number">3.4.</span> <span class="toc-text">消息的可靠性(非持久化和持久化)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#持久"><span class="toc-number">3.4.1.</span> <span class="toc-text">持久</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事务"><span class="toc-number">3.4.2.</span> <span class="toc-text">事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#签收"><span class="toc-number">3.4.3.</span> <span class="toc-text">签收</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置集群容错的mq集群"><span class="toc-number">3.5.</span> <span class="toc-text">配置集群容错的mq集群</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置集群基础broker"><span class="toc-number">3.5.1.</span> <span class="toc-text">配置集群基础broker</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mq高级特性"><span class="toc-number">4.</span> <span class="toc-text">mq高级特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ActiveMQ-传输协议"><span class="toc-number">4.1.</span> <span class="toc-text">ActiveMQ 传输协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ActiveMQ-消息存储和持久化"><span class="toc-number">4.2.</span> <span class="toc-text">ActiveMQ 消息存储和持久化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ActiveMQ-的持久化方式"><span class="toc-number">4.2.1.</span> <span class="toc-text">ActiveMQ 的持久化方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#KahaDB"><span class="toc-number">4.2.1.1.</span> <span class="toc-text">KahaDB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC"><span class="toc-number">4.2.1.2.</span> <span class="toc-text">JDBC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC持久增强Jdbc-with-journal"><span class="toc-number">4.2.1.3.</span> <span class="toc-text">JDBC持久增强Jdbc with journal</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ActiveMQ-多节点集群ZooKeeper-LevelDB"><span class="toc-number">4.3.</span> <span class="toc-text">ActiveMQ 多节点集群ZooKeeper+LevelDB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何搭建mq集群"><span class="toc-number">4.3.1.</span> <span class="toc-text">如何搭建mq集群</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高级特性和面试题"><span class="toc-number">4.4.</span> <span class="toc-text">高级特性和面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#异步投递"><span class="toc-number">4.4.1.</span> <span class="toc-text">异步投递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ActiveMQ的消息的消费重试机制"><span class="toc-number">4.4.2.</span> <span class="toc-text">ActiveMQ的消息的消费重试机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#消费重试机制"><span class="toc-number">4.4.2.1.</span> <span class="toc-text">消费重试机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#死信队列"><span class="toc-number">4.4.2.2.</span> <span class="toc-text">死信队列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防止重复消费问题，幂等性调用"><span class="toc-number">4.4.3.</span> <span class="toc-text">防止重复消费问题，幂等性调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#消息的分发策略"><span class="toc-number">4.4.4.</span> <span class="toc-text">消息的分发策略</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#queue的分发策略"><span class="toc-number">4.4.4.1.</span> <span class="toc-text">queue的分发策略</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#topic的分发策略"><span class="toc-number">4.4.4.2.</span> <span class="toc-text">topic的分发策略</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -977,10 +978,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">note - Nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
               </li>
              
@@ -990,6 +987,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">持久化框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1033,10 +1034,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">redis</a>
               </li>
              
@@ -1045,15 +1042,19 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">spring</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">springmvc</a>
+                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
+                <a href="javascript:void(0)" class="js-tag color5">springmvc</a>
               </li>
              
               <li class="article-tag-list-item">
